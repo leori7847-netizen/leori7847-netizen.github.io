@@ -1,0 +1,10 @@
+{
+  "name": "人工智能训练师技师理论题库刷题",
+  "short_name": "AI题库",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#cdebd3",
+  "theme_color": "#cdebd3",
+  "lang": "zh-CN",
+  "icons": []
+}
