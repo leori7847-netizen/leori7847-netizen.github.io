@@ -780,7 +780,7 @@ app.addEventListener("change", (event) => {
 });
 
 app.addEventListener("submit", (event) => {
-  if (!event.target.dataset.unlockForm) return;
+  if (event.target.dataset.unlockForm === undefined) return;
   event.preventDefault();
   const password = event.target.querySelector("[data-password]")?.value || "";
   unlockSite(password);
