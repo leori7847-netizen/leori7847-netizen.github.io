@@ -1,5 +1,12 @@
-const CACHE_NAME = "ai-trainer-question-bank-v3";
-const ASSETS = ["./", "./index.html", "./styles.css", "./vault.js", "./app.js", "./manifest.webmanifest"];
+const CACHE_NAME = "ai-trainer-question-bank-v2026070601";
+const ASSETS = [
+  "./",
+  "./index.html",
+  "./styles.css?v=2026070601",
+  "./vault.js?v=2026070601",
+  "./app.js?v=2026070601",
+  "./manifest.webmanifest?v=2026070601",
+];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS)));
