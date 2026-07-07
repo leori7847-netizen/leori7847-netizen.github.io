@@ -1,0 +1,82 @@
+[
+  {
+    "code": "SS-1",
+    "name": "数据采集和处理",
+    "questionCount": 2,
+    "levels": [
+      "中级工",
+      "初级工"
+    ],
+    "practiceTypes": [
+      "python_coding"
+    ]
+  },
+  {
+    "code": "SS-2",
+    "name": "数据标注",
+    "questionCount": 2,
+    "levels": [
+      "中级工",
+      "初级工"
+    ],
+    "practiceTypes": [
+      "bbox_labeling",
+      "text_labeling"
+    ]
+  },
+  {
+    "code": "SS-3",
+    "name": "智能系统运维",
+    "questionCount": 2,
+    "levels": [
+      "中级工",
+      "初级工"
+    ],
+    "practiceTypes": [
+      "monitoring_ops"
+    ]
+  },
+  {
+    "code": "SS-4",
+    "name": "业务分析",
+    "questionCount": 10,
+    "levels": [
+      "技师",
+      "高级工",
+      "高级技师"
+    ],
+    "practiceTypes": [
+      "bbox_labeling",
+      "dify_agent",
+      "document_ocr",
+      "flow_design",
+      "image_ai"
+    ]
+  },
+  {
+    "code": "SS-5",
+    "name": "智能训练",
+    "questionCount": 10,
+    "levels": [
+      "技师",
+      "高级工",
+      "高级技师"
+    ],
+    "practiceTypes": [
+      "model_evaluation"
+    ]
+  },
+  {
+    "code": "SS-6",
+    "name": "智能系统设计",
+    "questionCount": 10,
+    "levels": [
+      "技师",
+      "高级工",
+      "高级技师"
+    ],
+    "practiceTypes": [
+      "flow_design"
+    ]
+  }
+]

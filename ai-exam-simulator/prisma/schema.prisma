@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Question {
+  id                  String   @id
+  title               String
+  module              String?
+  moduleCode          String?
+  subModuleCode       String?
+  level               String?
+  questionType        String?
+  practiceType        String?
+  timeLimitMinutes    Int?
+  score               Int?
+  toolsAndEnvironment String?
+  questionText        String?
+  sourcePages         String?
+  platformTags        String?
+  rawText             String?
+  rubrics             Rubric[]
+  attempts            Attempt[]
+}
+
+model Rubric {
+  id          String   @id
+  questionId  String
+  order       Int
+  item        String?
+  requirement String?
+  points      Int?
+  standard    String?
+  remarks     String?
+  question    Question @relation(fields: [questionId], references: [id])
+}
+
+model Attempt {
+  id             Int            @id @default(autoincrement())
+  questionId     String
+  userAnswer     String?
+  score          Int?
+  startedAt      DateTime?
+  submittedAt    DateTime?
+  durationSeconds Int?
+  timeoutPenalty Int            @default(0)
+  mode           String?
+  question       Question       @relation(fields: [questionId], references: [id])
+  scores         AttemptScore[]
+}
+
+model AttemptScore {
+  id           Int     @id @default(autoincrement())
+  attemptId    Int
+  rubricId     String
+  earnedPoints Int?
+  maxPoints    Int?
+  comment      String?
+  attempt      Attempt @relation(fields: [attemptId], references: [id])
+}
+
+model WrongQuestion {
+  id         Int      @id @default(autoincrement())
+  questionId String
+  attemptId  Int?
+  reason     String?
+  createdAt  DateTime @default(now())
+}
+
+model StudyStat {
+  id              Int    @id @default(autoincrement())
+  module          String?
+  level           String?
+  practiceType    String?
+  totalAttempts   Int    @default(0)
+  averageScore    Float  @default(0)
+  averageDuration Float  @default(0)
+}

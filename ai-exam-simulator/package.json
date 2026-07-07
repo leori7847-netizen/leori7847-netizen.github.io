@@ -1,0 +1,14 @@
+{
+  "name": "ai-exam-simulator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "人工智能算法测试员操作技能在线模拟考试平台",
+  "type": "module",
+  "scripts": {
+    "dev": "node server/static-dev.mjs",
+    "extract": "python3 scripts/extract_pdf.py",
+    "normalize": "python3 scripts/normalize_questions.py",
+    "seed": "python3 scripts/seed_database.py",
+    "validate": "node server/validate.mjs"
+  }
+}

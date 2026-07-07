@@ -1,0 +1,4 @@
+.DS_Store
+ai-exam-simulator/docs/question_bank.pdf
+ai-exam-simulator/data/raw_pdf_text.json
+ai-exam-simulator/data/exam_simulator.sqlite

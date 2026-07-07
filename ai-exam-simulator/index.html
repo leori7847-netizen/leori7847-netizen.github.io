@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f5fb8" />
+    <title>人工智能算法测试员操作技能模拟考试平台</title>
+    <link rel="stylesheet" href="./styles.css?v=2026070605" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      if ("caches" in window) caches.keys().then((keys) => keys.forEach((key) => caches.delete(key))).catch(() => {});
+      if ("serviceWorker" in navigator) navigator.serviceWorker.getRegistrations().then((regs) => regs.forEach((reg) => reg.update())).catch(() => {});
+    </script>
+    <script src="../vault.js?v=2026070602"></script>
+    <script src="./app.js?v=2026070605" defer></script>
+  </body>
+</html>
