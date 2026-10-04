@@ -1,0 +1,57 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-10-04T17:05:11.602744Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:05:10.342654Z",
+      "mimetype": "text/markdown",
+      "name": "\u9898\u76ee.md",
+      "path": "SS-6-4-4-04/\u9898\u76ee.md",
+      "size": 1354,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-10-04T17:05:11.602231Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:05:10.342561Z",
+      "mimetype": null,
+      "name": "answer.ipynb",
+      "path": "SS-6-4-4-04/answer.ipynb",
+      "size": 2292,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-10-04T17:05:11.602511Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:05:10.342718Z",
+      "mimetype": "text/markdown",
+      "name": "\u64cd\u4f5c\u8bf4\u660e.md",
+      "path": "SS-6-4-4-04/\u64cd\u4f5c\u8bf4\u660e.md",
+      "size": 673,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-10-04T17:05:11.602744Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-10-04T17:05:11.602744Z",
+  "mimetype": null,
+  "name": "SS-6-4-4-04",
+  "path": "SS-6-4-4-04",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
