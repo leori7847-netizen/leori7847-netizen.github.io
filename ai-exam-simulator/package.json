@@ -9,6 +9,7 @@
     "extract": "python3 scripts/extract_pdf.py",
     "normalize": "python3 scripts/normalize_questions.py",
     "seed": "python3 scripts/seed_database.py",
-    "validate": "node server/validate.mjs"
+    "validate": "node server/validate.mjs",
+    "build:lite-content": "python3 scripts/build_public_lite_content.py"
   }
 }

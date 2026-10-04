@@ -1200,3 +1200,10 @@ th {
 .notebook-results .console { margin-top: 16px; max-height: 420px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; }
 .notebook-workbench code, .notebook-workbench li { overflow-wrap: anywhere; }
 @media (max-width: 700px) { .notebook-toolbar { gap: 12px; } .notebook-toolbar > .field { flex-basis: 100%; } }
+.public-lite-note {
+  margin: 14px 0;
+  padding: 12px 14px;
+  border-left: 3px solid #0f5fb8;
+  background: #edf6ff;
+  color: #18324a;
+}

@@ -71,7 +71,20 @@ node --test server/python-runtime.test.mjs
 
 GitHub Pages 发布版本只包含脱敏后的运行数据和静态页面。以下来源文件不提交到公网仓库：
 
-公开站点可浏览 Python 题目、评分标准和老师带练，但不会启动 JupyterLab，也不能运行或提交 Python 答案。真实内核、工作区、个人笔记本和交卷记录只在按上文步骤启动的本机服务中使用；`.local-jupyter/` 不发布。流程绘图等纯浏览器练习仍可在公开站点使用，记录只保存在当前浏览器。
+公开站已为 `SS-6-4-4-04` 线损计算题提供独立的 JupyterLite 试点。点击“Python编程”，选择该题，再点“打开浏览器 Jupyter”即可在浏览器内运行 Python，无需安装本地环境。它使用 Pyodide 内核，练习内容保存在当前浏览器；换设备或清除网站数据前，应从 Jupyter 菜单下载 `.ipynb`。该试点不连接本地自动评分接口，也不会读取 `.local-jupyter/`。
+
+重新生成公开浏览器环境：
+
+```sh
+python3 scripts/build_public_lite_content.py
+python3 -m venv .jupyterlite-build-env
+.jupyterlite-build-env/bin/pip install -r requirements-public-lite.txt
+.jupyterlite-build-env/bin/jupyter lite build --lite-dir lite-src --output-dir lite --apps lab --no-sourcemaps --no-unused-shared-packages
+```
+
+推送 `lite-src/` 或生成脚本后，GitHub Actions 会运行同一构建命令，并把生成的 `lite/` 静态文件提交回主分支；公开站仍沿用现有 GitHub Pages 分支发布方式。工作流只申请提交构建产物所需的仓库内容写权限。
+
+除上述线损题试点外，公开站点目前只浏览 Python 题目、评分标准和老师带练。真实本机内核、自动检查、工作区和交卷记录仍只在按上文步骤启动的本机服务中使用；`.local-jupyter/` 不发布。流程绘图等纯浏览器练习仍可在公开站点使用，记录只保存在当前浏览器。
 题目原始附件（包括评论数据及现场照片）也只留在本机，不随公开站点发布；依赖附件的看图读数与 BBox 质检需回到本机练习。
 
 ```text

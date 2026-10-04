@@ -1,0 +1,10 @@
+{
+  "jupyter-config-data": {
+    "appName": "操作技能浏览器实操台",
+    "appUrl": "./lab",
+    "appVersion": "2026.10.05",
+    "disabledExtensions": [
+      "@jupyterlab/apputils-extension:announcements"
+    ]
+  }
+}

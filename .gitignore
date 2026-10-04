@@ -2,3 +2,10 @@
 ai-exam-simulator/docs/question_bank.pdf
 ai-exam-simulator/data/raw_pdf_text.json
 ai-exam-simulator/data/exam_simulator.sqlite
+ai-exam-simulator/data/attachments/**/*.zip
+ai-exam-simulator/data/bbox-preview/
+.venv/
+.jupyterlite-build-env/
+.jupyterlite.doit.db
+.local-jupyter/
+__pycache__/
