@@ -1,0 +1,192 @@
+[
+  {
+    "id": "SS-1-1-1-01",
+    "starter": "# 请读取 business_data.csv，完成清洗、分析并保存结果。\n",
+    "files": [
+      "business_data.csv"
+    ],
+    "note": "",
+    "explanations": []
+  },
+  {
+    "id": "SS-1-2-2-01",
+    "starter": "# 请读取 text_classification_data.csv，完成分词、停用词处理和 TF-IDF。\n",
+    "files": [
+      "text_classification_data.csv"
+    ],
+    "note": "",
+    "explanations": []
+  },
+  {
+    "id": "SS-4-3-3-02",
+    "starter": "# 请根据题目编写完整 Python 脚本。\n",
+    "files": [
+      "raw_images/inspection_small.jpg",
+      "raw_images/inspection_tall.jpg",
+      "raw_images/inspection_wide.jpg",
+      "raw_images/ignore.png"
+    ],
+    "note": "raw_images/ 是为练习生成的模拟图片，不是考试原始图片。",
+    "explanations": []
+  },
+  {
+    "id": "SS-5-3-3-01",
+    "starter": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____()\nX = data[____3____]\n\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=____6____)\nmodel = LogisticRegression(max_iter=1000)\nmodel.____7____(X_train, y_train)\naccuracy = model.____8____(X_test, y_test)\nprint(\"准确率：\", accuracy)\nprint(\"满足要求\" if accuracy >= ____9____ else \"未满足要求\")\n",
+    "files": [
+      "04/SS-5-3-3-01_transformer_dga.csv"
+    ],
+    "note": "",
+    "explanations": []
+  },
+  {
+    "id": "SS-5-3-3-02",
+    "starter": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____()\nX = data[____3____]\n\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=____6____)\nmodel = LogisticRegression(max_iter=2000)\nmodel.____7____(X_train, y_train)\naccuracy = model.____8____(X_test, y_test)\nprint(\"准确率：\", accuracy)\nprint(\"满足要求\" if accuracy >= ____9____ else \"未满足要求\")\n",
+    "files": [
+      "04/SS-5-3-3-02_line_loss.csv"
+    ],
+    "note": "",
+    "explanations": []
+  },
+  {
+    "id": "SS-5-4-4-01",
+    "starter": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import accuracy_score, f1_score\nfrom sklearn.linear_model import LogisticRegression\n\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = LogisticRegression(max_iter=2000, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")\n",
+    "files": [
+      "04/SS-5-4-4-01_line_loss.csv"
+    ],
+    "note": "",
+    "explanations": [
+      "read_csv 要知道从哪里读取数据。题目已给出文件路径；代码外面已有引号，所以空里不用再加引号。",
+      "dropna 会删除含缺失值的行。题目已经写好后面的括号，这里只需填方法名；接下来还会去重和重新编号。",
+      "这 8 列是模型判断异常时使用的线索，合称特征 X。一次选择多列，要把列名写成带方括号的列表；外层 data[...] 已写好。",
+      "“是否异常”是模型要预测的正确答案列，称为标签 y。列名是文字，所以这一空要带引号。",
+      "test_size 是留给测试的数据比例。0.2 表示 20% 测试、80% 训练，对应题目要求的 8:2。",
+      "stratify=y 表示按“是否异常”的比例分层抽样，避免训练集或测试集里异常样本的比例偶然失衡。",
+      "训练集要先让标准化器学习规则（fit），再按规则转换数据（transform），合起来就是 fit_transform。",
+      "测试集只使用训练集学到的标准化规则进行转换，不能再次 fit；否则就提前用测试数据参与学习了。",
+      "fit 是训练：把训练集的线索 X_train_s 和正确答案 y_train 交给逻辑回归模型学习。",
+      "predict 是预测：让训练好的模型根据测试集线索 X_test_s 给出判断，结果存在 y_pred。",
+      "accuracy_score 将预测和真实答案比较，算出总体有多少比例判断对了，这叫准确率。",
+      "f1_score 同时考虑“报出的异常有多准”和“真正的异常找到了多少”。这题关注漏检，所以不能只看准确率。",
+      "0.70 是题目指定的 F1 合格线；程序算出的 F1 达到它才显示“达到要求”，不是把 F1 固定写成 0.70。"
+    ]
+  },
+  {
+    "id": "SS-5-4-4-02",
+    "starter": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import accuracy_score, f1_score\nfrom sklearn.ensemble import RandomForestClassifier\n\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")\n",
+    "files": [
+      "04/SS-5-4-4-02_payment_risk.csv"
+    ],
+    "note": "",
+    "explanations": [
+      "read_csv 要知道从哪里读取数据。题目已给出文件路径；代码外面已有引号，所以空里不用再加引号。",
+      "dropna 会删除含缺失值的行。题目已经写好后面的括号，这里只需填方法名；接下来还会去重和重新编号。",
+      "这 8 列是判断客户是否可能违约的线索，合称特征 X。一次选多列要用带方括号的列表；外层 data[...] 已写好。列名要与 CSV 完全一致。",
+      "“是否违约”是模型要预测的正确答案列，称为标签 y。列名是文字，所以要加引号。",
+      "test_size 是留给测试的数据比例。0.2 表示 20% 测试、80% 训练，对应题目要求的 8:2。",
+      "stratify=y 表示按“是否违约”的比例分层抽样，使训练集和测试集里的违约样本比例尽量接近。",
+      "训练集要先让标准化器学习规则（fit），再按规则转换数据（transform），合起来就是 fit_transform。",
+      "测试集只使用训练集学到的标准化规则进行转换，不能再次 fit；否则就提前用测试数据参与学习了。",
+      "fit 是训练：把训练集的客户信息 X_train_s 和已知是否违约 y_train 交给随机森林模型学习。",
+      "predict 是预测：让训练好的模型根据测试集线索 X_test_s 给出判断，结果存在 y_pred。",
+      "accuracy_score 将预测和真实答案比较，算出总体有多少比例判断对了，这叫准确率。",
+      "f1_score 同时考虑违约预测的准确程度和实际违约客户有没有被找到；只看总体准确率可能掩盖漏检。",
+      "0.70 是题目指定的 F1 合格线；程序算出的 F1 达到它才显示“达到要求”，不是把 F1 固定写成 0.70。"
+    ]
+  },
+  {
+    "id": "SS-5-4-4-03",
+    "starter": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import accuracy_score, f1_score\nfrom sklearn.ensemble import RandomForestClassifier\n\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")\n",
+    "files": [
+      "04/SS-5-4-4-03_line_icing.csv"
+    ],
+    "note": "",
+    "explanations": [
+      "read_csv 要知道从哪里读取数据。题目已给出文件路径；代码外面已有引号，所以空里不用再加引号。",
+      "dropna 会删除含缺失值的行。题目已经写好后面的括号，这里只需填方法名；接下来还会去重和重新编号。",
+      "气温、湿度、风速等 9 列是模型判断是否覆冰的线索，合称特征 X。多列要写成带方括号的列表；外层 data[...] 已写好。列名必须与 CSV 一字不差。",
+      "“是否覆冰”是模型要预测的正确答案列，称为标签 y。列名是文字，这一空要带引号。",
+      "test_size 是留给测试的数据比例。0.2 表示 20% 测试、80% 训练，对应题目要求的 8:2。",
+      "stratify=y 表示按“是否覆冰”的比例分层抽样，让训练集和测试集中的覆冰样本比例尽量接近。",
+      "训练集要先让标准化器学习规则（fit），再按规则转换数据（transform），合起来就是 fit_transform。",
+      "测试集只使用训练集学到的标准化规则进行转换，不能再次 fit；否则就提前用测试数据参与学习了。",
+      "fit 是训练：把气象与线路数据 X_train_s 和已知的覆冰结果 y_train 交给随机森林模型学习。",
+      "predict 是预测：让训练好的模型根据测试集线索 X_test_s 给出判断，结果存在 y_pred。",
+      "accuracy_score 将预测和真实答案比较，算出总体有多少比例判断对了，这叫准确率。",
+      "f1_score 同时考虑覆冰预测是否准确，以及真实覆冰有没有被找到；不能只看总体准确率。",
+      "0.85 是这道覆冰题指定的 F1 合格线，比前两题的 0.70 更高。程序算出的 F1 达到它才显示“达到要求”。"
+    ]
+  },
+  {
+    "id": "SS-5-4-4-04",
+    "starter": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import accuracy_score, f1_score\nfrom sklearn.linear_model import LogisticRegression\n\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = LogisticRegression(max_iter=2000, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")\n",
+    "files": [
+      "04/SS-5-4-4-04_terminal_comm.csv"
+    ],
+    "note": "",
+    "explanations": [
+      "read_csv 要知道从哪里读取数据。题目已给出文件路径；代码外面已有引号，所以空里不用再加引号。",
+      "dropna 会删除含缺失值的行。题目已经写好后面的括号，这里只需填方法名；接下来还会去重和重新编号。",
+      "心跳间隔、丢失率等 9 列是判断通信异常的线索，合称特征 X。多列要写成带方括号的列表。实际 CSV 列名是“CPU利用率”和“内存利用率”，中间都没有空格。",
+      "“是否异常”是模型要预测的正确答案列，称为标签 y。列名是文字，这一空要带引号。",
+      "test_size 是留给测试的数据比例。0.2 表示 20% 测试、80% 训练，对应题目要求的 8:2。",
+      "stratify=y 表示按通信异常与正常的比例分层抽样，让训练集和测试集中的异常样本比例尽量接近。",
+      "训练集要先让标准化器学习规则（fit），再按规则转换数据（transform），合起来就是 fit_transform。",
+      "测试集只使用训练集学到的标准化规则进行转换，不能再次 fit；否则就提前用测试数据参与学习了。",
+      "fit 是训练：把终端通信数据 X_train_s 和已知的异常结果 y_train 交给逻辑回归模型学习。",
+      "predict 是预测：让训练好的模型根据测试集线索 X_test_s 给出判断，结果存在 y_pred。",
+      "accuracy_score 将预测和真实答案比较，算出总体有多少比例判断对了，这叫准确率。",
+      "f1_score 同时考虑异常判断是否准确，以及真正的通信异常有没有被找到；不能只看总体准确率。",
+      "0.80 是这道通信异常题指定的 F1 合格线。程序算出的 F1 达到它才显示“达到要求”。"
+    ]
+  },
+  {
+    "id": "SS-5-5-5-01",
+    "starter": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score, f1_score\n\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nresults = []\nfor seed in [____5____]:\n    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=seed, stratify=____6____)\n    scaler = StandardScaler()\n    X_train_s = scaler.____7____(X_train)\n    X_test_s = scaler.____8____(X_test)\n    model = RandomForestClassifier(n_estimators=100, random_state=seed)\n    model.____9____(X_train_s, y_train)\n    pred = model.____10____(X_test_s)\n    results.append((accuracy_score(y_test, pred), f1_score(y_test, pred)))\nprint(results)\nacc_gap = max(item[____11____] for item in results) - min(item[0] for item in results)\nf1_gap = max(item[____12____] for item in results) - min(item[1] for item in results)\nprint(\"结果基本稳定\" if acc_gap <= ____13____ and f1_gap <= ____14____ else \"结果波动较大\")\n",
+    "files": [
+      "04/SS-5-5-5-01_payment_risk.csv"
+    ],
+    "note": "",
+    "explanations": []
+  },
+  {
+    "id": "SS-5-5-5-02",
+    "starter": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score\n\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=2026, stratify=____5____)\nscaler = StandardScaler()\nX_train_s = scaler.____6____(X_train)\nX_test_s = scaler.____7____(X_test)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____8____(X_train_s, y_train)\npred = model.____9____(X_test_s)\ntest_info = X_test.copy()\ntest_info[\"真实标签\"] = y_test.values\ntest_info[\"预测标签\"] = pred\ncounts = {}\naccs = {}\nfor level in [____10____]:\n    sub = test_info[test_info[____11____] == level]\n    counts[level] = len(sub)\n    accs[level] = ____12____(sub[\"真实标签\"], sub[\"预测标签\"]) if len(sub) else 0\n    print(level, counts[level], accs[level])\nprint(\"重点关注等级：\", ____13____(counts, key=counts.____14____))\n",
+    "files": [
+      "04/SS-5-5-5-02_transformer_health.csv"
+    ],
+    "note": "",
+    "explanations": []
+  },
+  {
+    "id": "SS-5-5-5-03",
+    "starter": "# 请根据题目完成光伏预测、噪声测试和分时段评价。\n",
+    "files": [
+      "solar_pv.csv"
+    ],
+    "note": "",
+    "explanations": []
+  },
+  {
+    "id": "SS-5-5-5-04",
+    "starter": "import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score, f1_score\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,\nrandom_state=2026, stratify=____5____)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____6____(X_train, y_train)\npred = model.____7____(X_test)\naccuracy = ____8____(y_test, pred)\nf1 = ____9____(y_test, pred)\ncapability = pd.____10____({\"指标\": [\"Accuracy\", \"F1\"], \"值\": [accuracy,\nf1]})\nprint(capability)\nbelow = capability[capability[\"值\"] < ____11____]\nprint(\"模型通过质量门禁\" if ____12____(below) == 0 else \"模型需进入下一轮迭代\")\n",
+    "files": [
+      "04/SS-5-5-5-04_user_load.csv"
+    ],
+    "note": "",
+    "explanations": []
+  },
+  {
+    "id": "SS-6-4-4-02",
+    "starter": "import asyncio\nimport random\nimport time\n\nclass TextGeneratorSimulator:\n    def __init__(self, delay_ms=200, error_rate=0.02):\n        self.delay_ms = delay_ms\n        self.error_rate = error_rate\n\n    async def generate(self, prompt):\n        # 模拟响应延迟、随机失败，并返回续写文本。\n        raise NotImplementedError(\"请完成 generate\")\n\nsimulator = TextGeneratorSimulator()\nprompts = [\"今天天气\", \"智能电表\", \"设备巡检\", \"故障预警\", \"客户服务\",\n           \"数据质量\", \"模型训练\", \"安全生产\", \"节能方案\", \"应急处置\"]\n\nasync def send_request(number, prompt):\n    # 记录开始时间，等待 generate，捕获失败，返回状态与耗时。\n    raise NotImplementedError(\"请完成 send_request\")\n\nasync def main():\n    # 顺序发送 10 条请求并汇总指标。\n    # 再用 asyncio.Semaphore(5) 和 asyncio.gather 模拟 5 人并发。\n    # 分别输出成功率、平均响应时间、吞吐量、最短及最长响应时间。\n    raise NotImplementedError(\"请完成两组测试\")\n\nawait main()\n",
+    "files": [],
+    "note": "浏览器 Python 不支持 ThreadPoolExecutor；本练习用 asyncio 模拟 5 人并发。正式练习线程池写法仍需使用本地 Jupyter。",
+    "explanations": []
+  },
+  {
+    "id": "SS-6-4-4-04",
+    "starter": "data = [\n    {\"id\": \"T001\", \"name\": \"城东 1 区\", \"supply\": 12500, \"sell\": 11800},\n    {\"id\": \"T002\", \"name\": \"城东 2 区\", \"supply\": 9800, \"sell\": 9750},\n    {\"id\": \"T003\", \"name\": \"城西 1 区\", \"supply\": 15200, \"sell\": 13600},\n    {\"id\": \"T004\", \"name\": \"城西 2 区\", \"supply\": 8600, \"sell\": 8900},\n]\n\n# 请在下方遍历数据，计算线损电量、线损率并判断状态。\n",
+    "files": [],
+    "note": "",
+    "explanations": []
+  }
+]

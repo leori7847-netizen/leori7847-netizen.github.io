@@ -1388,7 +1388,6 @@ function renderPythonSandbox() {
   const q = questions.find(q => q.id === (state.pythonQuestionId || state.store.pythonQuestionId)) || questions[0];
   state.pythonQuestionId = q.id;
   if (!['127.0.0.1', 'localhost'].includes(location.hostname)) {
-    const hasBrowserNotebook = q.id === 'SS-6-4-4-04';
     layout(`
       <section class="notebook-workbench">
         <div class="notebook-toolbar">
@@ -1397,17 +1396,15 @@ function renderPythonSandbox() {
           </select></label>
         </div>
         <h3>${escapeHTML(notebookTitle(q))}</h3>
-        <div class="tag-row"><span class="tag">${q.id}</span><span class="tag">${q.timeLimitMinutes} 分钟</span>${hasBrowserNotebook ? '<span class="tag">浏览器 Python</span>' : ''}</div>
-        <p class="muted">${hasBrowserNotebook
-          ? '这道试点题可直接在公开网站的浏览器 Jupyter 中编写并运行，无需安装 Python。草稿保存在当前浏览器，不会与本地版或其他设备自动同步。'
-          : '这道题尚未适配浏览器 Python。你仍可阅读题目与老师带练；真实本机 Jupyter、自动检查和交卷档案保持在本地版中。'}</p>
+        <div class="tag-row"><span class="tag">${q.id}</span><span class="tag">${q.timeLimitMinutes} 分钟</span><span class="tag">浏览器 Python</span></div>
+        <p class="muted">这道题可在浏览器 Jupyter 中编写并运行。练习保存在当前浏览器，不会自动同步到其他设备。</p>
         <div class="button-row">
-          ${hasBrowserNotebook ? `<a class="btn primary" href="${publicLiteNotebookUrl(q.id)}" target="_blank" rel="noopener">打开浏览器 Jupyter ↗</a>` : ''}
-          <a class="btn ${hasBrowserNotebook ? '' : 'primary'}" href="#/learn/${q.id}">老师带练</a>
+          <a class="btn primary" href="${publicLiteNotebookUrl(q.id)}" target="_blank" rel="noopener">打开浏览器 Jupyter ↗</a>
+          <a class="btn" href="#/learn/${q.id}">老师带练</a>
           <a class="btn" href="#/question/${q.id}">原题与评分标准</a>
           <a class="btn" href="./README.md">本机运行步骤</a>
         </div>
-        ${hasBrowserNotebook ? '<p class="public-lite-note"><strong>首次使用：</strong>打开后等待右上角内核就绪，点击代码单元格，补写代码，再按 Shift + Enter 运行。需要换设备时请先下载笔记本。</p>' : ''}
+        <p class="public-lite-note"><strong>首次使用：</strong>打开后等待右上角内核就绪，点击代码单元格，补写代码，再按 Shift + Enter 运行。需要换设备时请先下载笔记本。${q.id === 'SS-6-4-4-02' ? '性能测试题在浏览器内使用 asyncio 模拟并发，线程池写法需用本地 Jupyter 练习。' : ''}</p>
         <details open><summary>题目与交付要求</summary><div class="question-text">${escapeHTML(q.questionText)}</div></details>
       </section>
     `, 'Python 题目');
