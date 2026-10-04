@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.718584Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:47.825623Z",
+      "mimetype": "text/csv",
+      "name": "SS-5-4-4-01_line_loss.csv",
+      "path": "SS-5-4-4-01/04/SS-5-4-4-01_line_loss.csv",
+      "size": 52995,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-10-04T17:36:00.718584Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-10-04T17:36:00.718584Z",
+  "mimetype": null,
+  "name": "04",
+  "path": "SS-5-4-4-01/04",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

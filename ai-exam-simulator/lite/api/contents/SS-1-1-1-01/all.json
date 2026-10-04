@@ -1,0 +1,71 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.711121Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:58.928579Z",
+      "mimetype": "text/markdown",
+      "name": "\u9898\u76ee.md",
+      "path": "SS-1-1-1-01/\u9898\u76ee.md",
+      "size": 1104,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.710051Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:58.928477Z",
+      "mimetype": null,
+      "name": "answer.ipynb",
+      "path": "SS-1-1-1-01/answer.ipynb",
+      "size": 2710,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.710814Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:58.928658Z",
+      "mimetype": "text/markdown",
+      "name": "\u64cd\u4f5c\u8bf4\u660e.md",
+      "path": "SS-1-1-1-01/\u64cd\u4f5c\u8bf4\u660e.md",
+      "size": 385,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.710491Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:47.823837Z",
+      "mimetype": "text/csv",
+      "name": "business_data.csv",
+      "path": "SS-1-1-1-01/business_data.csv",
+      "size": 670,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-10-04T17:36:00.710814Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-10-04T17:36:00.710814Z",
+  "mimetype": null,
+  "name": "SS-1-1-1-01",
+  "path": "SS-1-1-1-01",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

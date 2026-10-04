@@ -1,0 +1,71 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.713640Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:47.824145Z",
+      "mimetype": "image/jpeg",
+      "name": "inspection_small.jpg",
+      "path": "SS-4-3-3-02/raw_images/inspection_small.jpg",
+      "size": 19486,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.713979Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:47.824145Z",
+      "mimetype": "image/jpeg",
+      "name": "inspection_tall.jpg",
+      "path": "SS-4-3-3-02/raw_images/inspection_tall.jpg",
+      "size": 44207,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.713228Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:47.824044Z",
+      "mimetype": "image/png",
+      "name": "ignore.png",
+      "path": "SS-4-3-3-02/raw_images/ignore.png",
+      "size": 39300,
+      "type": "file",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.714412Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:47.824145Z",
+      "mimetype": "image/jpeg",
+      "name": "inspection_wide.jpg",
+      "path": "SS-4-3-3-02/raw_images/inspection_wide.jpg",
+      "size": 89162,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-10-04T17:36:00.714221Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-10-04T17:36:00.714221Z",
+  "mimetype": null,
+  "name": "raw_images",
+  "path": "SS-4-3-3-02/raw_images",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}

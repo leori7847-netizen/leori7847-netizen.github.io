@@ -1,0 +1,29 @@
+{
+  "content": [
+    {
+      "content": null,
+      "created": "2026-10-04T17:36:00.730072Z",
+      "format": null,
+      "hash": null,
+      "hash_algorithm": null,
+      "last_modified": "2026-10-04T17:35:47.827539Z",
+      "mimetype": "text/csv",
+      "name": "SS-5-5-5-04_user_load.csv",
+      "path": "SS-5-5-5-04/04/SS-5-5-5-04_user_load.csv",
+      "size": 51133,
+      "type": "file",
+      "writable": true
+    }
+  ],
+  "created": "2026-10-04T17:36:00.730072Z",
+  "format": "json",
+  "hash": null,
+  "hash_algorithm": null,
+  "last_modified": "2026-10-04T17:36:00.730072Z",
+  "mimetype": null,
+  "name": "04",
+  "path": "SS-5-5-5-04/04",
+  "size": null,
+  "type": "directory",
+  "writable": true
+}
