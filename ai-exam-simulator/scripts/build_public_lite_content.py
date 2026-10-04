@@ -10,6 +10,15 @@ import nbformat
 ROOT = Path(__file__).resolve().parents[1]
 QUESTION_ID = "SS-6-4-4-04"
 OUTPUT_DIR = ROOT / "lite-src" / "files" / QUESTION_ID
+LINE_LOSS_STARTER = '''data = [
+    {"id": "T001", "name": "城东 1 区", "supply": 12500, "sell": 11800},
+    {"id": "T002", "name": "城东 2 区", "supply": 9800, "sell": 9750},
+    {"id": "T003", "name": "城西 1 区", "supply": 15200, "sell": 13600},
+    {"id": "T004", "name": "城西 2 区", "supply": 8600, "sell": 8900},
+]
+
+# 请在下方遍历数据，计算线损电量、线损率并判断状态。
+'''
 
 
 def load_json(path: Path):
@@ -19,7 +28,6 @@ def load_json(path: Path):
 
 def main():
     questions = load_json(ROOT / "data" / "questions.json")
-    seeds = load_json(ROOT / "data" / "notebook-seeds.json")
     question = next(item for item in questions if item["id"] == QUESTION_ID)
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -50,7 +58,7 @@ def main():
             "- 其他情况：线损正常\n\n"
             "完成后按 `Shift + Enter` 运行代码。"
         ),
-        nbformat.v4.new_code_cell(seeds["samples"]["lineLossStarter"]),
+        nbformat.v4.new_code_cell(LINE_LOSS_STARTER),
         nbformat.v4.new_markdown_cell(
             "## 运行后自查\n\n"
             "应打印 4 行，每行包含台区编号、名称、供电量、售电量、线损电量、线损率和状态。\n\n"
