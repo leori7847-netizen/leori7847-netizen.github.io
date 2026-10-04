@@ -1,11 +1,11 @@
-const CACHE_NAME = "ai-trainer-question-bank-v2026070701";
+const CACHE_NAME = "ai-trainer-question-bank-v2026100401";
 const ASSETS = [
   "./",
   "./index.html",
-  "./styles.css?v=2026070701",
-  "./vault.js?v=2026070701",
-  "./app.js?v=2026070701",
-  "./manifest.webmanifest?v=2026070701",
+  "./styles.css?v=2026100401",
+  "./bank.js?v=2026100401",
+  "./app.js?v=2026100401",
+  "./manifest.webmanifest?v=2026100401",
 ];
 
 self.addEventListener("install", (event) => {

@@ -115,70 +115,6 @@ function saveStore() {
   localStorage.setItem(STORE_KEY, JSON.stringify(store));
 }
 
-function bytesFromBase64(value) {
-  const binary = atob(value);
-  const bytes = new Uint8Array(binary.length);
-  for (let index = 0; index < binary.length; index += 1) bytes[index] = binary.charCodeAt(index);
-  return bytes;
-}
-
-async function decryptQuestionBank(password) {
-  const vault = window.ENCRYPTED_QUESTION_BANK;
-  if (!vault) return window.QUESTION_BANK || { title: "题库", total: 0, questions: [] };
-  if (!window.crypto?.subtle) throw new Error("crypto-unavailable");
-  const encoder = new TextEncoder();
-  const keyMaterial = await crypto.subtle.importKey("raw", encoder.encode(password), "PBKDF2", false, ["deriveKey"]);
-  const key = await crypto.subtle.deriveKey(
-    {
-      name: "PBKDF2",
-      hash: "SHA-256",
-      salt: bytesFromBase64(vault.salt),
-      iterations: vault.iterations,
-    },
-    keyMaterial,
-    { name: "AES-GCM", length: 256 },
-    false,
-    ["decrypt"],
-  );
-  const decrypted = await crypto.subtle.decrypt(
-    { name: "AES-GCM", iv: bytesFromBase64(vault.iv) },
-    key,
-    bytesFromBase64(vault.data),
-  );
-  return JSON.parse(new TextDecoder().decode(decrypted));
-}
-
-function renderLock(error = "") {
-  app.innerHTML = `
-    <main class="lock-screen">
-      <section class="lock-card panel">
-        <div class="lock-icon">${icons.exam}</div>
-        <h1>人工智能训练师技师理论题库</h1>
-        <p>请输入访问密码后继续刷题。</p>
-        <a class="simulator-entry compact" href="./ai-exam-simulator/?v=2026070701">
-          <strong>进入操作技能实操模拟平台</strong>
-          <span>Python / 标注 / 流程设计在线演练</span>
-        </a>
-        <form class="lock-form" data-unlock-form>
-          <input data-password type="password" autocomplete="current-password" placeholder="访问密码" autofocus />
-          <button class="primary-button" type="submit">进入网站</button>
-        </form>
-        ${error ? `<div class="lock-error">${escapeHTML(error)}</div>` : ""}
-      </section>
-    </main>
-  `;
-}
-
-async function unlockSite(password) {
-  try {
-    const payload = await decryptQuestionBank(password);
-    setQuestionBank(payload);
-    render();
-  } catch {
-    renderLock("密码不正确，或当前浏览器不支持安全解密。");
-  }
-}
-
 function exportRecords() {
   const payload = {
     app: "ai-trainer-question-bank",
@@ -337,7 +273,7 @@ function renderHome() {
         <h2>人工智能算法测试员实操模拟平台</h2>
         <p>基于 PDF 操作技能题库，提供 Python 编程、数据标注、流程设计、模拟考试和学习分析。</p>
       </div>
-      <a class="primary-button" href="./ai-exam-simulator/?v=2026070701">进入实操模拟平台</a>
+      <a class="primary-button" href="./ai-exam-simulator/?v=2026100401">进入实操模拟平台</a>
     </section>
     <main class="mode-grid" aria-label="刷题模式">
       ${modes
@@ -1040,13 +976,6 @@ app.addEventListener("change", (event) => {
   render();
 });
 
-app.addEventListener("submit", (event) => {
-  if (event.target.dataset.unlockForm === undefined) return;
-  event.preventDefault();
-  const password = event.target.querySelector("[data-password]")?.value || "";
-  unlockSite(password);
-});
-
 setInterval(() => {
   if (state.view !== "exam" || !state.exam || state.exam.submitted) return;
   if (Date.now() >= state.exam.endsAt) submitExam(true);
@@ -1054,11 +983,11 @@ setInterval(() => {
 }, 1000);
 
 function boot() {
-  if (window.ENCRYPTED_QUESTION_BANK) {
-    renderLock();
+  if (!window.QUESTION_BANK?.questions?.length) {
+    app.innerHTML = '<main class="panel empty">题库未加载，请确认 bank.js 文件存在并刷新页面。</main>';
     return;
   }
-  setQuestionBank(window.QUESTION_BANK || { title: "题库", total: 0, questions: [] });
+  setQuestionBank(window.QUESTION_BANK);
   render();
 }
 

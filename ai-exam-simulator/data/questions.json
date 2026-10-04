@@ -134,7 +134,10 @@
         "remarks": ""
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-1-1-1-01/business_data.csv"
+    ]
   },
   {
     "id": "SS-1-2-2-01",
@@ -166,9 +169,9 @@
     ],
     "practiceType": "python_coding",
     "inputFiles": [
+      "business_data.csv",
       "cleaned_text.csv",
-      "text_classification_data.csv",
-      "business_data.csv"
+      "text_classification_data.csv"
     ],
     "expectedOutputFiles": [
       "cleaned_text.csv"
@@ -238,7 +241,10 @@
         "remarks": ""
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-1-2-2-01/text_classification_data.csv"
+    ]
   },
   {
     "id": "SS-2-1-1-01",
@@ -268,6 +274,7 @@
     ],
     "practiceType": "text_labeling",
     "inputFiles": [
+      "ecomment_reviews_raw.csv",
       "input_data.csv"
     ],
     "expectedOutputFiles": [
@@ -321,7 +328,10 @@
         "remarks": ""
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-2-1-1-01/ecomment_reviews_raw.csv"
+    ]
   },
   {
     "id": "SS-2-2-2-01",
@@ -334,8 +344,8 @@
     "questionType": "实际操作题",
     "timeLimitMinutes": 60,
     "score": 100,
-    "toolsAndEnvironment": "YOLOv5 的.txt 文件。",
-    "questionText": "目标检测数据集中边界框标注质量评估与修复\n已安装配置好 python 的电脑一台，一个包含 10,000 张交通场景图像的目标检测数据集，标注格式为\n工具、设备、场地\nYOLOv5 的.txt 文件。\n给定一个包含 10,000 张交通场景图像的目标检测数据集，标注格式为 YOLOv5\n的.txt 文件。存在边界框尺寸异常（如负值）、标签 ID 错位、漏标等问题。请分析\n标注质量，修复无效标注，并按质量等级重新归类数据集。",
+    "toolsAndEnvironment": "已安装配置好 Python 的电脑一台，含 10,000 张交通场景图像及 YOLOv5 TXT 标注的数据集。",
+    "questionText": "目标检测数据集中边界框标注质量评估与修复\n工具、设备、场地：已安装配置好 Python 的电脑一台，一个包含 10,000 张交通场景图像的目标检测数据集，标注格式为 YOLOv5 的 TXT 文件。\n给定一个包含 10,000 张交通场景图像的目标检测数据集，标注格式为 YOLOv5 的 TXT 文件。存在边界框尺寸异常（如负值）、标签 ID 错位、漏标等问题。请分析标注质量，修复无效标注，并按质量等级重新归类数据集。",
     "sourcePages": [
       16
     ],
@@ -352,7 +362,7 @@
     ],
     "practiceType": "bbox_labeling",
     "inputFiles": [
-      "的.txt"
+      "demo_dataset.zip"
     ],
     "expectedOutputFiles": [],
     "rubric": [
@@ -411,7 +421,10 @@
         "remarks": ""
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-2-2-2-01/demo_dataset.zip"
+    ]
   },
   {
     "id": "SS-3-1-1-01",
@@ -435,10 +448,9 @@
       24
     ],
     "platformTags": [
-      "告警规则",
-      "监控"
+      "图像识别"
     ],
-    "practiceType": "monitoring_ops",
+    "practiceType": "image_ai",
     "inputFiles": [],
     "expectedOutputFiles": [],
     "rubric": [
@@ -542,7 +554,8 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-3-2-2-01",
@@ -620,7 +633,8 @@
         "remarks": ""
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-4-3-3-01",
@@ -752,7 +766,11 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-4-3-3-01/个人知识库文件.pdf",
+      "data/attachments/SS-4-3-3-01/共享知识库文件.pdf"
+    ]
   },
   {
     "id": "SS-4-3-3-02",
@@ -777,11 +795,21 @@
       36
     ],
     "platformTags": [
-      "图像识别"
+      "Python",
+      "PIL",
+      "OpenCV",
+      "图像增强"
     ],
-    "practiceType": "image_ai",
-    "inputFiles": [],
-    "expectedOutputFiles": [],
+    "practiceType": "python_coding",
+    "inputFiles": [
+      "insulator_defect_0001.jpg",
+      "insulator_defect_0001_aug.jpg",
+      "insulator_defect_0002.jpg"
+    ],
+    "expectedOutputFiles": [
+      "image_augmentation.py",
+      "augmented_images/"
+    ],
     "rubric": [
       {
         "id": "SS-4-3-3-02-R01",
@@ -973,7 +1001,8 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-4-4-4-01",
@@ -1123,7 +1152,10 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-4-4-4-01/天气查询插件信息.docx"
+    ]
   },
   {
     "id": "SS-4-4-4-02",
@@ -1146,11 +1178,13 @@
       42
     ],
     "platformTags": [
-      "OCR",
-      "字段抽取"
+      "智能体",
+      "流程编排"
     ],
-    "practiceType": "document_ocr",
-    "inputFiles": [],
+    "practiceType": "dify_agent",
+    "inputFiles": [
+      "文档识别图片.jpg"
+    ],
     "expectedOutputFiles": [],
     "rubric": [
       {
@@ -1271,7 +1305,10 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-4-4-4-02/文档识别图片.jpg"
+    ]
   },
   {
     "id": "SS-4-4-4-03",
@@ -1295,16 +1332,17 @@
       46
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "图像识别"
     ],
-    "practiceType": "flow_design",
+    "practiceType": "image_ai",
     "inputFiles": [
-      "流程节点模板.json"
+      "现场表记照片1.jpg",
+      "现场表记照片2.jpg",
+      "现场表记照片3.jpg",
+      "现场表记照片4.jpg",
+      "现场表记照片5.jpg"
     ],
-    "expectedOutputFiles": [
-      "flow_design.json"
-    ],
+    "expectedOutputFiles": [],
     "rubric": [
       {
         "id": "SS-4-4-4-03-R01",
@@ -1343,7 +1381,14 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-4-4-4-03/现场表记照片1.jpg",
+      "data/attachments/SS-4-4-4-03/现场表记照片2.jpg",
+      "data/attachments/SS-4-4-4-03/现场表记照片3.jpg",
+      "data/attachments/SS-4-4-4-03/现场表记照片4.jpg",
+      "data/attachments/SS-4-4-4-03/现场表记照片5.jpg"
+    ]
   },
   {
     "id": "SS-4-4-4-04",
@@ -1370,10 +1415,18 @@
     ],
     "platformTags": [
       "Dify",
-      "图像识别"
+      "智能体",
+      "流程编排"
     ],
-    "practiceType": "image_ai",
-    "inputFiles": [],
+    "practiceType": "dify_agent",
+    "inputFiles": [
+      "1.jpg",
+      "2.jpg",
+      "2__安全帽识别_样例1.jpg",
+      "2__安全帽识别_样例2.jpg",
+      "样例1.jpg",
+      "样例2.jpg"
+    ],
     "expectedOutputFiles": [],
     "rubric": [
       {
@@ -1566,7 +1619,13 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-4-4-4-04/2__安全帽识别_样例1.jpg",
+      "data/attachments/SS-4-4-4-04/2__安全帽识别_样例2.jpg",
+      "data/attachments/SS-4-4-4-04/样例1.jpg",
+      "data/attachments/SS-4-4-4-04/样例2.jpg"
+    ]
   },
   {
     "id": "SS-4-5-5-01",
@@ -1593,7 +1652,10 @@
       "流程编排"
     ],
     "practiceType": "dify_agent",
-    "inputFiles": [],
+    "inputFiles": [
+      "数据.xlsx",
+      "数据数据.xlsx"
+    ],
     "expectedOutputFiles": [],
     "rubric": [
       {
@@ -1714,7 +1776,10 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-4-5-5-01/数据.xlsx"
+    ]
   },
   {
     "id": "SS-4-5-5-02",
@@ -1935,7 +2000,8 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-4-5-5-03",
@@ -1962,10 +2028,14 @@
       66
     ],
     "platformTags": [
-      "图像识别"
+      "智能体",
+      "流程编排"
     ],
-    "practiceType": "image_ai",
-    "inputFiles": [],
+    "practiceType": "dify_agent",
+    "inputFiles": [
+      "悬式绝缘子缺陷破损.jpg",
+      "物品数量统计.jpg"
+    ],
     "expectedOutputFiles": [],
     "rubric": [
       {
@@ -2158,7 +2228,11 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-4-5-5-03/悬式绝缘子缺陷破损.jpg",
+      "data/attachments/SS-4-5-5-03/物品数量统计.jpg"
+    ]
   },
   {
     "id": "SS-4-5-5-04",
@@ -2186,7 +2260,10 @@
       "标注质检"
     ],
     "practiceType": "bbox_labeling",
-    "inputFiles": [],
+    "inputFiles": [
+      "small_animals.jpg",
+      "small_animals_result.jpg"
+    ],
     "expectedOutputFiles": [],
     "rubric": [
       {
@@ -2217,149 +2294,321 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-5-3-3-01",
-    "title": "变压器油色谱在线监测异常预警模型的数据处理与算法测试 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
+    "title": "变压器油色谱在线监测异常预警模型的基础运行与准确率测试",
     "module": "智能训练",
     "moduleCode": "SS-5",
     "subModuleCode": "SS-5-3",
     "evaluationContent": "",
     "level": "高级工",
     "questionType": "实际操作题",
-    "timeLimitMinutes": 90,
+    "timeLimitMinutes": 60,
     "score": 100,
-    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用变压器油色谱在线监测数据集 1 份（路径：04/SS-5-3-3- 01_transformer_dga.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
-    "questionText": "变压器油色谱在线监测异常预警模型的数据处理与算法测试\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用变压器油色谱在线监测数据集 1 份（路径：04/SS-5-3-3-\n01_transformer_dga.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局通过油色谱在线监\n测装置（DGA）采集了所辖 220kV 主变压器近半年的油中溶解气体浓度及运行工况数\n据，希望建立异常预警模型，对变压器是否存在潜伏性故障进行预测。数据集\ntransformer_dga.csv 已预先放置在指定路径下，部分数据如表 1-1 所示。\n表 1-1 变压器油色谱在线监测数据集（部分）\n负载 运行 是否\n序号 H2 CH4 C2H6 C2H4 C2H2 总烃 油温\n率 年限 异常\n1 16.92 80.43 44.26 37.16 1.57 163.41 55.32 0.407 6.9 0\n2 134.86 19.25 182.11 159.19 4.22 364.77 93.09 0.777 14.4 1\n3 87.69 59.23 41.42 1 1.71 103.36 53.16 0.829 6.7 0\n4 129.01 54.27 108.83 79.87 5.41 248.39 74.69 0.99 22.9 1\n… … … … … … … … … … …\n字段说明：H2（氢气，μL/L）、CH4（甲烷，μL/L）、C2H6（乙烷，μL/L）、\nC2H4（乙烯，μL/L）、C2H2（乙炔，μL/L）、总烃（CH4+C2H6+C2H4+C2H2，\nμL/L）、油温（℃）、负载率（实际负载/额定容量）、运行年限（年）、是否异\n常（1=存在潜伏性故障，0=正常运行）。\n\n（二）考核任务\n针对该变压器油色谱异常预警业务场景，使用 Python 完成数据处理与逻辑回归\n模型的算法测试。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（35 分）\n①读取 transformer_dga.csv 数据集（10 分）\n②数据集进行缺失值与重复值处理（15 分）\n③打印输出处理后数据集的 shape（10 分）\n（2）算法测试（65 分）\n①划分特征 X（字段：H2、CH4、C2H6、C2H4、C2H2、总烃、油温、负载率、运\n行年限）与标签 Y（字段：是否异常）（10 分）\n②按 8:2 比例、random_state=2026 划分训练集和测试集（15 分）\n③定义并训练逻辑回归模型（15 分）\n④输出模型在测试集上的准确率（10 分）\n⑤ 输出分类报告（classification_report），并判断模型是否满足上线要求\n（准确率阈值参考：≥ 85% 为合格）（15 分）\n3.工作终结\n\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
+    "toolsAndEnvironment": "21 考核要求及工作规范 （一）现场条件 考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运",
+    "questionText": "变压器油色谱在线监测异常预警模型的基础运行与准确率测试。\n工具、设备、场地 21\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局通过油色谱在线监\n测装置（DGA）采集了所辖 220kV 主变压器近半年的油中溶解气体浓度及运行工况数\n据，希望建立异常预警模型，对变压器是否存在潜伏性故障进行预测。数据集\n04/SS-5-3-3-01_transformer_dga.csv 已预先放置在指定路径下，部分数据如表 1-\n1 所示。\n表 1-1 变压器油色谱在线监测数据集（部分）\n负载 运行 是否\n序号 H2 CH4 C2H6 C2H4 C2H2 总烃 油温\n率 年限 异常\n1 16.92 80.43 44.26 37.16 1.57 163.41 55.32 0.407 6.9 0\n2 134.86 19.25 182.11 159.19 4.22 364.77 93.09 0.777 14.4 1\n3 87.69 59.23 41.42 1 1.71 103.36 53.16 0.829 6.7 0\n4 129.01 54.27 108.83 79.87 5.41 248.39 74.69 0.99 22.9 1\n… … … … … … … … … … …\n字段说明：H2（氢气，μL/L）、CH4（甲烷，μL/L）、C2H6（乙烷，μL/L）、\nC2H4（乙烯，μL/L）、C2H2（乙炔，μL/L）、总烃（CH4+C2H6+C2H4+C2H2，\nμL/L）、油温（℃）、负载率（实际负载/额定容量）、运行年限（年）、是否异\n\n常（1=存在潜伏性故障，0=正常运行）。\n（二）考核任务\n针对该变压器油色谱异常预警业务场景，使用 Python 补全给定代码，完成数据\n处理、逻辑回归模型训练、准确率输出及阈值判断。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（20 分）\n①请补全以下空格部分代码，读取 04/SS-5-3-3-01_transformer_dga.csv 数据\n集（8 分）\ndata = pd.read_csv(\"____1____\")\n②请补全以下空格部分代码，对数据集进行缺失值处理（12 分）\ndata = data.____2____()\n（2）算法测试（80 分）\n①请补全以下空格部分代码，划分特征 X（字段：\nH2、CH4、C2H6、C2H4、C2H2、总烃、油温、负载率、运行年限）与标签 y（字段：\n是否异常）（15 分）\nX = data[____3____]\ny = data[____4____]\n\n②请补全以下空格部分代码，按 8:2 比例、random_state=2026 划分训练集和测\n试集（15 分）\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=____6____)\n③请补全以下空格部分代码，定义并训练逻辑回归模型（25 分）\nmodel = LogisticRegression(max_iter=1000)\nmodel.____7____(X_train, y_train)\n④请补全以下空格部分代码，计算并输出模型在测试集上的准确率（15 分）\naccuracy = model.____8____(X_test, y_test)\nprint(\"准确率：\", accuracy)\n⑤请补全以下空格部分代码，根据准确率与 85%阈值作出上线判断（10 分）\nprint(\"满足要求\" if accuracy >= ____9____ else \"未满足要求\")\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。\n参考代码（请补全空格后运行）\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____()\nX = data[____3____]\n\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=____6____)\nmodel = LogisticRegression(max_iter=1000)\nmodel.____7____(X_train, y_train)\naccuracy = model.____8____(X_test, y_test)\nprint(\"准确率：\", accuracy)\nprint(\"满足要求\" if accuracy >= ____9____ else \"未满足要求\")",
     "sourcePages": [
       70,
       71,
-      72
+      72,
+      73
     ],
     "rubricPages": [
-      73,
       74,
       75,
       76,
       77,
-      78,
-      79,
-      80,
-      81
+      78
     ],
     "platformTags": [
       "模型评估",
-      "黄金测试集"
+      "质量门禁"
     ],
     "practiceType": "model_evaluation",
     "inputFiles": [
-      "01_transformer_dga.csv",
-      "transformer_dga.csv"
+      "04/SS-5-3-3-01_transformer_dga.csv",
+      "SS-5-3-3-01_transformer_dga.csv"
     ],
     "expectedOutputFiles": [],
     "rubric": [
       {
         "id": "SS-5-3-3-01-R01",
         "order": 1,
-        "item": "数据处理",
-        "requirement": "数据处理",
+        "item": "数据处理 01_transformer_dga.csv 数据集。",
+        "requirement": "数据处理 01_transformer_dga.csv 数据集。",
         "points": 50,
-        "standard": "对数据集进行缺失值与重复值预 data=pd. 处理。1.3 输出处理后行列数：打 read_csv 印输出处理后数据集的 shape。 ('04/SS- 5-3-3- 01_trans former_d 正确调用 ga.csv') pd.read_csv('transformer_dga. data=dat csv')读取数据集并赋值给变量 a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 950,10) importpa 正确使用 dropna()（或等效 ndasaspd fillna()）方法处理缺失值 data=pd. read_csv ('04/SS- 5-3-3- 01_trans former_d ga.csv') data=dat a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 950,10) importpa ndasaspd data=pd. read_csv ('04/SS- 5-3-3- 01_trans former_d 正确使用 drop_duplicates()方法 ga.csv') 处理重复值 data=dat a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 950,10) importpa ndasaspd data=pd. read_csv ('04/SS- 5-3-3- 01_trans former_d 清洗结果正确赋值（变量名不 ga.csv') 限），且后续特征/标签划分使用 data=dat 同一清洗后变量 a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 950,10) 正确使用 DataFrame.shape 属性 importpa 获取处理后数据集的行列数 ndasaspd data=pd. read_csv ('04/SS- 5-3-3- 01_trans former_d ga.csv') data=dat a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 950,10) importpa ndasaspd data=pd. read_csv ('04/SS- 5-3-3- 01_trans former_d 正确使用 print()函数输出处理后 ga.csv') 数据集的 shape data=dat a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 950,10) X=data[[ 'H2','CH 4','C2H6 ','C2H4' 2.1 划分特征 X ,'C2H2', （H2、CH4、C2H6、C2H4、C2H2、 '总烃',' 总烃、油温、负载率、运行年 油温',' 限）与标签 y（是否异常）。2.2 正确选取 9 个指定字段 负载率', 按 8:2 比例、random_state=2026 （H2、CH4、C2H6、C2H4、C2H2、 '运行年",
+        "standard": "data=dat 1.2 缺失值处理：正确补全 a.dropna dropna()代码。 ()X=data [[\"H2\",\" CH4\",\"C2 H6\",\"C2H 4\",\"C2H2 \",\"总烃 \",\"油温 \",\"负载 率\",\"运 行年限 \"]]y=dat a[\"是否 异常\"] importpa ndasaspd 1.2（12 分）：正确补全 dropna fromskle 并保证后续代码可以运行 arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.lin ear_mode limportL ogisticR egressio ndata=pd .read_cs v(\"04/SS -5-3-3- 01_trans former_d ga.csv\") data=dat a.dropna ()X=data [[\"H2\",\" CH4\",\"C2 H6\",\"C2H 4\",\"C2H2 \",\"总烃 \",\"油温 \",\"负载 率\",\"运 行年限 \"]]y=dat a[\"是否 异常\"] X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 2.1 正确补全特征 X 和标签 ,random_ y。2.2 正确补全 8:2 划分参数及 state=20 random_state。训练代码。2.3 正 2.1（15 分）：正确补全指定特征 26)model",
         "remarks": ""
       },
       {
         "id": "SS-5-3-3-01-R02",
         "order": 2,
-        "item": "算法测试 划分训练集和测试集。2.3 定义逻",
-        "requirement": "算法测试 划分训练集和测试集。2.3 定义逻",
+        "item": "算法测试 确补全逻辑回归模型 2.4 正确补",
+        "requirement": "算法测试 确补全逻辑回归模型 2.4 正确补",
         "points": 50,
-        "standard": "总烃、油温、负载率、运行年 限 辑回归模型并在训练集上训练。 限）构造特征 X ']]y=dat 2.4 输出模型在测试集上的准确率。 a['是否 2.5 输出 classification_report 异常 并判断是否满足上线要求（≥85% ']fromsk 为合格）。 learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr essionmo del=Logi sticRegr ession(m ax_iter= 1000)mod el.fit(X _train,y _train)p rint(mod el.score (X_test, y_test)) #≈0.989 5fromskl earn.met ricsimpo rtclassi fication _reporty _pred=mo del.pred ict(X_te st)print (classif ication_ report(y _test,y_ pred))# 准确率 ≈0.9895 ≥0.85， 满足上线 要求 正确选取\"是否异常\"字段构造标 X=data[[ 签 y 'H2','CH 4','C2H6 ','C2H4' ,'C2H2', '总烃',' 油温',' 负载率', '运行年 限 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr essionmo del=Logi sticRegr ession(m ax_iter= 1000)mod el.fit(X _train,y _train)p rint(mod el.score (X_test, y_test)) #≈0.989 5fromskl earn.met ricsimpo rtclassi fication _reporty _pred=mo del.pred ict(X_te st)print (classif ication_ report(y _test,y_ pred))# 准确率 ≈0.9895 ≥0.85， 满足上线 要求 X=data[[ 'H2','CH 4','C2H6 ','C2H4' ,'C2H2', '总烃',' 油温',' 负载率', '运行年 限 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp 正确从 sklearn.model_selection orttrain 导入 train_test_split _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr essionmo del=Logi sticRegr ession(m ax_iter= 1000)mod el.fit(X _train,y _train)p rint(mod el.score (X_test, y_test)) #≈0.989 5fromskl earn.met ricsimpo rtclassi fication _reporty _pred=mo del.pred ict(X_te st)print (classif ication_ report(y _test,y_ pred))# 准确率 ≈0.9895 ≥0.85， 满足上线 要求 X=data[[ 'H2','CH 4','C2H6 ','C2H4' ,'C2H2', '总烃',' 油温',' 负载率', '运行年 正确设置 test_size=0.2 限 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr essionmo del=Logi sticRegr ession(m ax_iter= 1000)mod el.fit(X _train,y _train)p rint(mod el.score (X_test, y_test)) #≈0.989 5fromskl earn.met ricsimpo rtclassi fication _reporty _pred=mo del.pred ict(X_te st)print (classif ication_ report(y _test,y_ pred))# 准确率 ≈0.9895 ≥0.85， 满足上线 要求 正确设置 random_state=2026 且 X=data[[ 四个变量 'H2','CH （X_train、X_test、y_train、y 4','C2H6 _test）正确赋值 ','C2H4' ,'C2H2', '总烃',' 油温',' 负载率', '运行年 限 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr essionmo del=Logi sticRegr ession(m ax_iter= 1000)mod el.fit(X _train,y _train)p rint(mod el.score (X_test, y_test)) #≈0.989 5fromskl earn.met ricsimpo rtclassi fication",
+        "standard": "字段列表和标签字段 =Logisti 全准确率计算代码并输出结果。 cRegress 2.5 正确补全 85%阈值并输出判断 ion(max_ 结论。 iter=100 0)model. fit(X_tr ain,y_tr ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26)model =Logisti cRegress ion(max_ iter=100 0)model. 2.2（15 分）：正确补全 fit(X_tr test_size=0.2 和 ain,y_tr random_state=2026 ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") X_train, X_test,y 2.3（25 分）：正确补全 fit 并完 _train,y 成模型训练 _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26)model =Logisti cRegress ion(max_ iter=100 0)model. fit(X_tr ain,y_tr ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26)model 2.4（15 分）：正确补全 score 并 =Logisti 输出测试集准确率 cRegress ion(max_ iter=100 0)model. fit(X_tr ain,y_tr ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26)model =Logisti cRegress ion(max_ iter=100 0)model. 2.5（10 分）：正确补全 0.85 阈 fit(X_tr 值并给出明确结论 ain,y_tr ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") 每超 1 分钟扣 1 分，超过 5 分停",
         "remarks": ""
+      },
+      {
+        "id": "SS-5-3-3-01-R03",
+        "order": 3,
+        "item": "超时扣分 按时完成工作",
+        "requirement": "超时扣分 按时完成工作",
+        "points": 0,
+        "standard": "止操作。 考评人： 日期: 地点:",
+        "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-3-3-01/SS-5-3-3-01_transformer_dga.csv"
+    ]
   },
   {
     "id": "SS-5-3-3-02",
-    "title": "配网台区线损率异常诊断模型的数据处理与算法测试 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
+    "title": "配网台区线损率异常诊断模型的基础运行与准确率测试",
     "module": "智能训练",
     "moduleCode": "SS-5",
     "subModuleCode": "SS-5-3",
     "evaluationContent": "",
     "level": "高级工",
     "questionType": "实际操作题",
-    "timeLimitMinutes": 90,
+    "timeLimitMinutes": 60,
     "score": 100,
-    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用台区线损率监测数据集 1 份（line_loss.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
-    "questionText": "配网台区线损率异常诊断模型的数据处理与算法测试\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用台区线损率监测数据集 1 份（line_loss.csv）、考核试题纸 1\n份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局营配班组对所辖\n10kV 配网台区进行线损率监测，希望建立异常诊断模型，对台区线损率是否出现异\n常（可能由窃电、计量异常或设备故障引起）进行预测。数据集 line_loss.csv 已\n预先放置在指定路径下，部分数据如表 1-1 所示。\n表 1-1 台区线损率监测数据集（部分）\n变压器 低电压 运行年 线路总\n供电量 售电量 平均负 是否异\n序号 用户数 容量 用户占 限 长度\n（kWh） （kWh） 载率 常\n（kVA） 比 （年） （km）\n1 41707 39941 213 315 0.944 0.000 19.3 3.67 0\n2 59727 56209 214 630 0.419 0.047 20.6 3.93 0\n3 26898 24776 133 315 0.709 0.052 4.8 0.61 0\n4 23682 21563 227 315 0.816 0.003 12.5 1.59 0\n… … … … … … … … … …\n字段说明：供电量=台区计量出口供电量；售电量=台区用户表抄表电量总和；\n变压器容量=配电变压器额定容量；平均负载率=实际负载/额定容量；低电压用户占\n比=电压低于国标范围的用户占比；线路总长度=台区低压线路总长度（含主干线及\n\n分支线，km）；是否异常：1=存在异常（线损率显著偏高），0=正常运行。\n（二）考核任务\n针对该配网台区线损率异常诊断业务场景，使用 Python 完成数据处理与逻辑回\n归模型的算法测试。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（35 分）\n①读取 line_loss.csv 数据集（10 分）\n②对数据集进行缺失值与重复值处理（15 分）\n③打印输出处理后数据集的 shape（10 分）\n（2）算法测试（65 分）\n①划分特征 X（字段：供电量、售电量、用户数、变压器容量、平均负载率、低\n电压用户占比、运行年限、线路总长度）与标签 y（字段：是否异常）（10 分）\n②按 8:2 比例、random_state=2026 划分训练集和测试集（15 分）\n③定义并训练逻辑回归模型（15 分）\n④输出模型在测试集上的准确率（10 分）\n⑤输出分类报告（classification_report），并判断模型是否满足上线要求\n（准确率阈值参考：≥85%为合格）（15 分）\n\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
+    "toolsAndEnvironment": "21 考核要求及工作规范 （一）现场条件 考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运",
+    "questionText": "配网台区线损率异常诊断模型的基础运行与准确率测试。\n工具、设备、场地 21\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局营配班组对所辖\n10kV 配网台区进行线损率监测，希望建立异常诊断模型，对台区线损率是否出现异\n常（可能由窃电、计量异常或设备故障引起）进行预测。数据集 04/SS-5-3-3-\n02_line_loss.csv 已预先放置在指定路径下，部分数据如表 1-1 所示。\n表 1-1 台区线损率监测数据集（部分）\n变压器\n供电量 售电量 低电压 运行年 线路总\n容量 平均负 是否异\n序号 （kWh （kWh 用户数 用户占 限 长度\n（kVA 载率 常\n） ） 比 （年） （km）\n）\n1 41707 39941 213 315 0.944 0.000 19.3 3.67 0\n2 59727 56209 214 630 0.419 0.047 20.6 3.93 0\n3 26898 24776 133 315 0.709 0.052 4.8 0.61 0\n4 23682 21563 227 315 0.816 0.003 12.5 1.59 0\n… … … … … … … … … …\n字段说明：供电量=台区计量出口供电量；售电量=台区用户表抄表电量总和；\n变压器容量=配电变压器额定容量；平均负载率=实际负载/额定容量；低电压用户占\n比=电压低于国标范围的用户占比；线路总长度=台区低压线路总长度（含主干线及\n\n分支线，km）；是否异常：1=存在异常（线损率显著偏高），0=正常运行。\n（二）考核任务\n针对该配网台区线损率异常诊断业务场景，使用 Python 补全给定代码，完成数\n据处理、逻辑回归模型训练、准确率输出及阈值判断。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（20 分）\n①请补全以下空格部分代码，读取 04/SS-5-3-3-02_line_loss.csv 数据集（8\n分）\ndata = pd.read_csv(\"____1____\")\n②请补全以下空格部分代码，对数据集进行缺失值处理（12 分）\ndata = data.____2____()\n（2）算法测试（80 分）\n①请补全以下空格部分代码，划分特征 X（字段：供电量、售电量、用户数、变\n压器容量、平均负载率、低电压用户占比、运行年限、线路总长度）与标签 y（字\n段：是否异常）（15 分）\nX = data[____3____]\ny = data[____4____]\n\n②请补全以下空格部分代码，按 8:2 比例、random_state=2026 划分训练集和测\n试集（15 分）\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=____6____)\n③请补全以下空格部分代码，定义并训练逻辑回归模型（25 分）\nmodel = LogisticRegression(max_iter=2000)\nmodel.____7____(X_train, y_train)\n④请补全以下空格部分代码，计算并输出模型在测试集上的准确率（15 分）\naccuracy = model.____8____(X_test, y_test)\nprint(\"准确率：\", accuracy)\n⑤请补全以下空格部分代码，根据准确率与 85%阈值作出上线判断（10 分）\nprint(\"满足要求\" if accuracy >= ____9____ else \"未满足要求\")\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。\n参考代码（请补全空格后运行）\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.linear_model import LogisticRegression\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____()\nX = data[____3____]\n\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=____6____)\nmodel = LogisticRegression(max_iter=2000)\nmodel.____7____(X_train, y_train)\naccuracy = model.____8____(X_test, y_test)\nprint(\"准确率：\", accuracy)\nprint(\"满足要求\" if accuracy >= ____9____ else \"未满足要求\")",
     "sourcePages": [
-      93,
-      94,
-      95
+      79,
+      80,
+      81,
+      82
     ],
     "rubricPages": [
-      96,
-      97,
-      98,
-      99,
-      100,
-      101,
-      102,
-      103,
-      104
+      83,
+      84,
+      85,
+      86,
+      87,
+      88
     ],
     "platformTags": [
       "模型评估",
-      "黄金测试集"
+      "质量门禁"
     ],
     "practiceType": "model_evaluation",
     "inputFiles": [
-      "line_loss.csv"
+      "02_line_loss.csv",
+      "04/SS-5-3-3-02_line_loss.csv",
+      "SS-5-3-3-02_line_loss.csv"
     ],
     "expectedOutputFiles": [],
     "rubric": [
       {
         "id": "SS-5-3-3-02-R01",
         "order": 1,
-        "item": "数据处理 集进行缺失值与重复值预处理。 data=pd.",
-        "requirement": "数据处理 集进行缺失值与重复值预处理。 data=pd.",
+        "item": "数据处理 02_line_loss.csv 数据集。1.2",
+        "requirement": "数据处理 02_line_loss.csv 数据集。1.2",
         "points": 50,
-        "standard": "1.3 输出处理后行列数：打印输出 read_csv 处理后数据集的行列数（shape）。 ('04/SS- 5-3-3- 02_line_ loss.csv 正确调用 ')data=d pd.read_csv('line_loss.csv') ata.drop 读取数据集并赋值给变量 na()data =data.dr op_dupli cates()p rint(dat a.shape) #(1045,9 ) importpa ndasaspd 正确使用 dropna()（或等效 data=pd. fillna()）方法处理缺失值 read_csv ('04/SS- 5-3-3- 02_line_ loss.csv ')data=d ata.drop na()data =data.dr op_dupli cates()p rint(dat a.shape) #(1045,9 ) importpa ndasaspd data=pd. read_csv ('04/SS- 5-3-3- 02_line_ loss.csv 正确使用 drop_duplicates()方法 ')data=d 处理重复值 ata.drop na()data =data.dr op_dupli cates()p rint(dat a.shape) #(1045,9 ) importpa ndasaspd data=pd. read_csv ('04/SS- 5-3-3- 02_line_ loss.csv 清洗结果正确赋值（变量名不 ')data=d 限），且后续特征/标签划分使用 ata.drop 同一清洗后变量 na()data =data.dr op_dupli cates()p rint(dat a.shape) #(1045,9 ) importpa 正确使用 DataFrame.shape 属性 ndasaspd 获取处理后数据集的行列数 data=pd. read_csv ('04/SS- 5-3-3- 02_line_ loss.csv ')data=d ata.drop na()data =data.dr op_dupli cates()p rint(dat a.shape) #(1045,9 ) importpa ndasaspd data=pd. read_csv ('04/SS- 5-3-3- 02_line_ loss.csv 正确使用 print()函数输出处理后 ')data=d 数据集的 shape ata.drop na()data =data.dr op_dupli cates()p rint(dat a.shape) #(1045,9 ) X=data[[ '供电量 ','售电 量','用 2.1 划分特征 X（供电量、售电量、 户数',' 用户数、变压器容量、平均负载 变压器容 率、低电压用户占比、运行年限、 量','平 线路总长度）与标签 y（是否异 正确选取 8 个指定字段（供电量、 均负载率 常）。2.2 按 8:2 比例、 售电量、用户数、变压器容量、 ','低电 random_state=2026 划分训练集和",
+        "standard": "ata.drop 缺失值处理：正确补全 dropna() na()X=da 代码。 ta[[\"供 电量\",\" 售电量\", \"用户数 \",\"变压 器容量\", \"平均负 载率\",\" 低电压用 户占比\", \"运行年 限\",\"线 路总长度 \"]]y=dat a[\"是否 异常\"] importpa 1.2（12 分）：正确补全 dropna ndasaspd 并保证后续代码可以运行 fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.lin ear_mode limportL ogisticR egressio ndata=pd .read_cs v(\"04/SS -5-3-3- 02_line_ loss.csv \")data=d ata.drop na()X=da ta[[\"供 电量\",\" 售电量\", \"用户数 \",\"变压 器容量\", \"平均负 载率\",\" 低电压用 户占比\", \"运行年 限\",\"线 路总长度 \"]]y=dat a[\"是否 异常\"] X_train, X_test,y _train,y _test=tr ain_test 2.1 正确补全特征 X 和标签 _split(X y。2.2 正确补全 8:2 划分参数及 ,y,test_ random_state。2.3 正确补全逻辑 2.1（15 分）：正确补全指定特征 size=0.2",
         "remarks": ""
       },
       {
         "id": "SS-5-3-3-02-R02",
         "order": 2,
-        "item": "算法测试 平均负载率、低电压用户占比、 压用户占",
-        "requirement": "算法测试 平均负载率、低电压用户占比、 压用户占",
+        "item": "算法测试 回归模型训练代码。2.4 正确补全",
+        "requirement": "算法测试 回归模型训练代码。2.4 正确补全",
         "points": 50,
-        "standard": "测试集。2.3 定义逻辑回归模型并 运行年限、线路总长度）构造特 比','运 在训练集上训练。2.4 输出模型在 征 X 行年限', 测试集上的准确率。2.5 输出 '线路总 classification_report 并判断是 长度 否满足上线要求（≥85%为合格）。 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr essionmo del=Logi sticRegr ession(m ax_iter= 2000)mod el.fit(X _train,y _train)p rint(mod el.score (X_test, y_test)) #≈0.923 4fromskl earn.met ricsimpo rtclassi fication _reporty _pred=mo del.pred ict(X_te st)print (classif ication_ report(y _test,y_ pred))# 准确率 ≈0.9234 ≥0.85， 满足上线 要求 X=data[[ '供电量 ','售电 量','用 户数',' 变压器容 量','平 均负载率 ','低电 压用户占 比','运 行年限', '线路总 长度 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra 正确选取\"是否异常\"字段构造标 in,X_tes 签 y t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr essionmo del=Logi sticRegr ession(m ax_iter= 2000)mod el.fit(X _train,y _train)p rint(mod el.score (X_test, y_test)) #≈0.923 4fromskl earn.met ricsimpo rtclassi fication _reporty _pred=mo del.pred ict(X_te st)print (classif ication_ report(y _test,y_ pred))# 准确率 ≈0.9234 ≥0.85， 满足上线 要求 X=data[[ '供电量 ','售电 量','用 户数',' 变压器容 量','平 均负载率 ','低电 压用户占 比','运 行年限', '线路总 长度 正确从 sklearn.model_selection ']]y=dat 导入 train_test_split a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr essionmo del=Logi sticRegr ession(m ax_iter= 2000)mod el.fit(X _train,y _train)p rint(mod el.score (X_test, y_test)) #≈0.923 4fromskl earn.met ricsimpo rtclassi fication _reporty _pred=mo del.pred ict(X_te st)print (classif ication_ report(y _test,y_ pred))# 准确率 ≈0.9234 ≥0.85， 满足上线 要求 X=data[[ '供电量 ','售电 量','用 正确设置 test_size=0.2 户数',' 变压器容 量','平 均负载率 ','低电 压用户占 比','运 行年限', '线路总 长度 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr essionmo del=Logi sticRegr ession(m ax_iter= 2000)mod el.fit(X _train,y _train)p rint(mod el.score (X_test, y_test)) #≈0.923 4fromskl earn.met ricsimpo rtclassi fication _reporty _pred=mo del.pred ict(X_te st)print (classif ication_ report(y _test,y_ pred))# 准确率 ≈0.9234 ≥0.85， 满足上线 要求 X=data[[ '供电量 ','售电 量','用 户数',' 变压器容 量','平 均负载率 ','低电 压用户占 比','运 行年限', '线路总 长度 ']]y=dat a['是否 异常 ']fromsk 正确设置 random_state=2026 且 learn.mo 四个变量 del_sele （X_train、X_test、y_train、y ctionimp _test）正确赋值 orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026)fr omsklear n.linear _modelim portLogi sticRegr",
+        "standard": "字段列表和标签字段 ,random_ 准确率计算代码并输出结果。2.5 state=20 正确补全 85%阈值并输出判断结论。 26)model =Logisti cRegress ion(max_ iter=200 0)model. fit(X_tr ain,y_tr ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26)model =Logisti cRegress ion(max_ iter=200 0)model. 2.2（15 分）：正确补全 fit(X_tr test_size=0.2 和 ain,y_tr random_state=2026 ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26)model =Logisti cRegress ion(max_ iter=200 0)model. 2.3（25 分）：正确补全 fit 并完 fit(X_tr 成模型训练 ain,y_tr ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 2.4（15 分）：正确补全 score 并 ,random_ 输出测试集准确率 state=20 26)model =Logisti cRegress ion(max_ iter=200 0)model. fit(X_tr ain,y_tr ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26)model =Logisti cRegress ion(max_ iter=200 0)model. 2.5（10 分）：正确补全 0.85 阈 fit(X_tr 值并给出明确结论 ain,y_tr ain)accu racy=mod el.score (X_test, y_test)p rint(\"准 确率： \",accura cy)print (\"满足要 求 \"ifaccur acy>=0.8 5else\"未 满足要求 \") 每超 1 分钟扣 1 分，超过 5 分停",
         "remarks": ""
+      },
+      {
+        "id": "SS-5-3-3-02-R03",
+        "order": 3,
+        "item": "超时扣分 按时完成工作",
+        "requirement": "超时扣分 按时完成工作",
+        "points": 0,
+        "standard": "止操作。 考评人： 日期: 地点:",
+        "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-3-3-02/SS-5-3-3-02_line_loss.csv"
+    ]
   },
   {
     "id": "SS-5-4-4-01",
-    "title": "配网台区线损率异常诊断模型的黄金测试集构建与训练流程优化 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
+    "title": "配网台区线损率异常诊断模型的分层划分、标准化与 F1 测试",
     "module": "智能训练",
     "moduleCode": "SS-5",
     "subModuleCode": "SS-5-4",
     "evaluationContent": "",
     "level": "技师",
     "questionType": "实际操作题",
-    "timeLimitMinutes": 90,
+    "timeLimitMinutes": 60,
     "score": 100,
-    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用台区线损率监测数据集 1 份（line_loss.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
-    "questionText": "配网台区线损率异常诊断模型的黄金测试集构建与训练流程优化\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用台区线损率监测数据集 1 份（line_loss.csv）、考核试题纸 1\n份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局营配班组前期曾以\n简单随机划分方式训练了一版基线逻辑回归模型，准确率约 92%，但未进行特征标准\n化与分层抽样，召回率偏低，存在较高的异常台区漏检风险。当前需要由技师对算\n法测试流程进行优化升级：引入特征标准化与分层抽样构建黄金测试集，开展两模\n型对比测试，对最优模型进行参数调优以显著提升召回率，并形成完整的算法上线\n测试结论。数据集 line_loss.csv 已预先放置在指定路径下，部分数据如表 1-1 所\n示。\n表 1-1 台区线损率监测数据集（部分）\n变压器 低电压 运行年 线路总\n供电量 售电量 平均负 是否异\n序号 用户数 容量 用户占 限 长度\n（kWh） （kWh） 载率 常\n（kVA） 比 （年） （km）\n1 41707 39941 213 315 0.944 0.000 19.3 3.67 0\n2 59727 56209 214 630 0.419 0.047 20.6 3.93 0\n3 26898 24776 133 315 0.709 0.052 4.8 0.61 0\n4 23682 21563 227 315 0.816 0.003 12.5 1.59 0\n… … … … … … … … … …\n\n字段说明：供电量=台区计量出口供电量；售电量=台区用户表抄表电量总和；\n变压器容量=配电变压器额定容量；平均负载率=实际负载/额定容量；低电压用户占\n比=电压低于国标范围的用户占比；线路总长度=台区低压线路总长度（含主干线及\n分支线，km）；是否异常：1=存在异常（线损率显著偏高），0=正常运行。\n（二）考核任务\n针对该配网台区线损率异常诊断业务场景，使用 Python 完成黄金测试集构建、\n两模型对比测试、参数调优及上线判断。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据准备与黄金测试集构建（30 分）\n①读取 line_loss.csv 数据集，完成缺失值与重复值清洗并重置索引（8 分）\n②划分特征 X（字段：供电量、售电量、用户数、变压器容量、平均负载率、低\n电压用户占比、运行年限、线路总长度）与标签 y（字段：是否异常）（4 分）\n③构建黄金测试集：按 8:2 比例、random_state=2026、stratify=y 分层抽样划\n分；输出训练集和测试集异常样本比例验证分层有效性（12 分）\n④使用 StandardScaler 对训练集 fit_transform、测试集 transform（6 分）\n（2）两模型对比测试（25 分）\n①构建并训练两种分类模型：逻辑回归（max_iter=2000r,a ndom_state=2026）、\n\n随机森林（n_estimators=100, random_state=2026），分别在标准化后的训练集上\n训练（10 分）\n②在同一黄金测试集上计算两模型的准确率、召回率、F1 值三项指标（10 分）\n③选出最优模型并简要说明选择依据（5 分）\n（3）模型调优（30 分）\n①针对最优模型使用 GridSearchCV（5 折交叉验证，scoring='f1'）进行参数\n调优，参数候选必须包含 class_weight=[None, 'balanced']（业务考量：异常台区\n漏检的损失成本显著高于误报的人工核查成本）（15 分）\n②输出最优参数组合及最优交叉验证 F1 值（7 分）\n③用调优后模型在黄金测试集上输出准确率、召回率与混淆矩阵（8 分）\n（4）上线判断与优化建议（15 分）\n①给出调优前后准确率与召回率的对比，并说明召回率提升对业务的实际意义\n（异常台区漏检率下降）（8 分）\n②明确给出“是否满足上线要求”的结论（准确率阈值参考：≥85%为合格）并\n提出至少 1 条后续优化方向（7 分）\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
+    "toolsAndEnvironment": "21 考核要求及工作规范 （一）现场条件 考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运",
+    "questionText": "配网台区线损率异常诊断模型的分层划分、标准化与 F1 测试。\n工具、设备、场地 21\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局营配班组前期曾以\n简单随机划分方式训练了一版基线逻辑回归模型，准确率约 92%，但未进行特征标准\n化与分层抽样，召回率偏低，存在较高的异常台区漏检风险。当前需要由技师对算\n法测试流程进行优化升级：引入特征标准化与分层抽样构建黄金测试集，开展两模\n型对比测试，对最优模型进行参数调优以显著提升召回率，并形成完整的算法上线\n测试结论。数据集 04/SS-5-4-4-01_line_loss.csv 已预先放置在指定路径下，部分\n数据如表 1-1 所示。\n表 1-1 台区线损率监测数据集（部分）\n变压器\n供电量 售电量 低电压 运行年 线路总\n容量 平均负 是否异\n序号 （kWh （kWh 用户数 用户占 限 长度\n（kVA 载率 常\n） ） 比 （年） （km）\n）\n1 41707 39941 213 315 0.944 0.000 19.3 3.67 0\n2 59727 56209 214 630 0.419 0.047 20.6 3.93 0\n3 26898 24776 133 315 0.709 0.052 4.8 0.61 0\n4 23682 21563 227 315 0.816 0.003 12.5 1.59 0\n… … … … … … … … … …\n\n字段说明：供电量=台区计量出口供电量；售电量=台区用户表抄表电量总和；\n变压器容量=配电变压器额定容量；平均负载率=实际负载/额定容量；低电压用户占\n比=电压低于国标范围的用户占比；线路总长度=台区低压线路总长度（含主干线及\n分支线，km）；是否异常：1=存在异常（线损率显著偏高），0=正常运行。\n（二）考核任务\n针对该业务场景，使用 Python 补全给定代码，完成数据清洗、按标签分层划分、\n特征标准化、模型训练，并输出准确率和 F1 值。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（20 分）\n①请补全以下空格部分代码，读取 04/SS-5-4-4-01_line_loss.csv 数据集，并\n完成缺失值、重复值清洗及索引重置（8 分）\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\n②请补全以下空格部分代码，划分特征 X（字段：供电量、售电量、用户数、变\n压器容量、平均负载率、低电压用户占比、运行年限、线路总长度）与标签 y（字\n段：是否异常）（12 分）\nX = data[____3____]\n\ny = data[____4____]\n（2）算法测试（80 分）\n①请补全以下空格部分代码，按 8:2 比例、random_state=2026 并使用\nstratify=y 分层划分训练集和测试集（15 分）\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\n②请补全以下空格部分代码，使用 StandardScaler 对训练集和测试集进行标准\n化（15 分）\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\n③请补全以下空格部分代码，定义模型并完成训练和预测（20 分）\nmodel = LogisticRegression(max_iter=2000, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\n④请补全以下空格部分代码，计算并输出测试集准确率和 F1 值（20 分）\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\n⑤请补全以下空格部分代码，根据 F1 值与 0.70 阈值作出判断（10 分）\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")\n\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。\n参考代码（请补全空格后运行）\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import accuracy_score, f1_score\nfrom sklearn.linear_model import LogisticRegression\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = LogisticRegression(max_iter=2000, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\naccuracy = ____11____(y_test, y_pred)\n\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")",
     "sourcePages": [
-      117,
-      118,
-      119
+      89,
+      90,
+      91,
+      92,
+      93
     ],
     "rubricPages": [
-      120,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101
+    ],
+    "platformTags": [
+      "模型评估",
+      "质量门禁"
+    ],
+    "practiceType": "model_evaluation",
+    "inputFiles": [
+      "04/SS-5-4-4-01_line_loss.csv",
+      "SS-5-4-4-01_line_loss.csv"
+    ],
+    "expectedOutputFiles": [],
+    "rubric": [
+      {
+        "id": "SS-5-4-4-01-R01",
+        "order": 1,
+        "item": "数据处理",
+        "requirement": "数据处理",
+        "points": 50,
+        "standard": "售电量、用户数、变压器容量、 和 dropna，代码可完成清洗 n.linear 平均负载率、低电压用户占比、 _modelim 运行年限、线路总长度）和标签 y portLogi （是否异常）。 sticRegr essionda ta=pd.re ad_csv(\" 04/SS-5- 4-4- 01_line_ loss.csv \")data=d ata.drop na().dro p_duplic ates().r eset_ind ex(drop= True)X=d ata[[\"供 电量\",\" 售电量\", \"用户数 \",\"变压 器容量\", \"平均负 载率\",\" 低电压用 户占比\", \"运行年 限\",\"线 路总长度 \"]]y=dat a[\"是否 异常\"] importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport Standard Scalerfr omsklear n.metric simporta ccuracy_ 1.2（12 分）：正确补全指定特征 score,f1 字段列表和标签字段 _scorefr omsklear n.linear _modelim portLogi sticRegr essionda ta=pd.re ad_csv(\" 04/SS-5- 4-4- 01_line_ loss.csv \")data=d ata.drop na().dro p_duplic ates().r eset_ind ex(drop= True)X=d ata[[\"供 电量\",\" 售电量\", \"用户数 \",\"变压 器容量\", \"平均负 载率\",\" 低电压用 户占比\", \"运行年 限\",\"线 路总长度 \"]]y=dat a[\"是否 异常\"] X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca 2.1 正确补全分层划分代码。2.2 ler()X_t 正确补全 StandardScaler 标准化 rain_s=s 代码。2.3 正确补全模型训练与预 2.1（15 分）：正确补全 caler.fi",
+        "remarks": ""
+      },
+      {
+        "id": "SS-5-4-4-01-R02",
+        "order": 2,
+        "item": "算法测试 测代码。2.4 正确补全 Accuracy",
+        "requirement": "算法测试 测代码。2.4 正确补全 Accuracy",
+        "points": 50,
+        "standard": "test_size=0.2 和 stratify=y t_transf 和 F1 计算代码并输出结果。2.5 orm(X_tr 正确补全 F1 阈值并输出判断结论。 ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta 2.2（15 分）：训练集使用 ndardSca fit_transform、测试集使用 ler()X_t transform rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 2.3（20 分）：正确补全 fit 和 26,strat predict ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ 2.4（20 分）：正确补全 size=0.2 accuracy_score 和 f1_score ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr 2.5（10 分）：正确补全 0.70 阈 ain_test 值并给出明确结论 _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") 每超 1 分钟扣 1 分，超过 5 分停",
+        "remarks": ""
+      },
+      {
+        "id": "SS-5-4-4-01-R03",
+        "order": 3,
+        "item": "超时扣分 按时完成工作",
+        "requirement": "超时扣分 按时完成工作",
+        "points": 0,
+        "standard": "止操作。 考评人： 日期: 地点:",
+        "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
+      }
+    ],
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-4-4-01/SS-5-4-4-01_line_loss.csv"
+    ]
+  },
+  {
+    "id": "SS-5-4-4-02",
+    "title": "工商业用户电费回收风险模型的分层划分、标准化与 F1 测试",
+    "module": "智能训练",
+    "moduleCode": "SS-5",
+    "subModuleCode": "SS-5-4",
+    "evaluationContent": "",
+    "level": "技师",
+    "questionType": "实际操作题",
+    "timeLimitMinutes": 60,
+    "score": 100,
+    "toolsAndEnvironment": "21 考核要求及工作规范 （一）现场条件 考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运",
+    "questionText": "工商业用户电费回收风险模型的分层划分、标准化与 F1 测试。\n工具、设备、场地 21\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局营销中心希望对所\n辖工商业用户（非居民）的电费回收风险进行预测，提前识别可能发生违约（拖欠\n电费 60 天以上或恶意欠费）的客户，以便营销稽查班组提前介入开展电费催收和风\n险防控工作。数据集 04/SS-5-4-4-02_payment_risk.csv 已预先放置在指定路径\n下，部分数据如表 1-1 所示。\n表 1-1 工商业用户电费回收风险数据集（部分）\n月均用\n平均账 合同容 入网年\n电量 用电波 历史违 客户星 行业类 是否违\n序号 期 量 限\n（kWh 动率 约次数 级 型 约\n（天） （kW） （年）\n）\n1 2264 0.129 34.6 0 3 1 87.1 10.7 0\n2 12148 0.096 29.0 1 4 2 80.6 4.7 0\n3 10743 0.302 10.0 3 4 0 24.2 14.5 1\n4 2559 0.159 26.7 3 4 1 31.4 5.8 1\n… … … … … … … … … …\n字段说明：月均用电量=过去 12 个月平均月用电量；用电波动率=月用电量标准\n差/均值，反映用电稳定性；平均账期=从账单生成到实际缴费的平均天数；历史违\n\n约次数=过去 24 个月发生违约的总次数；客户星级=南网客户分级（1~5 星，5 星最\n优质）；行业类型：0=工业、1=商业、2=农业生产、3=其他；合同容量=用户报装合\n同容量；入网年限=成为供电客户的时长；是否违约：1=过去 12 个月发生过违约，\n0=按时缴费用户。\n（二）考核任务\n针对该业务场景，使用 Python 补全给定代码，完成数据清洗、按标签分层划分、\n特征标准化、模型训练，并输出准确率和 F1 值。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（20 分）\n①请补全以下空格部分代码，读取 04/SS-5-4-4-02_payment_risk.csv 数据\n集，并完成缺失值、重复值清洗及索引重置（8 分）\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\n②请补全以下空格部分代码，划分特征 X（字段：月均用电量、用电波动率、平\n均账期、历史违约次数、客户星级、行业类型、合同容量、入网年限）与标签 y（字\n段：是否违约）（12 分）\nX = data[____3____]\n\ny = data[____4____]\n（2）算法测试（80 分）\n①请补全以下空格部分代码，按 8:2 比例、random_state=2026 并使用\nstratify=y 分层划分训练集和测试集（15 分）\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\n②请补全以下空格部分代码，使用 StandardScaler 对训练集和测试集进行标准\n化（15 分）\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\n③请补全以下空格部分代码，定义模型并完成训练和预测（20 分）\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\n④请补全以下空格部分代码，计算并输出测试集准确率和 F1 值（20 分）\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\n⑤请补全以下空格部分代码，根据 F1 值与 0.70 阈值作出判断（10 分）\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")\n\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。\n参考代码（请补全空格后运行）\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import accuracy_score, f1_score\nfrom sklearn.ensemble import RandomForestClassifier\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\naccuracy = ____11____(y_test, y_pred)\n\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")",
+    "sourcePages": [
+      102,
+      103,
+      104,
+      105,
+      106
+    ],
+    "rubricPages": [
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      115
+    ],
+    "platformTags": [
+      "模型评估",
+      "质量门禁"
+    ],
+    "practiceType": "model_evaluation",
+    "inputFiles": [
+      "04/SS-5-4-4-02_payment_risk.csv",
+      "SS-5-4-4-02_payment_risk.csv"
+    ],
+    "expectedOutputFiles": [],
+    "rubric": [
+      {
+        "id": "SS-5-4-4-02-R01",
+        "order": 1,
+        "item": "数据处理",
+        "requirement": "数据处理",
+        "points": 50,
+        "standard": "用电量、用电波动率、平均账期、 和 dropna，代码可完成清洗 n.ensemb 历史违约次数、客户星级、行业 leimport 类型、合同容量、入网年限）和 RandomFo 标签 y（是否违约）。 restClas sifierda ta=pd.re ad_csv(\" 04/SS-5- 4-4- 02_payme nt_risk. csv\")dat a=data.d ropna(). drop_dup licates( ).reset_ index(dr op=True) X=data[[ \"月均用 电量\",\" 用电波动 率\",\"平 均账期\", \"历史违 约次数\", \"客户星 级\",\"行 业类型\", \"合同容 量\",\"入 网年限 \"]]y=dat a[\"是否 违约\"] importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport Standard Scalerfr omsklear n.metric simporta ccuracy_ 1.2（12 分）：正确补全指定特征 score,f1 字段列表和标签字段 _scorefr omsklear n.ensemb leimport RandomFo restClas sifierda ta=pd.re ad_csv(\" 04/SS-5- 4-4- 02_payme nt_risk. csv\")dat a=data.d ropna(). drop_dup licates( ).reset_ index(dr op=True) X=data[[ \"月均用 电量\",\" 用电波动 率\",\"平 均账期\", \"历史违 约次数\", \"客户星 级\",\"行 业类型\", \"合同容 量\",\"入 网年限 \"]]y=dat a[\"是否 违约\"] X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta 2.1 正确补全分层划分代码。2.2 ndardSca 正确补全 StandardScaler 标准化 ler()X_t 代码。2.3 正确补全模型训练与预 2.1（15 分）：正确补全 rain_s=s",
+        "remarks": ""
+      },
+      {
+        "id": "SS-5-4-4-02-R02",
+        "order": 2,
+        "item": "算法测试 测代码。2.4 正确补全 Accuracy",
+        "requirement": "算法测试 测代码。2.4 正确补全 Accuracy",
+        "points": 50,
+        "standard": "test_size=0.2 和 stratify=y caler.fi 和 F1 计算代码并输出结果。2.5 t_transf 正确补全 F1 阈值并输出判断结论。 orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat 2.2（15 分）：训练集使用 ify=y)sc fit_transform、测试集使用 aler=Sta transform ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 2.3（20 分）：正确补全 fit 和 ,random_ predict state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test 2.4（20 分）：正确补全 _split(X accuracy_score 和 f1_score ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") X_train, 2.5（10 分）：正确补全 0.70 阈 X_test,y 值并给出明确结论 _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .70else\" F1 未达 到要求\") 每超 1 分钟扣 1 分，超过 5 分停",
+        "remarks": ""
+      },
+      {
+        "id": "SS-5-4-4-02-R03",
+        "order": 3,
+        "item": "超时扣分 按时完成工作",
+        "requirement": "超时扣分 按时完成工作",
+        "points": 0,
+        "standard": "止操作。 考评人： 日期: 地点:",
+        "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
+      }
+    ],
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-4-4-02/SS-5-4-4-02_payment_risk.csv"
+    ]
+  },
+  {
+    "id": "SS-5-4-4-03",
+    "title": "输电线路覆冰预测模型的分层划分、标准化与 F1 测试",
+    "module": "智能训练",
+    "moduleCode": "SS-5",
+    "subModuleCode": "SS-5-4",
+    "evaluationContent": "",
+    "level": "技师",
+    "questionType": "实际操作题",
+    "timeLimitMinutes": 60,
+    "score": 100,
+    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用输电线路覆冰预测数据集 1 份（路径：04/SS-5-4-4- 03_line_icing.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
+    "questionText": "输电线路覆冰预测模型的分层划分、标准化与 F1 测试。\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用输电线路覆冰预测数据集 1 份（路径：04/SS-5-4-4-\n03_line_icing.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局通过输电线路微气\n象监测装置采集了所辖 110kV 架空输电线路覆冰期的气象与运行工况数据，希望建\n立覆冰预测模型，并构建黄金测试集作为算法上线前的质量保障。数据集 04/SS-5-\n4-4-03_line_icing.csv 已预先放置在指定路径下，部分数据如表 1-1 所示。\n表 1-1 输电线路覆冰预测数据集（部分）\n持续 日最\n导线温 凝结 是否\n序号 气温 湿度 风速 降水量 海拔 低温 低气\n度 水量 覆冰\n时长 温\n-\n1 -15.80 70.79 5.65 0.03 2434 -14.21 0.52 19 1\n20.94\n-\n2 -13.02 76.71 3.98 0.18 1960 -10.80 1.71 13 1\n16.65\n3 -0.51 61.95 4.51 1.88 2177 1.55 1.88 9 -5.36 0\n-\n4 -15.90 67.02 6.46 0.69 1887 -16.98 0.53 13 1\n21.78\n… … … … … … … … … … …\n字段说明：气温（℃）、湿度（%）、风速（m/s）、降水量（mm）、海拔（m）、\n导线温度（℃）、凝结水量（g/m³）、持续低温时长（小时）、日最低气温（℃）、\n\n是否覆冰（1=覆冰，0=未覆冰）。\n（二）考核任务\n针对该业务场景，使用 Python 补全给定代码，完成数据清洗、按标签分层划分、\n特征标准化、模型训练，并输出准确率和 F1 值。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（20 分）\n①请补全以下空格部分代码，读取 04/SS-5-4-4-03_line_icing.csv 数据集，\n并完成缺失值、重复值清洗及索引重置（8 分）\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\n②请补全以下空格部分代码，划分特征 X（字段：气温、湿度、风速、降水量、\n海拔、导线温度、凝结水量、持续低温时长、日最低气温）与标签 y（字段：是否覆\n冰）（12 分）\nX = data[____3____]\ny = data[____4____]\n（2）算法测试（80 分）\n①请补全以下空格部分代码，按 8:2 比例、random_state=2026 并使用\n\nstratify=y 分层划分训练集和测试集（15 分）\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\n②请补全以下空格部分代码，使用 StandardScaler 对训练集和测试集进行标准\n化（15 分）\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\n③请补全以下空格部分代码，定义模型并完成训练和预测（20 分）\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\n④请补全以下空格部分代码，计算并输出测试集准确率和 F1 值（20 分）\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\n⑤请补全以下空格部分代码，根据 F1 值与 0.85 阈值作出判断（10 分）\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。\n\n参考代码（请补全空格后运行）\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import accuracy_score, f1_score\nfrom sklearn.ensemble import RandomForestClassifier\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\n\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")",
+    "sourcePages": [
+      116,
+      117,
+      118,
+      119,
+      120
+    ],
+    "rubricPages": [
       121,
       122,
       123,
@@ -2367,162 +2616,58 @@
       125,
       126,
       127,
-      128
+      128,
+      129
     ],
     "platformTags": [
       "模型评估",
-      "黄金测试集"
+      "质量门禁"
     ],
     "practiceType": "model_evaluation",
     "inputFiles": [
-      "line_loss.csv"
-    ],
-    "expectedOutputFiles": [],
-    "rubric": [
-      {
-        "id": "SS-5-4-4-01-R01",
-        "order": 1,
-        "item": "random_state=2026、stratify=y 器容量',",
-        "requirement": "random_state=2026、stratify=y 器容量',",
-        "points": 50,
-        "standard": "集构建 pd.read_csv('line_loss.csv') 分层抽样划分；输出训练集和测 '平均负 读取数据集 试集异常样本比例验证分层有效 载率',' 性。1.4 使用 StandardScaler 对 低电压用 训练集 fit_transform、测试集 户占比', transform。 '运行年 限','线 路总长度 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .366,0.3 68fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) importpa ndasaspd data=pd. read_csv ('04/SS- 5-4-4- 01_line_ loss.csv ').dropn 正确调用 dropna()处理缺失值、 a().drop drop_duplicates()处理重复值并 _duplica reset_index(drop=True)重置索 tes().re 引 set_inde x(drop=T rue)X=da ta[['供 电量',' 售电量', '用户数 ','变压 器容量', '平均负 载率',' 低电压用 户占比', '运行年 限','线 路总长度 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .366,0.3 68fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) 正确选取 8 个指定字段（供电量、 importpa 售电量、用户数、变压器容量、 ndasaspd 平均负载率、低电压用户占比、 data=pd. 运行年限、线路总长度）构造 X， read_csv 正确选取\"是否异常\"构造 y ('04/SS- 5-4-4- 01_line_ loss.csv ').dropn a().drop _duplica tes().re set_inde x(drop=T rue)X=da ta[['供 电量',' 售电量', '用户数 ','变压 器容量', '平均负 载率',' 低电压用 户占比', '运行年 限','线 路总长度 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .366,0.3 68fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) importpa ndasaspd data=pd. read_csv ('04/SS- 5-4-4- 01_line_ loss.csv ').dropn a().drop _duplica tes().re set_inde x(drop=T rue)X=da 正确导入 train_test_split 并设 ta[['供 置 电量',' test_size=0.2、random_state=2 售电量', 026、stratify=y 完成分层划分 '用户数 ','变压 器容量', '平均负 载率',' 低电压用 户占比', '运行年 限','线 路总长度 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .366,0.3 68fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) importpa ndasaspd data=pd. read_csv ('04/SS- 正确输出训练集与测试集异常样 5-4-4- 本比例（如 y_train.mean()与 01_line_ y_test.mean()），且二者基本一 loss.csv 致以验证分层有效性 ').dropn a().drop _duplica tes().re set_inde x(drop=T rue)X=da ta[['供 电量',' 售电量', '用户数 ','变压 器容量', '平均负 载率',' 低电压用 户占比', '运行年 限','线 路总长度 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .366,0.3 68fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) importpa ndasaspd data=pd. read_csv ('04/SS- 5-4-4- 01_line_ loss.csv ').dropn a().drop _duplica tes().re set_inde x(drop=T rue)X=da ta[['供 电量',' 售电量', '用户数 ','变压 正确从 sklearn.preprocessing 器容量', 导入 StandardScaler 并实例化， '平均负 对训练集调用 fit_transform()、 载率',' 对测试集调用 transform()（不能 低电压用 用 fit_transform） 户占比', '运行年 限','线 路总长度 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .366,0.3 68fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) fromskle arn.line ar_model importLo gisticRe gression fromskle arn.ense 2.1 构建并训练逻辑回归 mbleimpo （max_iter=2000,random_state= 正确导入 LogisticRegression 与 rtRandom 2026）与随机森林 RandomForestClassifier，并按 ForestCl （n_estimators=100,random_sta 要求正确实例化（LR 含 assifier",
-        "remarks": ""
-      },
-      {
-        "id": "SS-5-4-4-01-R02",
-        "order": 2,
-        "item": "两模型对比测试 te=2026）两种分类模型。2.2 在 max_iter=2000、random_state=2 lr=Logis",
-        "requirement": "两模型对比测试 te=2026）两种分类模型。2.2 在 max_iter=2000、random_state=2 lr=Logis",
-        "points": 50,
-        "standard": "同一黄金测试集上计算两模型的 026；RF 含 ticRegre 准确率、召回率、F1 值三项指标。 n_estimators=100、random_stat ssion(ma 2.3 选出最优模型并简要说明选择 e=2026） x_iter=2 依据。 000,rand om_state =2026)rf =RandomF orestCla ssifier( n_estima tors=100 ,random_",
-        "remarks": ""
-      }
-    ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
-  },
-  {
-    "id": "SS-5-4-4-02",
-    "title": "工商业用户电费回收风险预测模型的黄金测试集构建与训练流程优化 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
-    "module": "智能训练",
-    "moduleCode": "SS-5",
-    "subModuleCode": "SS-5-4",
-    "evaluationContent": "",
-    "level": "技师",
-    "questionType": "实际操作题",
-    "timeLimitMinutes": 90,
-    "score": 100,
-    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用电费回收风险数据集 1 份（payment_risk.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
-    "questionText": "工商业用户电费回收风险预测模型的黄金测试集构建与训练流程优化\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用电费回收风险数据集 1 份（payment_risk.csv）、考核试题纸\n1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局营销中心希望对所\n辖工商业用户（非居民）的电费回收风险进行预测，提前识别可能发生违约（拖欠\n电费 60 天以上或恶意欠费）的客户，以便营销稽查班组提前介入开展电费催收和风\n险防控工作。数据集 payment_risk.csv 已预先放置在指定路径下，部分数据如表 1-\n1 所示。\n表 1-1 工商业用户电费回收风险数据集（部分）\n月均用 平均账 合同容 入网年\n用电波 历史违 客户星 行业类 是否违\n序号 电量 期 量 限\n动率 约次数 级 型 约\n（kWh） （天） （kW） （年）\n1 2264 0.129 34.6 0 3 1 87.1 10.7 0\n2 12148 0.096 29.0 1 4 2 80.6 4.7 0\n3 10743 0.302 10.0 3 4 0 24.2 14.5 1\n4 2559 0.159 26.7 3 4 1 31.4 5.8 1\n… … … … … … … … … …\n字段说明：月均用电量=过去 12 个月平均月用电量；用电波动率=月用电量标准\n差/均值，反映用电稳定性；平均账期=从账单生成到实际缴费的平均天数；历史违\n\n约次数=过去 24 个月发生违约的总次数；客户星级=南网客户分级（1~5 星，5 星最\n优质）；行业类型：0=工业、1=商业、2=农业生产、3=其他；合同容量=用户报装合\n同容量；入网年限=成为供电客户的时长；是否违约：1=过去 12 个月发生过违约，\n0=按时缴费用户。\n（二）考核任务\n针对该工商业用户电费回收风险预测业务场景，使用 Python 完成黄金测试集构\n建、两模型对比测试、参数调优及上线判断。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据准备与黄金测试集构建（30 分）\n①读取 payment_risk.csv 数据集，完成缺失值与重复值清洗并重置索引（8\n分）\n②划分特征 X（字段：月均用电量、用电波动率、平均账期、历史违约次数、客\n户星级、行业类型、合同容量、入网年限）与标签 y（字段：是否违约）（4 分）\n③构建黄金测试集：按 8:2 比例、random_state=2026、stratify=y 分层抽样划\n分；输出训练集和测试集违约样本比例验证分层有效性（12 分）\n④使用 StandardScaler 对训练集 fit_transform、测试集 transform（6 分）\n（2）两模型对比测试（25 分）\n\n①构建并训练两种分类模型：逻辑回归（max_iter=2000r,a ndom_state=2026）、\n随机森林（n_estimators=100, random_state=2026），分别在标准化后的训练集上\n训练（10 分）\n②在同一黄金测试集上计算两模型的准确率、召回率、F1 值三项指标（10 分）\n③选出最优模型并简要说明选择依据（5 分）\n（3）模型调优（30 分）\n①针对最优模型使用 GridSearchCV（5 折交叉验证，scoring='f1'）进行参数\n调优，参数候选必须包含 class_weight=[None, 'balanced']（业务考量：违约用户\n漏检造成的坏账损失成本显著高于误报的人工核查成本）（15 分）\n②输出最优参数组合及最优交叉验证 F1 值（7 分）\n③用调优后模型在黄金测试集上输出准确率、召回率与混淆矩阵（8 分）\n（4）上线判断与优化建议（15 分）\n①给出调优前后准确率与召回率的对比，并说明召回率提升对业务的实际意义\n（违约用户漏检率下降）（8 分）\n②明确给出“是否满足上线要求”的结论（准确率阈值参考：≥80%为合格）并\n提出至少 1 条后续优化方向（7 分）\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
-    "sourcePages": [
-      144,
-      145,
-      146
-    ],
-    "rubricPages": [
-      147,
-      148,
-      149,
-      150,
-      151,
-      152,
-      153,
-      154,
-      155
-    ],
-    "platformTags": [
-      "模型评估",
-      "黄金测试集"
-    ],
-    "practiceType": "model_evaluation",
-    "inputFiles": [
-      "payment_risk.csv"
-    ],
-    "expectedOutputFiles": [],
-    "rubric": [
-      {
-        "id": "SS-5-4-4-02-R01",
-        "order": 1,
-        "item": "（是否违约）。1.3 按 8:2 比例、 账期','",
-        "requirement": "（是否违约）。1.3 按 8:2 比例、 账期','",
-        "points": 50,
-        "standard": "集构建 pd.read_csv('payment_risk.csv random_state=2026、stratify=y 历史违约 ')读取数据集 分层抽样划分；输出训练集和测 次数',' 试集违约样本比例验证分层有效 客户星级 性。1.4 使用 StandardScaler 对 ','行业 训练集 fit_transform、测试集 类型',' transform。 合同容量 ','入网 年限 ']]y=dat a['是否 违约 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .327,0.3 25fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) importpa ndasaspd data=pd. read_csv ('04/SS- 5-4-4- 02_payme nt_risk. 正确调用 dropna()处理缺失值、 csv').dr drop_duplicates()处理重复值并 opna().d reset_index(drop=True)重置索 rop_dupl 引 icates() .reset_i ndex(dro p=True)X =data[[' 月均用电 量','用 电波动率 ','平均 账期',' 历史违约 次数',' 客户星级 ','行业 类型',' 合同容量 ','入网 年限 ']]y=dat a['是否 违约 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .327,0.3 25fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) importpa ndasaspd data=pd. read_csv ('04/SS- 5-4-4- 02_payme nt_risk. csv').dr opna().d rop_dupl icates() .reset_i ndex(dro p=True)X =data[[' 月均用电 量','用 电波动率 ','平均 账期',' 历史违约 次数',' 正确选取 8 个指定字段（月均用 客户星级 电量、用电波动率、平均账期、 ','行业 历史违约次数、客户星级、行业 类型',' 类型、合同容量、入网年限）构 合同容量 造 X，正确选取\"是否违约\"构造 y ','入网 年限 ']]y=dat a['是否 违约 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .327,0.3 25fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) importpa ndasaspd data=pd. read_csv ('04/SS- 5-4-4- 02_payme nt_risk. csv').dr opna().d rop_dupl icates() .reset_i 正确导入 train_test_split 并设 ndex(dro 置 p=True)X test_size=0.2、random_state=2 =data[[' 026、stratify=y 完成分层划分 月均用电 量','用 电波动率 ','平均 账期',' 历史违约 次数',' 客户星级 ','行业 类型',' 合同容量 ','入网 年限 ']]y=dat a['是否 违约 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .327,0.3 25fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) importpa ndasaspd data=pd. 正确输出训练集与测试集违约样 read_csv 本比例（如 y_train.mean()与 ('04/SS- y_test.mean()），且二者基本一 5-4-4- 致以验证分层有效性 02_payme nt_risk. csv').dr opna().d rop_dupl icates() .reset_i ndex(dro p=True)X =data[[' 月均用电 量','用 电波动率 ','平均 账期',' 历史违约 次数',' 客户星级 ','行业 类型',' 合同容量 ','入网 年限 ']]y=dat a['是否 违约 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .327,0.3 25fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) importpa ndasaspd data=pd. read_csv ('04/SS- 5-4-4- 02_payme nt_risk. csv').dr opna().d rop_dupl icates() .reset_i ndex(dro p=True)X =data[[' 月均用电 量','用 正确从 sklearn.preprocessing 电波动率 导入 StandardScaler 并实例化， ','平均 对训练集调用 fit_transform()、 账期',' 对测试集调用 transform()（不能 历史违约 用 fit_transform） 次数',' 客户星级 ','行业 类型',' 合同容量 ','入网 年限 ']]y=dat a['是否 违约 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )print(y _train.m ean(),y_ test.mea n())#≈0 .327,0.3 25fromsk learn.pr eprocess ingimpor tStandar dScalers caler=St andardSc aler()Xt r=scaler .fit_tra nsform(X _train)X te=scale r.transf orm(X_te st) fromskle arn.line ar_model importLo gisticRe 2.1 构建并训练逻辑回归 gression （max_iter=2000,random_state= 正确导入 LogisticRegression 与 fromskle 2026）与随机森林 RandomForestClassifier，并按 arn.ense （n_estimators=100,random_sta 要求正确实例化（LR 含 mbleimpo",
-        "remarks": ""
-      },
-      {
-        "id": "SS-5-4-4-02-R02",
-        "order": 2,
-        "item": "两模型对比测试 te=2026）两种分类模型。2.2 在 max_iter=2000、random_state=2 rtRandom",
-        "requirement": "两模型对比测试 te=2026）两种分类模型。2.2 在 max_iter=2000、random_state=2 rtRandom",
-        "points": 50,
-        "standard": "同一黄金测试集上计算两模型的 026；RF 含 ForestCl 准确率、召回率、F1 值三项指标。 n_estimators=100、random_stat assifier 2.3 选出最优模型并简要说明选择 e=2026） lr=Logis 依据。 ticRegre ssion(ma x_iter=2 000,rand om_state =2026)rf",
-        "remarks": ""
-      }
-    ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
-  },
-  {
-    "id": "SS-5-4-4-03",
-    "title": "输电线路覆冰预测模型的黄金测试集构建与训练流程优化 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
-    "module": "智能训练",
-    "moduleCode": "SS-5",
-    "subModuleCode": "SS-5-4",
-    "evaluationContent": "",
-    "level": "技师",
-    "questionType": "实际操作题",
-    "timeLimitMinutes": 60,
-    "score": 100,
-    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用输电线路覆冰预测数据集 1 份（路径：啥 line_icing.csv）、 考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
-    "questionText": "输电线路覆冰预测模型的黄金测试集构建与训练流程优化\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用输电线路覆冰预测数据集 1 份（路径：啥 line_icing.csv）、\n考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局通过输电线路微气\n象监测装置采集了所辖 110kV 架空输电线路覆冰期的气象与运行工况数据，希望建\n立覆冰预测模型，并构建黄金测试集作为算法上线前的质量保障。数据集\nline_icing.csv 已预先放置在指定路径下，部分数据如表 1-1 所示。\n表 1-1 输电线路覆冰预测数据集（部分）\n持续\n降水 导线温 凝结 日最低 是否\n序号 气温 湿度 风速 海拔 低温\n量 度 水量 气温 覆冰\n时长\n1 -15.80 70.79 5.65 0.03 2434 -14.21 0.52 19 -20.94 1\n2 -13.02 76.71 3.98 0.18 1960 -10.80 1.71 13 -16.65 1\n3 -0.51 61.95 4.51 1.88 2177 1.55 1.88 9 -5.36 0\n4 -15.90 67.02 6.46 0.69 1887 -16.98 0.53 13 -21.78 1\n… … … … … … … … … … …\n字段说明：气温（℃）、湿度（%）、风速（m/s）、降水量（mm）、海拔（m）、\n导线温度（℃）、凝结水量（g/m³）、持续低温时长（小时）、日最低气温（℃）、\n是否覆冰（1=覆冰，0=未覆冰）。\n\n（二）考核任务\n针对该输电线路覆冰预测业务场景，使用 Python 完成数据处理、黄金测试集构\n建，并通过对比逻辑回归与随机森林两种模型完成训练流程优化。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（35 分）\n①读取 line_icing.csv 数据集（10 分）\n②数据集进行缺失值与重复值处理（15 分）\n③打印输出处理后数据集的 shape（10 分）\n（2）算法测试（65 分）\n①划分特征 X（字段：气温、湿度、风速、降水量、海拔、导线温度、凝结水量、\n持续低温时长、日最低气温）与标签 y（字段：是否覆冰）（10 分）\n②按 8:2 比例、random_state=2026、按标签分层（stratify=y）划分训练集和\n黄金测试集（15 分）\n③定义并训练逻辑回归基线模型（15 分）\n④训练随机森林模型（n_estimators=100、random_state=2026），输出其在黄\n金测试集上的准确率（10 分）\n⑤ 输出两个模型的分类报告（classification_report）；使用 if-else 比较两\n\n个模型的准确率，并 print 输出准确率更高的模型名称作为优化后方案（15 分）\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
-    "sourcePages": [
-      171,
-      172,
-      173
-    ],
-    "rubricPages": [
-      174,
-      175,
-      176,
-      177,
-      178,
-      179,
-      180,
-      181,
-      182
-    ],
-    "platformTags": [
-      "模型评估",
-      "黄金测试集"
-    ],
-    "practiceType": "model_evaluation",
-    "inputFiles": [
-      "line_icing.csv"
+      "03_line_icing.csv",
+      "04/SS-5-4-4-03_line_icing.csv",
+      "4-4-03_line_icing.csv",
+      "SS-5-4-4-03_line_icing.csv"
     ],
     "expectedOutputFiles": [],
     "rubric": [
       {
         "id": "SS-5-4-4-03-R01",
         "order": 1,
-        "item": "数据处理 集进行缺失值与重复值预处理。",
-        "requirement": "数据处理 集进行缺失值与重复值预处理。",
+        "item": "数据处理",
+        "requirement": "数据处理",
         "points": 50,
-        "standard": "('0ine_i 1.3 输出处理后行列数：打印输出 cing.csv 处理后数据集的行列数（shape）。 ')data=d 正确调用 ata.drop pd.read_csv('line_icing.csv') na()data 读取数据集并赋值给变量 =data.dr op_dupli cates()p rint(dat a.shape) #(636,10 ) importpa ndasaspd data=pd. 正确使用 dropna()（或等效 read_csv fillna()）方法处理缺失值 ('0ine_i cing.csv ')data=d ata.drop na()data =data.dr op_dupli cates()p rint(dat a.shape) #(636,10 ) importpa ndasaspd data=pd. read_csv ('0ine_i cing.csv ')data=d 正确使用 drop_duplicates()方法 ata.drop 处理重复值 na()data =data.dr op_dupli cates()p rint(dat a.shape) #(636,10 ) importpa ndasaspd data=pd. read_csv ('0ine_i cing.csv ')data=d 清洗结果正确赋值（变量名不 ata.drop 限），且后续特征/标签划分使用 na()data 同一清洗后变量 =data.dr op_dupli cates()p rint(dat a.shape) #(636,10 ) importpa ndasaspd data=pd. read_csv ('0ine_i 正确使用 DataFrame.shape 属性 cing.csv 获取处理后数据集的行列数 ')data=d ata.drop na()data =data.dr op_dupli cates()p rint(dat a.shape) #(636,10 ) importpa ndasaspd data=pd. read_csv ('0ine_i cing.csv ')data=d 正确使用 print()函数输出处理后 ata.drop 数据集的 shape na()data =data.dr op_dupli cates()p rint(dat a.shape) #(636,10 ) X=data[[ '气温',' 湿度',' 风速',' 降水量', '海拔',' 导线温度 2.1 划分特征 X（气温、湿度、风 ','凝结 速、降水量、海拔、导线温度、 水量',' 凝结水量、持续低温时长、日最 持续低温 低气温）与标签 y（是否覆冰）。 时长',' 2.2 按 8:2 比例、 日最低气 random_state=2026、按标签分层 温 （stratify=y）划分训练集与黄 ']]y=dat 金测试集。2.3 定义逻辑回归基线 正确选取 9 个指定字段（气温、 a['是否 模型并在训练集上训练，输出黄 湿度、风速、降水量、海拔、导 覆冰",
+        "standard": "湿度、风速、降水量、海拔、导 和 dropna，代码可完成清洗 omsklear 线温度、凝结水量、持续低温时 n.ensemb 长、日最低气温）和标签 y（是否 leimport 覆冰）。 RandomFo restClas sifierda ta=pd.re ad_csv(\" 04/SS-5- 4-4- 03_line_ icing.cs v\")data= data.dro pna().dr op_dupli cates(). reset_in dex(drop =True)X= data[[\" 气温\",\" 湿度\",\" 风速\",\" 降水量\", \"海拔\",\" 导线温度 \",\"凝结 水量\",\" 持续低温 时长\",\" 日最低气 温 \"]]y=dat a[\"是否 覆冰\"] importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport Standard Scalerfr omsklear n.metric simporta 1.2（12 分）：正确补全指定特征 ccuracy_ 字段列表和标签字段 score,f1 _scorefr omsklear n.ensemb leimport RandomFo restClas sifierda ta=pd.re ad_csv(\" 04/SS-5- 4-4- 03_line_ icing.cs v\")data= data.dro pna().dr op_dupli cates(). reset_in dex(drop =True)X= data[[\" 气温\",\" 湿度\",\" 风速\",\" 降水量\", \"海拔\",\" 导线温度 \",\"凝结 水量\",\" 持续低温 时长\",\" 日最低气 温 \"]]y=dat a[\"是否 覆冰\"] X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta 2.1 正确补全分层划分代码。。 ndardSca 2.2 正确补全 StandardScaler 标 ler()X_t 准化代码 2.3 正确补全模型训练 2.1（15 分）：正确补全 rain_s=s",
         "remarks": ""
       },
       {
         "id": "SS-5-4-4-03-R02",
         "order": 2,
-        "item": "算法测试",
-        "requirement": "算法测试",
+        "item": "算法测试 与预测代码。2.4 正确补全",
+        "requirement": "算法测试 与预测代码。2.4 正确补全",
         "points": 50,
-        "standard": "金测试集准确率。2.4 训练随机森 线温度、凝结水量、持续低温时 ']fromsk 林模型 长、日最低气温）构造特征 X learn.mo （n_estimators=100、random_st del_sele ate=2026），输出其在黄金测试 ctionimp 集上的准确率。2.5 输出两个模型 orttrain 的分类报告 _test_sp （classification_report），对 litX_tra 比准确率并选择更优模型作为优 in,X_tes 化后方案。 t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )fromskl earn.lin ear_mode limportL ogisticR egressio nmodel_l r=Logist icRegres sion(max _iter=10 00)model _lr.fit( X_train, y_train) acc_lr=m odel_lr. score(X_ test,y_t est)prin t(acc_lr )#≈0.89 8fromskl earn.ens embleimp ortRando mForestC lassifie rmodel_r f=Random ForestCl assifier (n_estim ators=10 0,random _state=2 026)mode l_rf.fit (X_train ,y_train )acc_rf= model_rf .score(X _test,y_ test)pri nt(acc_r f)#≈0.9 22fromsk learn.me tricsimp ortclass ificatio n_report print(cl assifica tion_rep ort(y_te st,model _lr.pred ict(X_te st)))pri nt(class ificatio n_report (y_test, model_rf .predict (X_test) ))ifacc_ rf>acc_l r:print( '优化后 方案： RandomFo rest')el se:print ('优化后 方案： Logistic Regressi on') X=data[[ '气温',' 湿度',' 风速',' 降水量', '海拔',' 导线温度 ','凝结 水量',' 持续低温 正确选取\"是否覆冰\"字段构造标 时长',' 签 y 日最低气 温 ']]y=dat a['是否 覆冰 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )fromskl earn.lin ear_mode limportL ogisticR egressio nmodel_l r=Logist icRegres sion(max _iter=10 00)model _lr.fit( X_train, y_train) acc_lr=m odel_lr. score(X_ test,y_t est)prin t(acc_lr )#≈0.89 8fromskl earn.ens embleimp ortRando mForestC lassifie rmodel_r f=Random ForestCl assifier (n_estim ators=10 0,random _state=2 026)mode l_rf.fit (X_train ,y_train )acc_rf= model_rf .score(X _test,y_ test)pri nt(acc_r f)#≈0.9 22fromsk learn.me tricsimp ortclass ificatio n_report print(cl assifica tion_rep ort(y_te st,model _lr.pred ict(X_te st)))pri nt(class ificatio n_report (y_test, model_rf .predict (X_test) ))ifacc_ rf>acc_l r:print( '优化后 方案： RandomFo rest')el se:print ('优化后 方案： Logistic Regressi on') X=data[[ '气温',' 湿度',' 风速',' 正确从 sklearn.model_selection 降水量', 导入 train_test_split '海拔',' 导线温度 ','凝结 水量',' 持续低温 时长',' 日最低气 温 ']]y=dat a['是否 覆冰 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )fromskl earn.lin ear_mode limportL ogisticR egressio nmodel_l r=Logist icRegres sion(max _iter=10 00)model _lr.fit( X_train, y_train) acc_lr=m odel_lr. score(X_ test,y_t est)prin t(acc_lr )#≈0.89 8fromskl earn.ens embleimp ortRando mForestC lassifie rmodel_r f=Random ForestCl assifier (n_estim ators=10 0,random _state=2 026)mode l_rf.fit (X_train ,y_train )acc_rf= model_rf .score(X _test,y_ test)pri nt(acc_r f)#≈0.9 22fromsk learn.me tricsimp ortclass ificatio n_report print(cl assifica tion_rep ort(y_te st,model _lr.pred ict(X_te st)))pri nt(class ificatio n_report (y_test, model_rf .predict (X_test) ))ifacc_ rf>acc_l r:print( '优化后 方案： RandomFo rest')el se:print ('优化后 方案： Logistic Regressi",
+        "standard": "test_size=0.2 和 stratify=y caler.fi Accuracy 和 F1 计算代码并输出结 t_transf 果。2.5 正确补全 F1 阈值并输出 orm(X_tr 判断结论。 ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .85else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat 2.2（15 分）：训练集使用 ify=y)sc fit_transform、测试集使用 aler=Sta transform ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .85else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 2.3（20 分）：正确补全 fit 和 ,random_ predict state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .85else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test 2.4（20 分）：正确补全 _split(X accuracy_score 和 f1_score ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .85else\" F1 未达 到要求\") X_train, 2.5（10 分）：正确补全 0.85 阈 X_test,y 值并给出明确结论 _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )y_pred= model.pr edict(X_ test_s)a ccuracy= accuracy _score(y _test,y_ pred)f1= f1_score (y_test, y_pred)p rint(\"准 确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .85else\" F1 未达 到要求\") 每超 1 分钟扣 1 分，超过 5 分停",
         "remarks": ""
+      },
+      {
+        "id": "SS-5-4-4-03-R03",
+        "order": 3,
+        "item": "超时扣分 按时完成工作",
+        "requirement": "超时扣分 按时完成工作",
+        "points": 0,
+        "standard": "止操作。 考评人： 日期: 地点:",
+        "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-4-4-03/SS-5-4-4-03_line_icing.csv"
+    ]
   },
   {
     "id": "SS-5-4-4-04",
-    "title": "配电终端通信异常诊断模型的黄金测试集构建与训练流程优化 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
+    "title": "配电终端通信异常诊断模型的分层划分、标准化与 F1 测试",
     "module": "智能训练",
     "moduleCode": "SS-5",
     "subModuleCode": "SS-5-4",
@@ -2531,185 +2676,220 @@
     "questionType": "实际操作题",
     "timeLimitMinutes": 60,
     "score": 100,
-    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用配电终端通信异常诊断数据集 1 份（路径： terminal_comm.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
-    "questionText": "配电终端通信异常诊断模型的黄金测试集构建与训练流程优化\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用配电终端通信异常诊断数据集 1 份（路径：\nterminal_comm.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局通过配电自动化主\n站系统采集了所辖 10kV 配电网中 FTU、DTU 等智能终端的通信状态与运行参数数\n据，希望建立通信异常诊断模型，并构建黄金测试集作为算法上线前的质量保障。\n数据集 terminal_comm.csv 已预先放置在指定路径下，部分数据如表 1-1 所示。\n表 1-1 配电终端通信异常诊断数据集（部分）\n心跳 内存\n心跳 信号 误码 重传 响应 CPU 利 在线 是否\n序号 丢失 利用\n间隔 强度 率 次数 延迟 用率 时长 异常\n率 率\n1 27.1 3.83 -77.0 0.300 2 163 55.5 37.7 296 0\n2 27.3 4.30 -77.7 0.788 14 172 45.9 59.5 152 0\n3 33.0 13.34 -49.0 2.315 2 308 57.3 76.8 221 1\n4 28.7 4.89 -83.0 0.040 5 127 56.3 62.7 262 1\n… … … … … … … … … … …\n字段说明：心跳间隔（秒）、心跳丢失率（%）、信号强度（dBm，数值越小信\n号越弱）、误码率（%）、重传次数（次）、响应延迟（ms）、CPU 利用率（%）、内\n存利用率（%）、在线时长（小时）、是否异常（1=通信异常，0=通信正常）。\n\n（二）考核任务\n针对该配电终端通信异常诊断业务场景，使用 Python 完成数据处理、黄金测试\n集构建，并通过对比逻辑回归与随机森林两种模型完成训练流程优化。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（35 分）\n①读取 terminal_comm.csv 数据集（10 分）\n②数据集进行缺失值与重复值处理（15 分）\n③打印输出处理后数据集的 shape（10 分）\n（2）算法测试（65 分）\n①划分特征 X（字段：心跳间隔、心跳丢失率、信号强度、误码率、重传次数、\n响应延迟、CPU 利用率、内存利用率、在线时长）与标签 y（字段：是否异常）（10\n分）\n②按 8:2 比例、random_state=2026、按标签分层（stratify=y）划分训练集和\n黄金测试集（15 分）\n③定义并训练逻辑回归基线模型（15 分）\n④训练随机森林模型（n_estimators=100、random_state=2026），输出其在黄\n金测试集上的准确率（10 分）\n\n⑤ 输出两个模型的分类报告（classification_report）；使用 if-else 比较两\n个模型的准确率，并 print 输出准确率更高的模型名称作为优化后方案（15 分）\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
+    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用配电终端通信异常诊断数据集 1 份（路径：04/SS-5-4-4- 04_terminal_comm.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
+    "questionText": "配电终端通信异常诊断模型的分层划分、标准化与 F1 测试。\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用配电终端通信异常诊断数据集 1 份（路径：04/SS-5-4-4-\n04_terminal_comm.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局通过配电自动化主\n站系统采集了所辖 10kV 配电网中 FTU、DTU 等智能终端的通信状态与运行参数数\n据，希望建立通信异常诊断模型，并构建黄金测试集作为算法上线前的质量保障。\n数据集 04/SS-5-4-4-04_terminal_comm.csv 已预先放置在指定路径下，部分数据如\n表 1-1 所示。\n表 1-1 配电终端通信异常诊断数据集（部分）\n心跳 内存\n心跳间 信号强 重传 响应延 CPU 利 在线 是否\n序号 丢失 误码率 利用\n隔 度 次数 迟 用率 时长 异常\n率 率\n1 27.1 3.83 -77.0 0.300 2 163 55.5 37.7 296 0\n2 27.3 4.30 -77.7 0.788 14 172 45.9 59.5 152 0\n3 33.0 13.34 -49.0 2.315 2 308 57.3 76.8 221 1\n4 28.7 4.89 -83.0 0.040 5 127 56.3 62.7 262 1\n… … … … … … … … … … …\n字段说明：心跳间隔（秒）、心跳丢失率（%）、信号强度（dBm，数值越小信\n号越弱）、误码率（%）、重传次数（次）、响应延迟（ms）、CPU 利用率（%）、内\n\n存利用率（%）、在线时长（小时）、是否异常（1=通信异常，0=通信正常）。\n（二）考核任务\n针对该业务场景，使用 Python 补全给定代码，完成数据清洗、按标签分层划分、\n特征标准化、模型训练，并输出准确率和 F1 值。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（20 分）\n①请补全以下空格部分代码，读取 04/SS-5-4-4-04_terminal_comm.csv 数据\n集，并完成缺失值、重复值清洗及索引重置（8 分）\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\n②请补全以下空格部分代码，划分特征 X（字段：心跳间隔、心跳丢失率、信号\n强度、误码率、重传次数、响应延迟、CPU 利用率、内存利用率、在线时长）与标签\ny（字段：是否异常）（12 分）\nX = data[____3____]\ny = data[____4____]\n（2）算法测试（80 分）\n①请补全以下空格部分代码，按 8:2 比例、random_state=2026 并使用\n\nstratify=y 分层划分训练集和测试集（15 分）\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\n②请补全以下空格部分代码，使用 StandardScaler 对训练集和测试集进行标准\n化（15 分）\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\n③请补全以下空格部分代码，定义模型并完成训练和预测（20 分）\nmodel = LogisticRegression(max_iter=2000, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\n④请补全以下空格部分代码，计算并输出测试集准确率和 F1 值（20 分）\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\n⑤请补全以下空格部分代码，根据 F1 值与 0.80 阈值作出判断（10 分）\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。\n\n参考代码（请补全空格后运行）\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.metrics import accuracy_score, f1_score\nfrom sklearn.linear_model import LogisticRegression\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=____5____, random_state=2026, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = LogisticRegression(max_iter=2000, random_state=2026)\nmodel.____9____(X_train_s, y_train)\ny_pred = model.____10____(X_test_s)\naccuracy = ____11____(y_test, y_pred)\nf1 = ____12____(y_test, y_pred)\nprint(\"准确率：\", accuracy)\nprint(\"F1：\", f1)\n\nprint(\"F1 达到要求\" if f1 >= ____13____ else \"F1 未达到要求\")",
     "sourcePages": [
-      206,
-      207,
-      208
+      130,
+      131,
+      132,
+      133,
+      134
     ],
     "rubricPages": [
-      209,
-      210,
-      211,
-      212,
-      213,
-      214,
-      215,
-      216,
-      217
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143
     ],
     "platformTags": [
       "模型评估",
-      "黄金测试集"
+      "质量门禁"
     ],
     "practiceType": "model_evaluation",
     "inputFiles": [
-      "terminal_comm.csv"
+      "04/SS-5-4-4-04_terminal_comm.csv",
+      "04_terminal_comm.csv",
+      "SS-5-4-4-04_terminal_comm.csv"
     ],
     "expectedOutputFiles": [],
     "rubric": [
       {
         "id": "SS-5-4-4-04-R01",
         "order": 1,
-        "item": "数据处理 数据集进行缺失值与重复值预处",
-        "requirement": "数据处理 数据集进行缺失值与重复值预处",
+        "item": "数据处理",
+        "requirement": "数据处理",
         "points": 50,
-        "standard": "('termin 理。1.3 输出处理后行列数：打印 al_comm. 输出处理后数据集的行列数 csv')dat （shape）。 正确调用 a=data.d pd.read_csv('terminal_comm.cs ropna()d v')读取数据集并赋值给变量 ata=data .drop_du plicates ()print( data.sha pe)#(980 ,10) importpa ndasaspd data=pd. 正确使用 dropna()（或等效 read_csv fillna()）方法处理缺失值 ('termin al_comm. csv')dat a=data.d ropna()d ata=data .drop_du plicates ()print( data.sha pe)#(980 ,10) importpa ndasaspd data=pd. read_csv ('termin al_comm. csv')dat 正确使用 drop_duplicates()方法 a=data.d 处理重复值 ropna()d ata=data .drop_du plicates ()print( data.sha pe)#(980 ,10) importpa ndasaspd data=pd. read_csv ('termin al_comm. csv')dat 清洗结果正确赋值（变量名不 a=data.d 限），且后续特征/标签划分使用 ropna()d 同一清洗后变量 ata=data .drop_du plicates ()print( data.sha pe)#(980 ,10) importpa ndasaspd data=pd. read_csv ('termin 正确使用 DataFrame.shape 属性 al_comm. 获取处理后数据集的行列数 csv')dat a=data.d ropna()d ata=data .drop_du plicates ()print( data.sha pe)#(980 ,10) importpa ndasaspd data=pd. read_csv ('termin al_comm. csv')dat 正确使用 print()函数输出处理后 a=data.d 数据集的 shape ropna()d ata=data .drop_du plicates ()print( data.sha pe)#(980 ,10) X=data[[ '心跳间 隔','心 跳丢失率 ','信号 强度',' 误码率', 2.1 划分特征 X（心跳间隔、心跳 '重传次 丢失率、信号强度、误码率、重 数','响 传次数、响应延迟、CPU 利用率、 应延迟', 内存利用率、在线时长）与标签 y 'CPU 利 （是否异常）。2.2 按 8:2 比例、 用率',' random_state=2026、按标签分层 内存利用 （stratify=y）划分训练集与黄 率','在 正确选取 9 个指定字段（心跳间 金测试集。2.3 定义逻辑回归基线 线时长 隔、心跳丢失率、信号强度、误 模型并在训练集上训练，输出黄 ']]y=dat",
+        "standard": "跳间隔、心跳丢失率、信号强度、 和 dropna，代码可完成清洗 omsklear 误码率、重传次数、响应延迟、 n.linear CPU 利用率、内存利用率、在线时 _modelim 长）和标签 y（是否异常）。 portLogi sticRegr essionda ta=pd.re ad_csv(\" 04/SS-5- 4-4- 04_termi nal_comm .csv\")da ta=data. dropna() .drop_du plicates ().reset _index(d rop=True )X=data[ [\"心跳间 隔\",\"心 跳丢失率 \",\"信号 强度\",\" 误码率\", \"重传次 数\",\"响 应延迟\", \"CPU 利 用率\",\" 内存利用 率\",\"在 线时长 \"]]y=dat a[\"是否 异常\"] importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport Standard Scalerfr omsklear n.metric 1.2（12 分）：正确补全指定特征 simporta 字段列表和标签字段 ccuracy_ score,f1 _scorefr omsklear n.linear _modelim portLogi sticRegr essionda ta=pd.re ad_csv(\" 04/SS-5- 4-4- 04_termi nal_comm .csv\")da ta=data. dropna() .drop_du plicates ().reset _index(d rop=True )X=data[ [\"心跳间 隔\",\"心 跳丢失率 \",\"信号 强度\",\" 误码率\", \"重传次 数\",\"响 应延迟\", \"CPU 利 用率\",\" 内存利用 率\",\"在 线时长 \"]]y=dat a[\"是否 异常\"] X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat 2.1 正确补全分层划分代码。2.2 ify=y)sc 正确补全 StandardScaler 标准化 aler=Sta 代码。2.3 正确补全模型训练与预 2.1（15 分）：正确补全 ndardSca",
         "remarks": ""
       },
       {
         "id": "SS-5-4-4-04-R02",
         "order": 2,
-        "item": "算法测试 码率、重传次数、响应延迟、CPU",
-        "requirement": "算法测试 码率、重传次数、响应延迟、CPU",
+        "item": "算法测试 测代码。2.4 正确补全 Accuracy",
+        "requirement": "算法测试 测代码。2.4 正确补全 Accuracy",
         "points": 50,
-        "standard": "金测试集准确率。2.4 训练随机森 a['是否 利用率、内存利用率、在线时 林模型 异常 长）构造特征 X （n_estimators=100、random_st ']fromsk ate=2026），输出其在黄金测试 learn.mo 集上的准确率。2.5 输出两个模型 del_sele 的分类报告 ctionimp （classification_report），对 orttrain 比准确率并选择更优模型作为优 _test_sp 化后方案。 litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )fromskl earn.lin ear_mode limportL ogisticR egressio nmodel_l r=Logist icRegres sion(max _iter=10 00)model _lr.fit( X_train, y_train) acc_lr=m odel_lr. score(X_ test,y_t est)prin t(acc_lr )#≈0.70 41fromsk learn.en sembleim portRand omForest Classifi ermodel_ rf=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el_rf.fi t(X_trai n,y_trai n)acc_rf =model_r f.score( X_test,y _test)pr int(acc_ rf)#≈0. 8316from sklearn. metricsi mportcla ssificat ion_repo rtprint( classifi cation_r eport(y_ test,mod el_lr.pr edict(X_ test)))p rint(cla ssificat ion_repo rt(y_tes t,model_ rf.predi ct(X_tes t)))ifac c_rf>acc _lr:prin t('优化 后方案： RandomFo rest')el se:print ('优化后 方案： Logistic Regressi on') X=data[[ '心跳间 隔','心 跳丢失率 ','信号 强度',' 误码率', '重传次 数','响 正确选取\"是否异常\"字段构造标 应延迟', 签 y 'CPU 利 用率',' 内存利用 率','在 线时长 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )fromskl earn.lin ear_mode limportL ogisticR egressio nmodel_l r=Logist icRegres sion(max _iter=10 00)model _lr.fit( X_train, y_train) acc_lr=m odel_lr. score(X_ test,y_t est)prin t(acc_lr )#≈0.70 41fromsk learn.en sembleim portRand omForest Classifi ermodel_ rf=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el_rf.fi t(X_trai n,y_trai n)acc_rf =model_r f.score( X_test,y _test)pr int(acc_ rf)#≈0. 8316from sklearn. metricsi mportcla ssificat ion_repo rtprint( classifi cation_r eport(y_ test,mod el_lr.pr edict(X_ test)))p rint(cla ssificat ion_repo rt(y_tes t,model_ rf.predi ct(X_tes t)))ifac c_rf>acc _lr:prin t('优化 后方案： RandomFo rest')el se:print ('优化后 方案： Logistic Regressi on') X=data[[ '心跳间 正确从 sklearn.model_selection 隔','心 导入 train_test_split 跳丢失率 ','信号 强度',' 误码率', '重传次 数','响 应延迟', 'CPU 利 用率',' 内存利用 率','在 线时长 ']]y=dat a['是否 异常 ']fromsk learn.mo del_sele ctionimp orttrain _test_sp litX_tra in,X_tes t,y_trai n,y_test =train_t est_spli t(X,y,te st_size= 0.2,rand om_state =2026,st ratify=y )fromskl earn.lin ear_mode limportL ogisticR egressio nmodel_l r=Logist icRegres sion(max _iter=10 00)model _lr.fit( X_train, y_train) acc_lr=m odel_lr. score(X_ test,y_t est)prin t(acc_lr )#≈0.70 41fromsk learn.en sembleim portRand omForest Classifi ermodel_ rf=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el_rf.fi t(X_trai n,y_trai n)acc_rf =model_r f.score( X_test,y _test)pr int(acc_ rf)#≈0. 8316from sklearn. metricsi mportcla ssificat ion_repo rtprint( classifi cation_r eport(y_ test,mod el_lr.pr edict(X_ test)))p rint(cla ssificat ion_repo rt(y_tes t,model_ rf.predi ct(X_tes t)))ifac c_rf>acc _lr:prin t('优化 后方案： RandomFo",
+        "standard": "test_size=0.2 和 stratify=y ler()X_t 和 F1 计算代码并输出结果。2.5 rain_s=s 正确补全 F1 阈值并输出判断结论。 caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .80else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 2.2（15 分）：训练集使用 26,strat fit_transform、测试集使用 ify=y)sc transform aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .80else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ 2.3（20 分）：正确补全 fit 和 size=0.2 predict ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .80else\" F1 未达 到要求\") X_train, X_test,y _train,y _test=tr 2.4（20 分）：正确补全 ain_test accuracy_score 和 f1_score _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .80else\" F1 未达 到要求\") X_train, 2.5（10 分）：正确补全 0.80 阈 X_test,y 值并给出明确结论 _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Logis ticRegre ssion(ma x_iter=2 000,rand om_state =2026)mo del.fit( X_train_ s,y_trai n)y_pred =model.p redict(X _test_s) accuracy =accurac y_score( y_test,y _pred)f1 =f1_scor e(y_test ,y_pred) print(\" 准确率： \",accura cy)print (\"F1： \",f1)pri nt(\"F1 达到要求 \"iff1>=0 .80else\" F1 未达 到要求\") 每超 1 分钟扣 1 分，超过 5 分停",
         "remarks": ""
+      },
+      {
+        "id": "SS-5-4-4-04-R03",
+        "order": 3,
+        "item": "超时扣分 按时完成工作",
+        "requirement": "超时扣分 按时完成工作",
+        "points": 0,
+        "standard": "止操作。 考评人： 日期: 地点:",
+        "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-4-4-04/SS-5-4-4-04_terminal_comm.csv"
+    ]
   },
   {
     "id": "SS-5-5-5-01",
-    "title": "工商业用户电费回收风险模型的稳健性测试与分层评估 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
+    "title": "工商业用户电费回收风险模型的多次划分稳健性评价。 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
     "module": "智能训练",
     "moduleCode": "SS-5",
     "subModuleCode": "SS-5-5",
     "evaluationContent": "",
     "level": "高级技师",
     "questionType": "实际操作题",
-    "timeLimitMinutes": 90,
+    "timeLimitMinutes": 60,
     "score": 100,
-    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用电费回收风险数据集 1 份（payment_risk.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
-    "questionText": "工商业用户电费回收风险模型的稳健性测试与分层评估\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用电费回收风险数据集 1 份（payment_risk.csv）、考核试题纸\n1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局营销中心已完成电\n费回收风险预测模型的技师级训练流程优化（基础模型为随机森林，调优后准确率\n约 84.5%）。当前需要由高级技师对该模型开展上线前的体系化质量评估：制定模型\n稳健性测试标准、执行多次随机重复评估、开展按行业分层的公平性评估，并形成\n训练集/测试集标准规范及训练平台迭代优化方向，作为该模型上线前的强制质量门\n禁依据。数据集 payment_risk.csv 已预先放置在指定路径下，部分数据如表 1-1 所\n示。\n表 1-1 工商业用户电费回收风险数据集（部分）\n月均用 平均账 合同容 入网年\n用电波 历史违 客户星 行业类 是否违\n序号 电量 期 量 限\n动率 约次数 级 型 约\n（kWh） （天） （kW） （年）\n1 2264 0.129 34.6 0 3 1 87.1 10.7 0\n2 12148 0.096 29.0 1 4 2 80.6 4.7 0\n3 10743 0.302 10.0 3 4 0 24.2 14.5 1\n4 2559 0.159 26.7 3 4 1 31.4 5.8 1\n… … … … … … … … … …\n\n字段说明：月均用电量=过去 12 个月平均月用电量；用电波动率=月用电量标准\n差/均值，反映用电稳定性；平均账期=从账单生成到实际缴费的平均天数；历史违\n约次数=过去 24 个月发生违约的总次数；客户星级=南网客户分级（1~5 星，5 星最\n优质）；行业类型：0=工业、1=商业、2=农业生产、3=其他；合同容量=用户报装合\n同容量；入网年限=成为供电客户的时长；是否违约：1=过去 12 个月发生过违约，\n0=按时缴费用户。\n（二）考核任务\n针对该工商业用户电费回收风险预测业务场景，使用 Python 完成稳健性测试、\n按行业分层评估，并形成训练集/测试集标准规范及训练平台迭代建议。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据准备与基准模型构建（15 分）\n①读取 payment_risk.csv 数据集，完成缺失值与重复值清洗并重置索引；划分\n特征 X（字段：月均用电量、用电波动率、平均账期、历史违约次数、客户星级、行\n业类型、合同容量、入网年限）与标签 y（字段：是否违约）（5 分）\n②使用 random_state=2026、stratify=y 按 8:2 划分训练集与测试集，对特征\n进行 StandardScaler 标准化（5 分）\n③使用随机森林（n_estimators=200, max_depth=5, class_weight=\n\n'balanced', random_state=2026）构建基准模型并在训练集上完成训练（5 分）\n（2）稳健性测试（35 分）\n①制定稳健性测试标准：使用至少 5 个不同的 random_state（建议包含 2026 在\n内的 5 个种子值，如[2026, 42, 100, 200, 333]），分别重复执行“划分→标准化→\n训练→预测”全流程，每次计算准确率、召回率、F1 值三项指标（20 分）\n②输出 5 次评估的明细表（含每次 seed、accuracy、recall、f1），并汇总输\n出三项指标各自的均值与标准差（10 分）\n③自行制定稳健性判定阈值（如准确率标准差<0.05、召回率标准差<0.05），\n明确给出“通过/不通过”的稳健性判定（5 分）\n（3）按行业分层评估（25 分）\n基于基准模型（random_state=2026）的预测结果：\n①按行业类型（0=工业、1=商业、2=农业生产、3=其他）分别筛选测试集子样\n本，分别计算各子群体的样本数、违约样本数、准确率、召回率（15 分）\n②识别上述行业维度中存在“群体偏差”的子群体（如某行业召回率显著低于\n其他行业），并简要说明判定依据（10 分）\n（4）训练集标准与平台迭代建议（25 分）\n①训练集/测试集标准规范：至少提出 2 条针对当前业务场景的可执行规范（如\n各行业最低样本量、分层评估纳入测试集标准等）（10 分）\n②训练平台迭代优化方向：至少提出 2 条平台层面的体系化优化方向（如分层\n评估自动化、群体公平性监控、再训练触发等）（10 分）\n③综合上线判定：基于稳健性与分层结果给出最终结论（5 分）\n3.工作终结\n\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
+    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用电费回收风险数据集 1 份（路径：04/SS-5-5-5- 01_payment_risk.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
+    "questionText": "工商业用户电费回收风险模型的多次划分稳健性评价。\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用电费回收风险数据集 1 份（路径：04/SS-5-5-5-\n01_payment_risk.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局营销中心已完成电\n费回收风险预测模型的技师级训练流程优化（基础模型为随机森林，调优后准确率\n约 84.5%）。当前需要由高级技师对该模型开展上线前的体系化质量评估：制定模型\n稳健性测试标准、执行多次随机重复评估、开展按行业分层的公平性评估，并形成\n训练集/测试集标准规范及训练平台迭代优化方向，作为该模型上线前的强制质量门\n禁依据。数据集 04/SS-5-5-5-01_payment_risk.csv 已预先放置在指定路径下，部\n分数据如表 1-1 所示。\n表 1-1 工商业用户电费回收风险数据集（部分）\n月均用 平均账 合同容 入网年\n用电波 历史违 客户星 行业类 是否违\n序号 电量 期 量 限\n动率 约次数 级 型 约\n（kWh） （天） （kW） （年）\n1 2264 0.129 34.6 0 3 1 87.1 10.7 0\n2 12148 0.096 29.0 1 4 2 80.6 4.7 0\n3 10743 0.302 10.0 3 4 0 24.2 14.5 1\n4 2559 0.159 26.7 3 4 1 31.4 5.8 1\n… … … … … … … … … …\n\n字段说明：月均用电量=过去 12 个月平均月用电量；用电波动率=月用电量标准\n差/均值，反映用电稳定性；平均账期=从账单生成到实际缴费的平均天数；历史违\n约次数=过去 24 个月发生违约的总次数；客户星级=南网客户分级（1~5 星，5 星最\n优质）；行业类型：0=工业、1=商业、2=农业生产、3=其他；合同容量=用户报装合\n同容量；入网年限=成为供电客户的时长；是否违约：1=过去 12 个月发生过违约，\n0=按时缴费用户。\n（二）考核任务\n针对该业务场景，使用 Python 补全给定代码，通过 3 个随机种子重复执行分层\n划分、标准化、训练和评价，完成模型稳健性专项质量评价。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（20 分）\n①请补全以下空格部分代码，读取 04/SS-5-5-5-01_payment_risk.csv 数据\n集，并完成缺失值、重复值清洗及索引重置（8 分）\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\n②请补全以下空格部分代码，划分特征 X（字段：月均用电量、用电波动率、平\n均账期、历史违约次数、客户星级、行业类型、合同容量、入网年限）与标签 y（字\n\n段：是否违约）（12 分）\nX = data[____3____]\ny = data[____4____]\n（2）专项质量评价（80 分）\n①请补全以下空格部分代码，使用随机种子 2026、42、100 重复执行分层划分、\n标准化、随机森林训练和 Accuracy、F1 评价（40 分）\nresults = []\nfor seed in [____5____]:\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=0.2, random_state=seed, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = RandomForestClassifier(n_estimators=100, random_state=seed)\nmodel.____9____(X_train_s, y_train)\npred = model.____10____(X_test_s)\nresults.append((accuracy_score(y_test, pred), f1_score(y_test,\npred)))\nprint(results)\n②请补全以下空格部分代码，计算 3 次结果的 Accuracy 极差和 F1 极差（20\n分）\nacc_gap = max(item[____11____] for item in results) - min(item[0] for item\n\nin results)\nf1_gap = max(item[____12____] for item in results) - min(item[1] for item\nin results)\n③请补全以下空格部分代码，当 Accuracy 极差和 F1 极差均不超过 0.10 时判定\n结果基本稳定（20 分）\nprint(\"结果基本稳定\" if acc_gap <= ____13____ and f1_gap <= ____14____\nelse \"结果波动较大\")\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。\n参考代码（请补全空格后运行）\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score, f1_score\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nresults = []\nfor seed in [____5____]:\n\nX_train, X_test, y_train, y_test = train_test_split(X, y,\ntest_size=0.2, random_state=seed, stratify=____6____)\nscaler = StandardScaler()\nX_train_s = scaler.____7____(X_train)\nX_test_s = scaler.____8____(X_test)\nmodel = RandomForestClassifier(n_estimators=100, random_state=seed)\nmodel.____9____(X_train_s, y_train)\npred = model.____10____(X_test_s)\nresults.append((accuracy_score(y_test, pred), f1_score(y_test,\npred)))\nprint(results)\nacc_gap = max(item[____11____] for item in results) - min(item[0] for item\nin results)\nf1_gap = max(item[____12____] for item in results) - min(item[1] for item\nin results)\nprint(\"结果基本稳定\" if acc_gap <= ____13____ and f1_gap <= ____14____\nelse \"结果波动较大\")",
     "sourcePages": [
-      241,
-      242,
-      243,
-      244
+      144,
+      145,
+      146,
+      147,
+      148
     ],
     "rubricPages": [
-      245,
-      246,
-      247,
-      248,
-      249,
-      250,
-      251,
-      252,
-      253
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156
     ],
     "platformTags": [
       "模型评估",
-      "黄金测试集"
+      "质量门禁"
     ],
     "practiceType": "model_evaluation",
     "inputFiles": [
-      "payment_risk.csv"
+      "01_payment_risk.csv",
+      "04/SS-5-5-5-01_payment_risk.csv",
+      "SS-5-5-5-01_payment_risk.csv"
     ],
     "expectedOutputFiles": [],
     "rubric": [
       {
         "id": "SS-5-5-5-01-R01",
         "order": 1,
-        "item": "dropna()、drop_duplicates()与 ta=pd.re",
-        "requirement": "dropna()、drop_duplicates()与 ta=pd.re",
+        "item": "数据处理 均用电量、用电波动率、平均账",
+        "requirement": "数据处理 均用电量、用电波动率、平均账",
         "points": 50,
-        "standard": "构建 StandardScaler 标准化。1.3 使 reset_index(drop=True)清洗， ad_csv(' 用随机森林 并正确划分特征 X 与标签 y（是否 04/SS-5- （n_estimators=200,max_depth= 违约） 5-5- 5,class_weight='balanced',ran 01_payme dom_state=2026）构建基准模型 nt_risk. 并在训练集上完成训练。 csv').dr opna().d rop_dupl icates() .reset_i ndex(dro p=True)X =data[[' 月均用电 量','用 电波动率 ','平均 账期',' 历史违约 次数',' 客户星级 ','行业 类型',' 合同容量 ','入网 年限 ']]y=dat a['是否 违约 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) scaler=S tandardS caler()X tr=scale r.fit_tr ansform( X_train) ;Xte=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=2 00,max_d epth=5,c lass_wei ght='bal anced',r andom_st ate=2026 )model.f it(Xtr,y _train) 正确按 importpa test_size=0.2、random_state=2 ndasaspd 026、stratify=y 分层划分训练/ fromskle 测试集，并使用 StandardScaler arn.mode 对训练集 fit_transform、对测试 l_select 集 transform ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport Standard Scalerfr omsklear n.ensemb leimport RandomFo restClas sifierda ta=pd.re ad_csv(' 04/SS-5- 5-5- 01_payme nt_risk. csv').dr opna().d rop_dupl icates() .reset_i ndex(dro p=True)X =data[[' 月均用电 量','用 电波动率 ','平均 账期',' 历史违约 次数',' 客户星级 ','行业 类型',' 合同容量 ','入网 年限 ']]y=dat a['是否 违约 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) scaler=S tandardS caler()X tr=scale r.fit_tr ansform( X_train) ;Xte=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=2 00,max_d epth=5,c lass_wei ght='bal anced',r andom_st ate=2026 )model.f it(Xtr,y _train) importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t 正确实例化 est_spli RandomForestClassifier tfromskl （n_estimators=200、max_depth earn.pre =5、class_weight= processi 'balanced'、random_state=2026 ngimport 四项参数全部正确），并调用 Standard fit()在训练集上完成训练无报错 Scalerfr omsklear n.ensemb leimport RandomFo restClas sifierda ta=pd.re ad_csv(' 04/SS-5- 5-5- 01_payme nt_risk. csv').dr opna().d rop_dupl icates() .reset_i ndex(dro p=True)X =data[[' 月均用电 量','用 电波动率 ','平均 账期',' 历史违约 次数',' 客户星级 ','行业 类型',' 合同容量 ','入网 年限 ']]y=dat a['是否 违约 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) scaler=S tandardS caler()X tr=scale r.fit_tr ansform( X_train) ;Xte=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=2 00,max_d epth=5,c lass_wei ght='bal anced',r andom_st ate=2026 )model.f it(Xtr,y _train) fromskle arn.metr icsimpor taccurac y_score, recall_s core,f1_ scoresee ds=[2026 ,42,100, 200,333] results= []forsin 2.1 使用至少 5 个不同的 seeds:Xt random_state（建议含 2026 在内 r2,Xte2, 如[2026,42,100,200,333]），循 ytr2,yte 环执行\"划分→标准化→训练→预 2=train_ 测\"全流程，每次计算准确率、召 正确定义至少 5 个不同的 test_spl",
+        "standard": "和 dropna，代码可完成清洗 omsklear 期、历史违约次数、客户星级、 n.metric 行业类型、合同容量、入网年 simporta 限）和标签 y（是否违约）。 ccuracy_ score,f1 _scoreda ta=pd.re ad_csv(\" 04/SS-5- 5-5- 01_payme nt_risk. csv\")dat a=data.d ropna(). drop_dup licates( ).reset_ index(dr op=True) X=data[[ \"月均用 电量\",\" 用电波动 率\",\"平 均账期\", \"历史违 约次数\", \"客户星 级\",\"行 业类型\", \"合同容 量\",\"入 网年限 \"]]y=dat a[\"是否 违约\"] importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport Standard Scalerfr omsklear n.ensemb leimport 1.2（12 分）：正确补全指定特征 RandomFo 字段列表和标签字段 restClas sifierfr omsklear n.metric simporta ccuracy_ score,f1 _scoreda ta=pd.re ad_csv(\" 04/SS-5- 5-5- 01_payme nt_risk. csv\")dat a=data.d ropna(). drop_dup licates( ).reset_ index(dr op=True) X=data[[ \"月均用 电量\",\" 用电波动 率\",\"平 均账期\", \"历史违 约次数\", \"客户星 级\",\"行 业类型\", \"合同容 量\",\"入 网年限 \"]]y=dat a[\"是否 违约\"] results= []forsee din[2026 ,42,100] :X_train ,X_test, y_train, y_test=t rain_tes t_split( X,y,test _size=0. 2.1 使用 3 个指定随机种子重复执 2,random 行分层划分、标准化、训练和预 _state=s 2.1（40 分）：正确补全种子列表、 测，并记录 Accuracy 和 F1。2.2 eed,stra",
         "remarks": ""
       },
       {
         "id": "SS-5-5-5-01-R02",
         "order": 2,
-        "item": "稳健性测试 回率、F1 值。2.2 输出 5 次评估 random_state（含 2026 在内，如 it(X,y,t",
-        "requirement": "稳健性测试 回率、F1 值。2.2 输出 5 次评估 random_state（含 2026 在内，如 it(X,y,t",
+        "item": "专项质量评价 分层参数、标准化、训练、预测",
+        "requirement": "专项质量评价 分层参数、标准化、训练、预测",
         "points": 50,
-        "standard": "的明细表，并汇总输出三项指标 [2026,42,100,200,333]） est_size 各自的均值与标准差。2.3 制定稳 =0.2,ran 健性判定阈值（如准确率标准差 dom_stat <0.05、召回率标准差<0.05）， e=s,stra 明确给出\"通过/不通过\"结论。 tify=y)s c=Standa rdScaler ()m=Rand omForest Classifi er(n_est imators= 200,max_ depth=5, class_we ight='ba lanced', random_s tate=s)m .fit(sc. fit_tran sform(Xt r2),ytr2 )yp=m.pr edict(sc .transfo rm(Xte2) )results .append( {'seed': s,'acc': accuracy _score(y te2,yp), 'rec':re call_sco re(yte2, yp),'f1' :f1_scor e(yte2,y p)})df=p d.DataFr ame(resu lts);pri nt(df)pr int(df[[ 'acc','r ec','f1' ]].agg([ 'mean',' std']))# accmean ≈0.8560 std≈0.0 297;recm ean≈0.7 785std≈ 0.0257# 阈值： accstd<0 .05、rec std<0.05 ；实测均 小于阈值 →通过 fromskle 正确循环执行\"划分→标准化→训 arn.metr 练→预测\"完整流程，每次循环均 icsimpor 使用对应 seed 进行划分与模型构 taccurac 建 y_score, recall_s core,f1_ scoresee ds=[2026 ,42,100, 200,333] results= []forsin seeds:Xt r2,Xte2, ytr2,yte 2=train_ test_spl it(X,y,t est_size =0.2,ran dom_stat e=s,stra tify=y)s c=Standa rdScaler ()m=Rand omForest Classifi er(n_est imators= 200,max_ depth=5, class_we ight='ba lanced', random_s tate=s)m .fit(sc. fit_tran sform(Xt r2),ytr2 )yp=m.pr edict(sc .transfo rm(Xte2) )results .append( {'seed': s,'acc': accuracy _score(y te2,yp), 'rec':re call_sco re(yte2, yp),'f1' :f1_scor e(yte2,y p)})df=p d.DataFr ame(resu lts);pri nt(df)pr int(df[[ 'acc','r ec','f1' ]].agg([ 'mean',' std']))# accmean ≈0.8560 std≈0.0 297;recm ean≈0.7 785std≈ 0.0257# 阈值： accstd<0 .05、rec std<0.05 ；实测均 小于阈值 →通过 fromskle arn.metr icsimpor taccurac y_score, recall_s core,f1_ scoresee ds=[2026 ,42,100, 200,333] 每次循环正确计算 results= accuracy_score、recall_score []forsin 、f1_score 三项指标（基于 seeds:Xt sklearn.metrics） r2,Xte2, ytr2,yte 2=train_ test_spl it(X,y,t est_size =0.2,ran dom_stat e=s,stra tify=y)s c=Standa",
+        "standard": "计算 3 次结果的 Accuracy 极差和 tify=y)s 和指标记录代码 F1 极差。2.3 使用 0.10 阈值作出 caler=St 稳健性判断。 andardSc aler()X_ train_s= scaler.f it_trans form(X_t rain)X_t est_s=sc aler.tra nsform(X _test)mo del=Rand omForest Classifi er(n_est imators= 100,rand om_state =seed)mo del.fit( X_train_ s,y_trai n)pred=m odel.pre dict(X_t est_s)re sults.ap pend((ac curacy_s core(y_t est,pred ),f1_sco re(y_tes t,pred)) )print(r esults)a cc_gap=m ax(item[ 0]forite minresul ts)- min(item [0]forit eminresu lts)f1_g ap=max(i tem[1]fo riteminr esults)- min(item [1]forit eminresu lts)prin t(\"结果 基本稳定 \"ifacc_g ap<=0.10 andf1_ga p<=0.10e lse\"结果 波动较大 \") results= 2.2（20 分）：正确补全 []forsee Accuracy 极差和 F1 极差计算 din[2026 ,42,100] :X_train ,X_test, y_train, y_test=t rain_tes t_split( X,y,test _size=0. 2,random _state=s eed,stra tify=y)s caler=St andardSc aler()X_ train_s= scaler.f it_trans form(X_t rain)X_t est_s=sc aler.tra nsform(X _test)mo del=Rand omForest Classifi er(n_est imators= 100,rand om_state =seed)mo del.fit( X_train_ s,y_trai n)pred=m odel.pre dict(X_t est_s)re sults.ap pend((ac curacy_s core(y_t est,pred ),f1_sco re(y_tes t,pred)) )print(r esults)a cc_gap=m ax(item[ 0]forite minresul ts)- min(item [0]forit eminresu lts)f1_g ap=max(i tem[1]fo riteminr esults)- min(item [1]forit eminresu lts)prin t(\"结果 基本稳定 \"ifacc_g ap<=0.10 andf1_ga p<=0.10e lse\"结果 波动较大 \") results= []forsee din[2026 ,42,100] :X_train ,X_test, y_train, y_test=t rain_tes t_split( X,y,test _size=0. 2,random 2.3（20 分）：正确补全两个 _state=s 0.10 阈值并输出结论 eed,stra tify=y)s caler=St andardSc aler()X_ train_s= scaler.f it_trans form(X_t rain)X_t est_s=sc aler.tra nsform(X _test)mo del=Rand omForest Classifi er(n_est imators= 100,rand om_state =seed)mo del.fit( X_train_ s,y_trai n)pred=m odel.pre dict(X_t est_s)re sults.ap pend((ac curacy_s core(y_t est,pred ),f1_sco re(y_tes t,pred)) )print(r esults)a cc_gap=m ax(item[ 0]forite minresul ts)- min(item [0]forit eminresu lts)f1_g ap=max(i tem[1]fo riteminr esults)- min(item [1]forit eminresu lts)prin t(\"结果 基本稳定 \"ifacc_g ap<=0.10 andf1_ga p<=0.10e lse\"结果 波动较大 \")",
         "remarks": ""
+      },
+      {
+        "id": "SS-5-5-5-01-R03",
+        "order": 3,
+        "item": "超时扣分 按时完成工作 每超 1 分钟扣 1 分，超过 5 分停",
+        "requirement": "超时扣分 按时完成工作 每超 1 分钟扣 1 分，超过 5 分停",
+        "points": 0,
+        "standard": "止操作。 考评人： 日期: 地点:",
+        "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-5-5-01/SS-5-5-5-01_payment_risk.csv"
+    ]
   },
   {
     "id": "SS-5-5-5-02",
-    "title": "主变压器状态评价模型的能力矩阵设计与训练平台迭代方案 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
+    "title": "主变压器状态评价模型的跨电压等级样本评价。 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
     "module": "智能训练",
     "moduleCode": "SS-5",
     "subModuleCode": "SS-5-5",
     "evaluationContent": "",
     "level": "高级技师",
     "questionType": "实际操作题",
-    "timeLimitMinutes": 90,
+    "timeLimitMinutes": 60,
     "score": 100,
-    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用主变压器状态评价数据集 1 份（transformer_health.csv）、 考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
-    "questionText": "主变压器状态评价模型的能力矩阵设计与训练平台迭代方案\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用主变压器状态评价数据集 1 份（transformer_health.csv）、\n考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局变电运维中心希望\n针对所辖主变压器（110kV~500kV 各电压等级）建立设备状态评价模型，对每台主变\n是否需要进入检修流程进行预测。前期已积累了完整的主变运行参数、油色谱在线\n监测和历史故障数据，需要由高级技师主导建立该模型的整体训练—测试—上线评\n估方案，重点考察跨电压等级的子群体公平性，并形成训练平台迭代的体系化方案。\n数据集 transformer_health.csv 已预先放置在指定路径下，部分数据如表 1-1 所示。\n表 1-1 主变压器状态评价数据集（部分）\n历\nH2 含 总烃含 史\n运行年 绕组温 油中含水 介质 电压等 是否\n油温 负载 量 量 故\n序号 限 度 量 损耗 级 需检\n（℃） 率 （μL/ （μL/ 障\n（年） （℃） （mg/L） （%） （kV） 修\nL） L） 次\n数\n1 9.1 57.00 59.61 0.623 5.00 239.81 13.37 0.584 1 110 0\n2 12.3 63.71 76.19 0.724 30.27 69.29 11.26 0.495 1 220 0\n3 4.6 53.16 51.55 0.472 78.54 53.60 8.13 0.347 0 220 0\n\n4 22.3 79.45 92.10 0.882 168.30 320.50 31.20 1.652 5 220 1\n… … … … … … … … … … … …\n字段说明：运行年限=主变投运至今的年限；油温=顶层油温实时测量值；绕组\n温度=绕组热点温度计算值；负载率=实时负载/额定容量；H2 含量=油中溶解氢气浓\n度；总烃含量=CH4+C2H6+C2H4+C2H2 总和；油中含水量=微水含量；介质损耗=绝缘油\ntanδ 测量值；历史故障次数=近 5 年发生故障的次数；电压等级=主变高压侧额定电\n压（110/220/500 kV）；是否需检修：1=状态评价为“注意”或“严重”，需进入检\n修流程；0=状态评价为“正常”。\n（二）考核任务\n针对该主变压器状态评价业务场景，使用 Python 完成基准模型构建、稳健性测\n试、跨电压等级公平性评估，并设计智能训练产品能力矩阵和训练平台整体迭代方\n案。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据准备与基准模型构建（15 分）\n①读取 transformer_health.csv 数据集，完成缺失值与重复值清洗并重置索\n引；划分特征 X（字段：运行年限、油温、绕组温度、负载率、H2 含量、总烃含量、\n油中含水量、介质损耗、历史故障次数、电压等级共 10 个字段）与标签 y（字段：\n\n是否需检修）（5 分）\n②使用 random_state=2026、stratify=y 按 8:2 划分训练集与测试集，对特征\n进行 StandardScaler 标准化（5 分）\n③使用随机森林（n_estimators=200, max_depth=10, class_weight=\n'balanced', random_state=2026）构建基准模型，输出测试集准确率、召回率、F1\n值（5 分）\n（2）稳健性测试（30 分）\n①制定稳健性测试标准：使用至少 5 个不同的 random_state（建议包含 2026 在\n内的 5 个种子值，如[2026, 42, 100, 200, 333]），分别重复执行“划分→标准化→\n训练→预测”全流程，每次计算准确率、召回率、F1 值（15 分）\n②输出 5 次评估的明细表，并汇总输出三项指标各自的均值与标准差（10 分）\n③自行制定稳健性判定阈值（如准确率标准差<0.02、召回率标准差<0.03），\n明确给出“通过/不通过”结论（5 分）\n（3）跨电压等级公平性评估（25 分）\n基于基准模型（random_state=2026）的预测结果：\n①按电压等级（110/220/500 kV）分别筛选测试集子样本，分别计算各子群体的\n样本数、需检修样本数、准确率、召回率（15 分）\n②计算 3 个子群体之间召回率的最大差异（最高-最低），设定阈值（如≤0.15\n可接受），明确给出“可接受/不可接受”的判定（10 分）\n（4）能力矩阵与训练平台迭代方案（30 分）\n①能力矩阵：以注释或表格形式列出至少 4 个能力维度（如数据质量管控、训\n练集标准、群体公平性、上线监控、增量训练等）及其覆盖情况（10 分）\n\n②训练平台迭代方向：至少从 3 个层级（如数据层/训练层/监控层）提出可执\n行方案（12 分）\n③提出至少 1 条前瞻性算法升级建议（如引入时序特征、多分类升级、AI+规则\n双重输出等）（8 分）\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
+    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用主变压器状态评价数据集 1 份（路径：04/SS-5-5-5- 02_transformer_health.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
+    "questionText": "主变压器状态评价模型的跨电压等级样本评价。\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用主变压器状态评价数据集 1 份（路径：04/SS-5-5-5-\n02_transformer_health.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局变电运维中心希望\n针对所辖主变压器（110kV~500kV 各电压等级）建立设备状态评价模型，对每台主变\n是否需要进入检修流程进行预测。前期已积累了完整的主变运行参数、油色谱在线\n监测和历史故障数据，需要由高级技师主导建立该模型的整体训练—测试—上线评\n估方案，重点考察跨电压等级的子群体公平性，并形成训练平台迭代的体系化方案。\n数据集 04/SS-5-5-5-02_transformer_health.csv 已预先放置在指定路径下，部分\n数据如表 1-1 所示。\n表 1-1 主变压器状态评价数据集（部分）\n历\nH2 含 总烃含 史\n运行年 绕组温 油中含水 介质 电压等 是否\n油温 负载 量 量 故\n序号 限 度 量 损耗 级 需检\n（℃） 率 （μL/ （μL/ 障\n（年） （℃） （mg/L） （%） （kV） 修\nL） L） 次\n数\n1 9.1 57.00 59.61 0.623 5.00 239.81 13.37 0.584 1 110 0\n2 12.3 63.71 76.19 0.724 30.27 69.29 11.26 0.495 1 220 0\n3 4.6 53.16 51.55 0.472 78.54 53.60 8.13 0.347 0 220 0\n\n4 22.3 79.45 92.10 0.882 168.30 320.50 31.20 1.652 5 220 1\n… … … … … … … … … … … …\n字段说明：运行年限=主变投运至今的年限；油温=顶层油温实时测量值；绕组\n温度=绕组热点温度计算值；负载率=实时负载/额定容量；H2 含量=油中溶解氢气浓\n度；总烃含量=CH4+C2H6+C2H4+C2H2 总和；油中含水量=微水含量；介质损耗=绝缘油\ntanδ 测量值；历史故障次数=近 5 年发生故障的次数；电压等级=主变高压侧额定电\n压（110/220/500 kV）；是否需检修：1=状态评价为“注意”或“严重”，需进入检\n修流程；0=状态评价为“正常”。\n（二）考核任务\n针对该业务场景，使用 Python 补全给定代码，构建随机森林模型，并按\n110kV、220kV、500kV 三个电压等级完成样本数量与准确率专项评价。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（20 分）\n①请补全以下空格部分代码，读取 04/SS-5-5-5-02_transformer_health.csv\n数据集，并完成缺失值、重复值清洗及索引重置（8 分）\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\n\n②请补全以下空格部分代码，划分特征 X（字段：运行年限、油温、绕组温度、\n负载率、H2 含量、总烃含量、油中含水量、介质损耗、历史故障次数、电压等级）\n与标签 y（字段：是否需检修）（12 分）\nX = data[____3____]\ny = data[____4____]\n（2）专项质量评价（80 分）\n①请补全以下空格部分代码，完成分层划分、标准化、随机森林训练和测试集\n预测（30 分）\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,\nrandom_state=2026, stratify=____5____)\nscaler = StandardScaler()\nX_train_s = scaler.____6____(X_train)\nX_test_s = scaler.____7____(X_test)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____8____(X_train_s, y_train)\npred = model.____9____(X_test_s)\n②请补全以下空格部分代码，分别统计 110kV、220kV、500kV 测试样本数及各\n等级预测准确率（40 分）\ntest_info = X_test.copy()\ntest_info[\"真实标签\"] = y_test.values\ntest_info[\"预测标签\"] = pred\ncounts = {}\n\naccs = {}\nfor level in [____10____]:\nsub = test_info[test_info[____11____] == level]\ncounts[level] = len(sub)\naccs[level] = ____12____(sub[\"真实标签\"], sub[\"预测标签\"]) if\nlen(sub) else 0\nprint(level, counts[level], accs[level])\n③请补全以下空格部分代码，找出测试样本数最少、需要重点关注的电压等级\n（10 分）\nprint(\"重点关注等级：\", ____13____(counts, key=counts.____14____))\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。\n参考代码（请补全空格后运行）\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\n\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,\nrandom_state=2026, stratify=____5____)\nscaler = StandardScaler()\nX_train_s = scaler.____6____(X_train)\nX_test_s = scaler.____7____(X_test)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____8____(X_train_s, y_train)\npred = model.____9____(X_test_s)\ntest_info = X_test.copy()\ntest_info[\"真实标签\"] = y_test.values\ntest_info[\"预测标签\"] = pred\ncounts = {}\naccs = {}\nfor level in [____10____]:\nsub = test_info[test_info[____11____] == level]\ncounts[level] = len(sub)\naccs[level] = ____12____(sub[\"真实标签\"], sub[\"预测标签\"]) if\nlen(sub) else 0\nprint(level, counts[level], accs[level])\nprint(\"重点关注等级：\", ____13____(counts, key=counts.____14____))",
     "sourcePages": [
-      272,
-      273,
-      274,
-      275
+      157,
+      158,
+      159,
+      160,
+      161
     ],
     "rubricPages": [
-      276,
-      277,
-      278,
-      279,
-      280,
-      281,
-      282,
-      283,
-      284
+      162,
+      163,
+      164,
+      165,
+      166,
+      167,
+      168,
+      169
     ],
     "platformTags": [
       "模型评估",
-      "黄金测试集"
+      "质量门禁"
     ],
     "practiceType": "model_evaluation",
     "inputFiles": [
-      "transformer_health.csv"
+      "02_transformer_health.csv",
+      "04/SS-5-5-5-02_transformer_health.csv",
+      "SS-5-5-5-02_transformer_health.csv"
     ],
     "expectedOutputFiles": [],
     "rubric": [
       {
         "id": "SS-5-5-5-02-R01",
         "order": 1,
-        "item": "random_state=2026、stratify=y",
-        "requirement": "random_state=2026、stratify=y",
-        "points": 33,
-        "standard": "构建 正确划分 10 个特征字段 X（运行 omsklear 按 8:2 划分训练/测试集，进行 年限、油温、绕组温度、负载率、 n.metric StandardScaler 标准化。1.3 使 H2 含量、总烃含量、油中含水量、 simporta 用随机森林 介质损耗、历史故障次数、电压 ccuracy_ （n_estimators=200,max_depth= 等级）与\"是否需检修\"标签 y score,re 10,class_weight='balanced',ra call_sco ndom_state=2026）构建基准模 re,f1_sc 型，输出测试集准确率、召回率、 oredata= F1 值。 pd.read_ csv('04/ SS-5-5- 5- 02_trans former_h ealth.cs v').drop na().dro p_duplic ates().r eset_ind ex(drop= True)X=d ata[['运 行年限', '油温',' 绕组温度 ','负载 率','H2 含量',' 总烃含量 ','油中 含水量', '介质损 耗','历 史故障次 数','电 压等级 ']]y=dat a['是否 需检修 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) scaler=S tandardS caler()X tr=scale r.fit_tr ansform( X_train) ;Xte=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=2 00,max_d epth=10, class_we ight='ba lanced', random_s tate=202 6)model. fit(Xtr, y_train) yp=model .predict (Xte)#ac c≈0.910 5,rec≈0 .8684,f1 ≈0.8859 importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport Standard Scalerfr omsklear n.ensemb leimport 正确按 RandomFo test_size=0.2、random_state=2 restClas 026、stratify=y 分层划分训练/ sifierfr 测试集，并使用 StandardScaler omsklear 对训练集 fit_transform、对测试 n.metric 集 transform simporta ccuracy_ score,re call_sco re,f1_sc oredata= pd.read_ csv('04/ SS-5-5- 5- 02_trans former_h ealth.cs v').drop na().dro p_duplic ates().r eset_ind ex(drop= True)X=d ata[['运 行年限', '油温',' 绕组温度 ','负载 率','H2 含量',' 总烃含量 ','油中 含水量', '介质损 耗','历 史故障次 数','电 压等级 ']]y=dat a['是否 需检修 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) scaler=S tandardS caler()X tr=scale r.fit_tr ansform( X_train) ;Xte=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=2 00,max_d epth=10, class_we ight='ba lanced', random_s tate=202 6)model. fit(Xtr, y_train) yp=model .predict (Xte)#ac c≈0.910 5,rec≈0 .8684,f1 ≈0.8859 importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport Standard Scalerfr 正确实例化 omsklear RandomForestClassifier n.ensemb （n_estimators=200、max_depth leimport =10、class_weight= RandomFo 'balanced'、random_state=2026 restClas 四项参数全部正确）完成 fit()训 sifierfr 练，并输出测试集上的 omsklear accuracy、recall、f1 三项指标 n.metric （参考值 simporta acc≈0.9105、rec≈0.8684、f1 ccuracy_ ≈0.8859） score,re call_sco re,f1_sc oredata= pd.read_ csv('04/ SS-5-5- 5- 02_trans former_h ealth.cs v').drop na().dro p_duplic ates().r eset_ind ex(drop= True)X=d ata[['运 行年限', '油温',' 绕组温度 ','负载 率','H2 含量',' 总烃含量 ','油中 含水量', '介质损 耗','历 史故障次 数','电 压等级 ']]y=dat a['是否 需检修 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) scaler=S tandardS caler()X tr=scale r.fit_tr ansform( X_train) ;Xte=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=2 00,max_d epth=10, class_we ight='ba lanced', random_s tate=202 6)model. fit(Xtr, y_train) yp=model .predict (Xte)#ac c≈0.910 5,rec≈0 .8684,f1 ≈0.8859 seeds=[2 026,42,1 00,200,3 33]rs=[] forsinse eds:Xtr2 ,Xte2,yt r2,yte2= train_te st_split (X,y,tes t_size=0 .2,rando 2.1 使用至少 5 个不同的 m_state= random_state（建议含 2026 在内 s,strati 如[2026,42,100,200,333]），循 fy=y)sc= 环执行\"划分→标准化→训练→预 Standard 测\"全流程，每次计算准确率、召 正确定义至少 5 个不同的 Scaler()",
+        "item": "数据处理 行年限、油温、绕组温度、负载",
+        "requirement": "数据处理 行年限、油温、绕组温度、负载",
+        "points": 50,
+        "standard": "和 dropna，代码可完成清洗 omsklear 率、H2 含量、总烃含量、油中含 n.metric 水量、介质损耗、历史故障次数、 simporta 电压等级）和标签 y（是否需检 ccuracy_ 修）。 scoredat a=pd.rea d_csv(\"0 4/SS-5- 5-5- 02_trans former_h ealth.cs v\")data= data.dro pna().dr op_dupli cates(). reset_in dex(drop =True)X= data[[\" 运行年限 \",\"油温 \",\"绕组 温度\",\" 负载率\", \"H2 含量 \",\"总烃 含量\",\" 油中含水 量\",\"介 质损耗\", \"历史故 障次数\", \"电压等 级 \"]]y=dat a[\"是否 需检修\"] importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport Standard Scalerfr omsklear n.ensemb 1.2（12 分）：正确补全指定特征 leimport 字段列表和标签字段 RandomFo restClas sifierfr omsklear n.metric simporta ccuracy_ scoredat a=pd.rea d_csv(\"0 4/SS-5- 5-5- 02_trans former_h ealth.cs v\")data= data.dro pna().dr op_dupli cates(). reset_in dex(drop =True)X= data[[\" 运行年限 \",\"油温 \",\"绕组 温度\",\" 负载率\", \"H2 含量 \",\"总烃 含量\",\" 油中含水 量\",\"介 质损耗\", \"历史故 障次数\", \"电压等 级 \"]]y=dat a[\"是否 需检修\"] X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 2.1 完成分层划分、标准化、随机 26,strat 森林训练和预测。2.2 按 ify=y)sc 110kV、220kV、500kV 统计测试样 2.1（30 分）：正确补全分层参数、 aler=Sta",
         "remarks": ""
       },
       {
         "id": "SS-5-5-5-02-R02",
         "order": 2,
-        "item": "支。",
-        "requirement": "支。",
-        "points": 33,
-        "standard": "评分标准依据 《人工智能算法测试员工作规范》 评分标准 序号 考核内容 评分要求 配分 得分标准 得分 备注 importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.pre processi ngimport 1.1 读取 Standard transformer_health.csv，完成 Scalerfr 清洗并重置索引；划分特征 X（10 omsklear 个字段：运行年限、油温、绕组 正确调用 n.ensemb 温度、负载率、H2 含量、总烃含 pd.read_csv('transformer_heal leimport 量、油中含水量、介质损耗、历 th.csv')读取数据集，完成 RandomFo 史故障次数、电压等级）与标签 y dropna()、drop_duplicates()与 restClas （是否需检修）。1.2 使用 数据准备与基准模型 reset_index(drop=True)清洗， sifierfr",
+        "item": "专项质量评价",
+        "requirement": "专项质量评价",
+        "points": 50,
+        "standard": "本数和准确率。2.3 找出测试样本 标准化、训练和预测代码 ndardSca 数最少、需要重点关注的电压等 ler()X_t 级。 rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )pred=mo del.pred ict(X_te st_s)tes t_info=X _test.co py()test _info[\" 真实标签 \"]=y_tes t.values test_inf o[\"预测 标签\"] =predcou nts={}ac cs={}for levelin[ 110,220, 500]:sub =test_in fo[test_ info[\"电 压等级\"] ==level] counts[l evel]=le n(sub)ac cs[level ]=accura cy_score (sub[\"真 实标签 \"],sub[\" 预测标签 \"])iflen (sub)els e0print( level,co unts[lev el],accs [level]) print(\" 重点关注 等级： \",min(co unts,key =counts. get)) X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran 2.2（40 分）：正确补全电压等级 sform(X_ 列表、筛选字段和准确率计算 test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )pred=mo del.pred ict(X_te st_s)tes t_info=X _test.co py()test _info[\" 真实标签 \"]=y_tes t.values test_inf o[\"预测 标签\"] =predcou nts={}ac cs={}for levelin[ 110,220, 500]:sub =test_in fo[test_ info[\"电 压等级\"] ==level] counts[l evel]=le n(sub)ac cs[level ]=accura cy_score (sub[\"真 实标签 \"],sub[\" 预测标签 \"])iflen (sub)els e0print( level,co unts[lev el],accs [level]) print(\" 重点关注 等级： \",min(co unts,key =counts. get)) X_train, X_test,y _train,y _test=tr ain_test _split(X 2.3（10 分）：正确使用 min 及 ,y,test_ counts.get 找出样本数最少等级 size=0.2 ,random_ state=20 26,strat ify=y)sc aler=Sta ndardSca ler()X_t rain_s=s caler.fi t_transf orm(X_tr ain)X_te st_s=sca ler.tran sform(X_ test)mod el=Rando mForestC lassifie r(n_esti mators=1 00,rando m_state= 2026)mod el.fit(X _train_s ,y_train )pred=mo del.pred ict(X_te st_s)tes t_info=X _test.co py()test _info[\" 真实标签 \"]=y_tes t.values test_inf o[\"预测 标签\"] =predcou nts={}ac cs={}for levelin[ 110,220, 500]:sub =test_in fo[test_ info[\"电 压等级\"] ==level] counts[l evel]=le n(sub)ac cs[level ]=accura cy_score (sub[\"真 实标签 \"],sub[\" 预测标签 \"])iflen (sub)els e0print( level,co unts[lev el],accs [level]) print(\" 重点关注 等级： \",min(co unts,key =counts. get)) 每超 1 分钟扣 1 分，超过 5 分停",
         "remarks": ""
       },
       {
         "id": "SS-5-5-5-02-R03",
         "order": 3,
-        "item": "稳健性测试 回率、F1 值。2.2 输出 5 次评估 random_state（含 2026 在内，如 m=Random",
-        "requirement": "稳健性测试 回率、F1 值。2.2 输出 5 次评估 random_state（含 2026 在内，如 m=Random",
-        "points": 33,
-        "standard": "的明细表，并汇总输出三项指标 [2026,42,100,200,333]） ForestCl 各自的均值与标准差。2.3 制定稳 assifier 健性判定阈值（如准确率标准差 (n_estim <0.02、召回率标准差<0.03）， ators=20 明确给出\"通过/不通过\"结论。 0,max_de pth=10,c lass_wei ght='bal anced',r andom_st ate=s)m. fit(sc.f it_trans form(Xtr 2),ytr2) yp2=m.pr edict(sc .transfo rm(Xte2) )rs.appe nd({'see d':s,'ac c':accur acy_scor e(yte2,y p2),'rec ':recall _score(y te2,yp2) ,'f1':f1 _score(y te2,yp2) })df=pd. DataFram e(rs);pr int(df)p rint(df[ ['acc',' rec','f1 ']].agg( ['mean', 'std'])) #accmean ≈0.9211 std≈0.0 083;recm ean≈0.8 553std≈ 0.0161# 阈值： accstd<0 .02、rec std<0.03 ；实测均 小于阈值 →通过 seeds=[2 026,42,1 00,200,3 33]rs=[] forsinse 正确循环执行\"划分→标准化→训 eds:Xtr2 练→预测\"完整流程，每次循环均 ,Xte2,yt 使用对应 seed 进行划分与模型构 r2,yte2= 建 train_te st_split (X,y,tes t_size=0 .2,rando m_state= s,strati fy=y)sc= Standard Scaler() m=Random ForestCl assifier (n_estim ators=20 0,max_de pth=10,c lass_wei ght='bal anced',r andom_st ate=s)m. fit(sc.f it_trans form(Xtr 2),ytr2) yp2=m.pr edict(sc .transfo rm(Xte2) )rs.appe nd({'see d':s,'ac c':accur acy_scor e(yte2,y p2),'rec ':recall _score(y te2,yp2) ,'f1':f1 _score(y te2,yp2) })df=pd. DataFram e(rs);pr int(df)p rint(df[ ['acc',' rec','f1 ']].agg( ['mean', 'std'])) #accmean ≈0.9211 std≈0.0 083;recm ean≈0.8",
-        "remarks": ""
+        "item": "超时扣分 按时完成工作",
+        "requirement": "超时扣分 按时完成工作",
+        "points": 0,
+        "standard": "止操作。 考评人： 日期: 地点:",
+        "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-5-5-02/SS-5-5-5-02_transformer_health.csv"
+    ]
   },
   {
     "id": "SS-5-5-5-03",
@@ -2725,27 +2905,28 @@
     "toolsAndEnvironment": "或 PyCharm）1 套；考核机房 1 间；考生用分布式光伏功率预测数据集 1 份（solar_pv.csv）、考核试 题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
     "questionText": "分布式光伏功率预测模型的稳健性测试与分层评估\n装有 Python3.x（含 pandas、scikit-learn、numpy 库）的计算机 1 台、开发环境（JupyterNotebook\n工具、设备、场地 或 PyCharm）1 套；考核机房 1 间；考生用分布式光伏功率预测数据集 1 份（solar_pv.csv）、考核试\n题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn、numpy 等所需第三方库；某地市供电局对辖区内\n一批分布式光伏发电站进行了为期半年的功率与气象数据采集，希望对“是否处于\n高出力状态”建立预测模型。考虑到光伏出力对气象输入小幅扰动敏感、且不同时\n段表现差异较大，模型上线前需完成稳健性测试与分时段分层评估，识别表现最差\n的时段并提出优化方向。数据集 solar_pv.csv 已预先放置在指定路径下，部分数据\n如表 1-1 所示。\n表 1-1 分布式光伏功率预测数据集（部分）\n是否\n辐照 环境 装机 安装\n序号 板温 风速 湿度 云量 时刻 高出\n度 温度 容量 倾角\n力\n1 0.0 25.02 26.06 0.63 76.7 6.5 200 30.1 19 0\n2 6.0 19.90 22.94 4.40 48.8 2.4 150 24.7 1 0\n3 667.1 25.31 35.46 1.24 49.4 3.4 300 29.1 15 1\n4 841.8 19.63 28.14 2.42 79.4 6.1 300 31.0 14 1\n… … … … … … … … … … …\n字段说明：辐照度（W/m²）、环境温度（℃）、板温（℃）、风速（m/s）、湿\n\n度（%）、云量（0~10 级，数值越大遮蔽越严重）、装机容量（kW）、安装倾角\n（°）、时刻（小时，0~23）、是否高出力（1=实际功率/装机容量≥50%，0=未达\n高出力状态）。\n（二）考核任务\n针对该分布式光伏功率预测业务场景，使用 Python 完成数据处理与随机森林模\n型训练，并对模型进行稳健性测试与分时段分层评估，识别最差时段并形成优化结\n论。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（35 分）\n①读取 solar_pv.csv 数据集（10 分）\n②数据集进行缺失值与重复值处理（15 分）\n③打印输出处理后数据集的 shape（10 分）\n（2）算法测试（65 分）\n①划分特征 X（字段：辐照度、环境温度、板温、风速、湿度、云量、装机容量、\n安装倾角、时刻）与标签 y（字段：是否高出力）（10 分）\n②按 8:2 比例、random_state=2026、按标签分层（stratify=y）划分训练集和\n测试集（15 分）\n\n③定义并训练随机森林模型（RandomForestClassifier，\nn_estimators=100、random_state=2026），输出在测试集上的基线准确率（15 分）\n④稳健性测试：对测试集特征加高斯噪声\n（np.random.seed(2026)、scale=10），输出扰动后准确率，并计算相对基线的性\n能下降百分点（10 分）\n⑤ 分层评估：按“时刻”将测试集划分为早晨（6~9 点）、中午（10~14 点）、\n傍晚（15~18 点）、夜晚（19~5 点）4 个时段，分别计算并 print 输出各时段在测试\n集上的准确率；使用 min() 函数（或排序方法）找出准确率最低的时段名称及其准\n确率值并 print 输出（15 分）\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
     "sourcePages": [
-      303,
-      304,
-      305
+      170,
+      171,
+      172
     ],
     "rubricPages": [
-      306,
-      307,
-      308,
-      309,
-      310,
-      311,
-      312,
-      313,
-      314
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181
     ],
     "platformTags": [
       "模型评估",
-      "黄金测试集"
+      "质量门禁"
     ],
     "practiceType": "model_evaluation",
     "inputFiles": [
+      "SS-5-5-5-03_solar_pv.csv",
       "solar_pv.csv"
     ],
     "expectedOutputFiles": [],
@@ -2753,36 +2934,30 @@
       {
         "id": "SS-5-5-5-03-R01",
         "order": 1,
-        "item": "支。",
-        "requirement": "支。",
-        "points": 33,
-        "standard": "评分标准依据 《人工智能算法测试员工作规范》 评分标准 序号 考核内容 评分要求 配分 得分标准 得分 备注 importpa ndasaspd data=pd. read_csv ('solar_ pv.csv') data=dat 正确导入 pandas 库（如 a.dropna importpandasaspd） ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importpa ndasaspd 1.1 数据集读取：使用 pandas 正 data=pd. 确读取 solar_pv.csv 数据集。 read_csv 1.2 缺失值与重复值处理：对数据 ('solar_",
+        "item": "数据处理 集进行缺失值与重复值预处理。",
+        "requirement": "数据处理 集进行缺失值与重复值预处理。",
+        "points": 50,
+        "standard": "pv.csv') 1.3 输出处理后行列数：打印输出 正确调用 data=dat 处理后数据集的行列数（shape）。 pd.read_csv('0solar_pv.csv') a.dropna 读取数据集并赋值给变量 ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importpa ndasaspd data=pd. read_csv 正确使用 dropna()（或等效 ('solar_ fillna()）方法处理缺失值 pv.csv') data=dat a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importpa ndasaspd data=pd. read_csv ('solar_ pv.csv') data=dat 正确使用 drop_duplicates()方法 a.dropna 处理重复值 ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importpa ndasaspd data=pd. read_csv ('solar_ pv.csv') 清洗结果正确赋值（变量名不 data=dat 限），且后续特征/标签划分使用 a.dropna 同一清洗后变量 ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importpa ndasaspd data=pd. read_csv ('solar_ pv.csv') data=dat 正确使用 DataFrame.shape 属性 a.dropna 获取处理后数据集的行列数 ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) 正确使用 print()函数输出处理后 importpa 数据集的 shape ndasaspd data=pd. read_csv ('solar_ pv.csv') data=dat a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importnu mpyasnpf romsklea rn.model _selecti onimport train_te st_split fromskle 2.1 划分特征 X（辐照度、环境温 arn.ense 度、板温、风速、湿度、云量、 mbleimpo 装机容量、安装倾角、时刻）与 rtRandom 标签 y（是否高出力）。2.2 按 ForestCl 8:2 比例、random_state=2026、 assifier 按标签分层（stratify=y）划分 fromskle 训练集与测试集。2.3 训练随机森 arn.metr 林模型 icsimpor （n_estimators=100、random_st taccurac 正确选取 9 个指定字段（辐照度、 ate=2026），输出在测试集上的 y_scoreX 环境温度、板温、风速、湿度、",
         "remarks": ""
       },
       {
         "id": "SS-5-5-5-03-R02",
         "order": 2,
-        "item": "数据处理 集进行缺失值与重复值预处理。",
-        "requirement": "数据处理 集进行缺失值与重复值预处理。",
-        "points": 33,
-        "standard": "pv.csv') 1.3 输出处理后行列数：打印输出 正确调用 data=dat 处理后数据集的行列数（shape）。 pd.read_csv('0solar_pv.csv') a.dropna 读取数据集并赋值给变量 ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importpa ndasaspd data=pd. read_csv 正确使用 dropna()（或等效 ('solar_ fillna()）方法处理缺失值 pv.csv') data=dat a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importpa ndasaspd data=pd. read_csv ('solar_ pv.csv') data=dat 正确使用 drop_duplicates()方法 a.dropna 处理重复值 ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importpa ndasaspd data=pd. read_csv ('solar_ pv.csv') 清洗结果正确赋值（变量名不 data=dat 限），且后续特征/标签划分使用 a.dropna 同一清洗后变量 ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importpa ndasaspd data=pd. read_csv ('solar_ pv.csv') data=dat 正确使用 DataFrame.shape 属性 a.dropna 获取处理后数据集的行列数 ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) 正确使用 print()函数输出处理后 importpa 数据集的 shape ndasaspd data=pd. read_csv ('solar_ pv.csv') data=dat a.dropna ()data=d ata.drop _duplica tes()pri nt(data. shape)#( 980,10) importnu mpyasnpf romsklea rn.model _selecti onimport train_te st_split fromskle 2.1 划分特征 X（辐照度、环境温 arn.ense 度、板温、风速、湿度、云量、 mbleimpo 装机容量、安装倾角、时刻）与 rtRandom 标签 y（是否高出力）。2.2 按 ForestCl 8:2 比例、random_state=2026、 assifier 按标签分层（stratify=y）划分 fromskle 训练集与测试集。2.3 训练随机森 arn.metr 林模型 icsimpor （n_estimators=100、random_st taccurac 正确选取 9 个指定字段（辐照度、 ate=2026），输出在测试集上的 y_scoreX 环境温度、板温、风速、湿度、",
-        "remarks": ""
-      },
-      {
-        "id": "SS-5-5-5-03-R03",
-        "order": 3,
         "item": "算法测试 基线准确率。2.4 稳健性测试：对 =data[['",
         "requirement": "算法测试 基线准确率。2.4 稳健性测试：对 =data[['",
-        "points": 33,
+        "points": 50,
         "standard": "云量、装机容量、安装倾角、时 测试集特征加高斯噪声 辐照度', 刻）构造特征 X （np.random.seed(2026)、scale '环境温 =10），输出扰动后准确率与相对 度','板 基线的下降百分点。2.5 分层评 温','风 估：按“时刻”将测试集划分为 速','湿 早晨、中午、傍晚、夜晚 4 个时 度','云 段，分别计算并打印各时段准确 量','装 率，使用 min()函数或排序方法找 机容量', 出并打印准确率最低的时段名称 '安装倾 及其准确率值。 角','时 刻 ']]y=dat a['是否 高出力 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) model=Ra ndomFore stClassi fier(n_e stimator s=100,ra ndom_sta te=2026) model.fi t(X_trai n,y_trai n)acc0=m odel.sco re(X_tes t,y_test )print(' 基线准确 率: ',acc0)# ≈0.9745 np.rando m.seed(2 026)X_te st_n=X_t est+np.r andom.no rmal(0,1 0,X_test .shape)a cc1=mode l.score( X_test_n ,y_test) print(' 扰动后: ',acc1,' 下降: ',round( (acc0- acc1)*10 0,2))#扰 动后 ≈0.9388 ,下降 ≈3.57 百分点 defseg(h ):if6<=h <=9:retu rn'早晨 'if10<=h <=14:ret urn'中午 'if15<=h <=18:ret urn'傍晚 'return' 夜晚 'yp=mode l.predic t(X_test )td=X_te st.copy( )td['y'] =y_test. values;t d['p']=y ptd['s'] =td['时 刻 '].apply (seg)seg _accs={} forsin[' 早晨',' 中午',' 傍晚',' 夜晚 ']:sub=t d[td['s' ]==s]ifl en(sub)> 0:seg_ac cs[s]=ac curacy_s core(sub ['y'],su b['p'])p rint(s,s eg_accs[ s])worst =min(seg _accs,ke y=seg_ac cs.get)p rint('最 差时段: ',worst, '准确率: ',seg_ac cs[worst ])#早晨 0.90 中 午 1.00 傍晚 0.94 夜 晚 1.00# 最差时 段：早 晨，准确 率 0.9000 importnu mpyasnpf romsklea rn.model _selecti onimport train_te st_split fromskle arn.ense mbleimpo rtRandom ForestCl assifier fromskle arn.metr icsimpor taccurac 正确选取“是否高出力”字段构 y_scoreX 造标签 y =data[[' 辐照度', '环境温 度','板 温','风 速','湿 度','云 量','装 机容量', '安装倾 角','时 刻 ']]y=dat a['是否 高出力 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) model=Ra ndomFore stClassi fier(n_e stimator s=100,ra ndom_sta te=2026) model.fi t(X_trai n,y_trai n)acc0=m odel.sco re(X_tes t,y_test )print(' 基线准确 率: ',acc0)# ≈0.9745 np.rando m.seed(2 026)X_te st_n=X_t est+np.r andom.no rmal(0,1 0,X_test .shape)a cc1=mode l.score( X_test_n ,y_test) print(' 扰动后: ',acc1,' 下降: ',round( (acc0- acc1)*10 0,2))#扰 动后 ≈0.9388 ,下降 ≈3.57 百分点 defseg(h ):if6<=h <=9:retu rn'早晨 'if10<=h <=14:ret urn'中午 'if15<=h <=18:ret urn'傍晚 'return' 夜晚 'yp=mode l.predic t(X_test )td=X_te st.copy( )td['y'] =y_test. values;t d['p']=y ptd['s'] =td['时 刻 '].apply (seg)seg _accs={} forsin[' 早晨',' 中午',' 傍晚',' 夜晚 ']:sub=t d[td['s' ]==s]ifl en(sub)> 0:seg_ac cs[s]=ac curacy_s core(sub ['y'],su b['p'])p rint(s,s eg_accs[ s])worst =min(seg _accs,ke y=seg_ac cs.get)p rint('最 差时段: ',worst, '准确率: ',seg_ac cs[worst ])#早晨 0.90 中 午 1.00 傍晚 0.94 夜 晚 1.00# 最差时 段：早 晨，准确 率 0.9000 importnu mpyasnpf romsklea rn.model _selecti onimport train_te st_split fromskle arn.ense mbleimpo rtRandom ForestCl assifier fromskle arn.metr icsimpor 正确从 sklearn.model_selection taccurac 导入 train_test_split y_scoreX =data[[' 辐照度', '环境温 度','板 温','风 速','湿 度','云 量','装 机容量', '安装倾 角','时 刻 ']]y=dat a['是否 高出力 ']X_trai",
         "remarks": ""
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-5-5-03/SS-5-5-5-03_solar_pv.csv"
+    ]
   },
   {
     "id": "SS-5-5-5-04",
-    "title": "用户负荷预测模型的能力矩阵设计与训练平台迭代方案 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
+    "title": "用户负荷预测模型的 Accuracy 与 F1 质量门禁评价。 装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或",
     "module": "智能训练",
     "moduleCode": "SS-5",
     "subModuleCode": "SS-5-5",
@@ -2791,54 +2966,67 @@
     "questionType": "实际操作题",
     "timeLimitMinutes": 60,
     "score": 100,
-    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用用户负荷预测数据集 1 份（user_load.csv）、考核试题纸 1 份、 草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
-    "questionText": "用户负荷预测模型的能力矩阵设计与训练平台迭代方案\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用用户负荷预测数据集 1 份（user_load.csv）、考核试题纸 1 份、\n草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局针对辖区内居民、\n工商业、工业、农业及大用户五类客户的用电数据进行了为期半年的采集，希望对\n客户在某一时段是否处于“高峰负荷状态”建立预测模型。模型上线前需面向多维\n度评价指标设计能力矩阵，并基于评价结果形成训练平台的整体迭代优化方案。数\n据集 user_load.csv 已预先放置在指定路径下，部分数据如表 1-1 所示。\n表 1-1 用户负荷预测数据集（部分）\n历史日 是否\n历史峰 用户 电压等 是否\n序号 均用电 月用电量 温度 湿度 节假 时刻\n值负荷 类型 级 高峰\n量 日\n1 5.43 18.65 155.76 1 0.22 9.7 67.8 0 10 0\n2 873.40 1852.35 24174.79 3 110.00 23.3 53.3 1 11 0\n3 84.20 251.30 2479.49 2 0.38 19.5 44.0 0 9 1\n4 341.14 965.67 8575.43 3 35.00 36.0 80.2 0 4 1\n… … … … … … … … … … …\n字段说明：历史日均用电量（kWh）、历史峰值负荷（kW）、月用电量（kWh）、\n用户类型（1=居民、2=工商业、3=工业、4=农业、5=大用户）、电压等级（kV）、\n\n温度（℃）、湿度（%）、是否节假日（1=节假日，0=工作日）、时刻（小时，\n0~23）、是否高峰（1=高峰负荷，0=非高峰）。\n（二）考核任务\n针对该用户负荷预测业务场景，使用 Python 完成数据处理与随机森林模型训\n练，构建包含 5 个评价维度的能力矩阵，并基于评价结果形成训练平台的迭代优化\n方案。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（35 分）\n①读取 user_load.csv 数据集（10 分）\n②数据集进行缺失值与重复值处理（15 分）\n③打印输出处理后数据集的 shape（10 分）\n（2）算法测试（65 分）\n①划分特征 X（字段：历史日均用电量、历史峰值负荷、月用电量、用户类型、\n电压等级、温度、湿度、是否节假日、时刻）与标签 y（字段：是否高峰）（10\n分）\n②按 8:2 比例、random_state=2026、按标签分层（stratify=y）划分训练集和\n测试集（15 分）\n\n③定义并训练随机森林模型（RandomForestClassifier，\nn_estimators=100、random_state=2026），输出在测试集上的基线准确率（15 分）\n④能力矩阵设计：在测试集上计算 Accuracy、Precision、Recall、F1、ROC-\nAUC 共 5 项指标，构建并打印能力矩阵（要求输出为 DataFrame 或等效结构化形式）\n（10 分）\n⑤ 质量门禁与迭代触发判定：对能力矩阵中的 5 项指标设置统一质量阈值\n0.80，逐项判断是否达到阈值；若全部指标≥0.80 则 print 输出“模型通过质量门\n禁，可以上线”，否则 print 输出“模型未通过质量门禁，需进入下一轮迭代”，\n并打印输出未达标指标的清单（包含指标名和指标值）（15 分）\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n束。",
+    "toolsAndEnvironment": "PyCharm）1 套；考核机房 1 间；考生用用户负荷预测数据集 1 份（路径：04/SS-5-5-5- 04_user_load.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。 考核要求及工作规范 （一）现场条件",
+    "questionText": "用户负荷预测模型的 Accuracy 与 F1 质量门禁评价。\n装有 Python3.x（含 pandas、scikit-learn 库）的计算机 1 台、开发环境（JupyterNotebook 或\n工具、设备、场地 PyCharm）1 套；考核机房 1 间；考生用用户负荷预测数据集 1 份（路径：04/SS-5-5-5-\n04_user_load.csv）、考核试题纸 1 份、草稿纸 1 份、签字笔 1 支。\n考核要求及工作规范\n（一）现场条件\n考核机房 1 间，每位考生配备 1 台已联网计算机，机器中已部署 Python 3.x 运\n行环境及 pandas、scikit-learn 等所需第三方库；某地市供电局针对辖区内居民、\n工商业、工业、农业及大用户五类客户的用电数据进行了为期半年的采集，希望对\n客户在某一时段是否处于“高峰负荷状态”建立预测模型。模型上线前需面向多维\n度评价指标设计能力矩阵，并基于评价结果形成训练平台的整体迭代优化方案。数\n据集 04/SS-5-5-5-04_user_load.csv 已预先放置在指定路径下，部分数据如表 1-1\n所示。\n表 1-1 用户负荷预测数据集（部分）\n历史日 是否\n历史峰 用户 电压等 是否\n序号 均用电 月用电量 温度 湿度 节假 时刻\n值负荷 类型 级 高峰\n量 日\n1 5.43 18.65 155.76 1 0.22 9.7 67.8 0 10 0\n2 873.40 1852.35 24174.79 3 110.00 23.3 53.3 1 11 0\n3 84.20 251.30 2479.49 2 0.38 19.5 44.0 0 9 1\n4 341.14 965.67 8575.43 3 35.00 36.0 80.2 0 4 1\n… … … … … … … … … … …\n字段说明：历史日均用电量（kWh）、历史峰值负荷（kW）、月用电量（kWh）、\n\n用户类型（1=居民、2=工商业、3=工业、4=农业、5=大用户）、电压等级（kV）、\n温度（℃）、湿度（%）、是否节假日（1=节假日，0=工作日）、时刻（小时，\n0~23）、是否高峰（1=高峰负荷，0=非高峰）。\n（二）考核任务\n针对该业务场景，使用 Python 补全给定代码，构建随机森林模型，以 Accuracy\n和 F1 组成简化能力矩阵，完成单项质量门禁评价。\n（三）考核内容\n1.工作前准备\n（1）按规定进行考核现场着装；\n（2）检查计算机运行环境，确认 Python 解释器、pandas 及 scikit-learn 库可\n正常加载，确认数据集文件已存在于指定路径，并向考评员汇报。\n2.工作过程\n（1）数据处理（20 分）\n①请补全以下空格部分代码，读取 04/SS-5-5-5-04_user_load.csv 数据集，并\n完成缺失值、重复值清洗及索引重置（8 分）\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\n②请补全以下空格部分代码，划分特征 X（字段：历史日均用电量、历史峰值负\n荷、月用电量、用户类型、电压等级、温度、湿度、是否节假日、时刻）与标签 y\n（字段：是否高峰）（12 分）\nX = data[____3____]\ny = data[____4____]\n\n（2）专项质量评价（80 分）\n①请补全以下空格部分代码，完成分层划分、随机森林训练和测试集预测（25\n分）\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,\nrandom_state=2026, stratify=____5____)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____6____(X_train, y_train)\npred = model.____7____(X_test)\n②请补全以下空格部分代码，计算 Accuracy 和 F1 并构建两项指标能力矩阵\n（35 分）\naccuracy = ____8____(y_test, pred)\nf1 = ____9____(y_test, pred)\ncapability = pd.____10____({\"指标\": [\"Accuracy\", \"F1\"], \"值\": [accuracy,\nf1]})\nprint(capability)\n③请补全以下空格部分代码，使用 0.80 阈值筛选未达标指标并输出质量门禁结\n论（20 分）\nbelow = capability[capability[\"值\"] < ____11____]\nprint(\"模型通过质量门禁\" if ____12____(below) == 0 else \"模型需进入下一\n轮迭代\")\n3.工作终结\n请保存代码文件至指定目录，关闭开发环境，整理考核工位，向考评员报告结\n\n束。\n参考代码（请补全空格后运行）\nimport pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestClassifier\nfrom sklearn.metrics import accuracy_score, f1_score\ndata = pd.read_csv(\"____1____\")\ndata = data.____2____().drop_duplicates().reset_index(drop=True)\nX = data[____3____]\ny = data[____4____]\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,\nrandom_state=2026, stratify=____5____)\nmodel = RandomForestClassifier(n_estimators=100, random_state=2026)\nmodel.____6____(X_train, y_train)\npred = model.____7____(X_test)\naccuracy = ____8____(y_test, pred)\nf1 = ____9____(y_test, pred)\ncapability = pd.____10____({\"指标\": [\"Accuracy\", \"F1\"], \"值\": [accuracy,\nf1]})\nprint(capability)\nbelow = capability[capability[\"值\"] < ____11____]\nprint(\"模型通过质量门禁\" if ____12____(below) == 0 else \"模型需进入下一\n\n轮迭代\")",
     "sourcePages": [
-      348,
-      349,
-      350
+      215,
+      216,
+      217,
+      218,
+      219
     ],
     "rubricPages": [
-      351,
-      352,
-      353,
-      354,
-      355,
-      356,
-      357,
-      358,
-      359
+      220,
+      221,
+      222,
+      223,
+      224,
+      225
     ],
     "platformTags": [
       "模型评估",
-      "黄金测试集"
+      "质量门禁"
     ],
     "practiceType": "model_evaluation",
     "inputFiles": [
-      "user_load.csv"
+      "04/SS-5-5-5-04_user_load.csv",
+      "04_user_load.csv",
+      "SS-5-5-5-04_user_load.csv"
     ],
     "expectedOutputFiles": [],
     "rubric": [
       {
         "id": "SS-5-5-5-04-R01",
         "order": 1,
-        "item": "数据处理 集进行缺失值与重复值预处理。 oad.csv'",
-        "requirement": "数据处理 集进行缺失值与重复值预处理。 oad.csv'",
+        "item": "数据处理 日均用电量、历史峰值负荷、月",
+        "requirement": "数据处理 日均用电量、历史峰值负荷、月",
         "points": 50,
-        "standard": "1.3 输出处理后行列数：打印输出 正确调用 )data=da 处理后数据集的行列数（shape）。 pd.read_csv('user_load.csv') ta.dropn 读取数据集并赋值给变量 a()data= data.dro p_duplic ates()pr int(data .shape)# (980,10) importpa ndasaspd data=pd. read_csv ('user_l 正确使用 dropna()（或等效 oad.csv' fillna()）方法处理缺失值 )data=da ta.dropn a()data= data.dro p_duplic ates()pr int(data .shape)# (980,10) importpa ndasaspd data=pd. read_csv ('user_l oad.csv' )data=da 正确使用 drop_duplicates()方法 ta.dropn 处理重复值 a()data= data.dro p_duplic ates()pr int(data .shape)# (980,10) importpa ndasaspd data=pd. read_csv ('user_l oad.csv' 清洗结果正确赋值（变量名不 )data=da 限），且后续特征/标签划分使用 ta.dropn 同一清洗后变量 a()data= data.dro p_duplic ates()pr int(data .shape)# (980,10) importpa ndasaspd data=pd. read_csv ('user_l oad.csv' )data=da 正确使用 DataFrame.shape 属性 ta.dropn 获取处理后数据集的行列数 a()data= data.dro p_duplic ates()pr int(data .shape)# (980,10) importpa 正确使用 print()函数输出处理后 ndasaspd 数据集的 shape data=pd. read_csv ('user_l oad.csv' )data=da ta.dropn a()data= data.dro p_duplic ates()pr int(data .shape)# (980,10) fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.ens embleimp 2.1 划分特征 X（历史日均用电量、 ortRando 历史峰值负荷、月用电量、用户 mForestC 类型、电压等级、温度、湿度、 lassifie 是否节假日、时刻）与标签 y（是 rfromskl 否高峰）。2.2 按 8:2 比例、 earn.met random_state=2026、按标签分层 ricsimpo （stratify=y）划分训练集与测 rt(accur 试集。2.3 训练随机森林模型 acy_scor （n_estimators=100、random_st e,precis ate=2026），输出在测试集上的 正确选取 9 个指定字段（历史日 ion_scor 基线准确率。2.4 能力矩阵设计： 均用电量、历史峰值负荷、月用 e,recall",
+        "standard": "和 dropna，代码可完成清洗 edata=pd 用电量、用户类型、电压等级、 .read_cs 温度、湿度、是否节假日、时 v(\"04/SS 刻）和标签 y（是否高峰）。 -5-5-5- 04_user_ load.csv \")data=d ata.drop na().dro p_duplic ates().r eset_ind ex(drop= True)X=d ata[[\"历 史日均用 电量\",\" 历史峰值 负荷\",\" 月用电量 \",\"用户 类型\",\" 电压等级 \",\"温度 \",\"湿度 \",\"是否 节假日\", \"时刻 \"]]y=dat a[\"是否 高峰\"] importpa ndasaspd fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.ens embleimp ortRando mForestC lassifie rfromskl earn.met ricsimpo rtaccura cy_score ,f1_scor 1.2（12 分）：正确补全指定特征 edata=pd 字段列表和标签字段 .read_cs v(\"04/SS -5-5-5- 04_user_ load.csv \")data=d ata.drop na().dro p_duplic ates().r eset_ind ex(drop= True)X=d ata[[\"历 史日均用 电量\",\" 历史峰值 负荷\",\" 月用电量 \",\"用户 类型\",\" 电压等级 \",\"温度 \",\"湿度 \",\"是否 节假日\", \"时刻 \"]]y=dat a[\"是否 高峰\"] X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)mo del=Rand omForest Classifi er(n_est imators= 100,rand om_state 2.1 完成分层划分、随机森林训练 =2026)mo 和预测。2.2 计算 Accuracy 和 F1 2.1（25 分）：正确补全分层参数、 del.fit(",
         "remarks": ""
       },
       {
         "id": "SS-5-5-5-04-R02",
         "order": 2,
-        "item": "算法测试 计算并打印 电量、用户类型、电压等级、温",
-        "requirement": "算法测试 计算并打印 电量、用户类型、电压等级、温",
+        "item": "专项质量评价 并构建两项指标能力矩阵。2.3 使",
+        "requirement": "专项质量评价 并构建两项指标能力矩阵。2.3 使",
         "points": 50,
-        "standard": "_score,f Accuracy、Precision、Recall、 度、湿度、是否节假日、时刻） 1_score, F1、ROC-AUC 共 5 项指标，组织为 构造特征 X roc_auc_ DataFrame 或等效结构化形式输出。 score)X= 2.5 质量门禁与迭代触发判定：对 data[[' 能力矩阵中的 5 项指标设置统一 历史日均 质量阈值 0.80，逐项判断是否达 用电量', 到阈值；若全部指标≥0.80 则打 '历史峰 印“模型通过质量门禁，可以上 值负荷', 线”，否则打印“模型未通过质 '月用电 量门禁，需进入下一轮迭代”， 量','用 并打印未达标指标的清单。 户类型', '电压等 级','温 度','湿 度','是 否节假日 ','时刻 ']]y=dat a['是否 高峰 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) model=Ra ndomFore stClassi fier(n_e stimator s=100,ra ndom_sta te=2026) model.fi t(X_trai n,y_trai n)yp=mod el.predi ct(X_tes t)yp_pro ba=model .predict _proba(X _test)[: ,1]acc=a ccuracy_ score(y_ test,yp) pre=prec ision_sc ore(y_te st,yp)re c=recall _score(y _test,yp )f1=f1_s core(y_t est,yp)a uc=roc_a uc_score (y_test, yp_proba )cm=pd.D ataFrame ({'评价 维度': ['Accura cy','Pre cision', 'Recall' ,'F1','A UC'],'指 标值': [acc,pre ,rec,f1, auc]})pr int(cm)# 示例: Acc≈0.7 2,Pre≈0 .62,Rec ≈0.57,F 1≈0.59, AUC≈0.7 5#质量门 禁与迭代 触发判定 threshol d=0.80be low=cm[c m['指标 值'] <thresho ld]iflen (below)= =0:print ('模型通 过质量门 禁，可以 上线 ')else:p rint('模 型未通过 质量门 禁，需进 入下一轮 迭代 ')print( '未达标 指标清 单： ')print( below.to _string( index=Fa lse)) fromskle arn.mode l_select ionimpor ttrain_t est_spli tfromskl earn.ens embleimp ortRando mForestC lassifie rfromskl earn.met ricsimpo rt(accur acy_scor e,precis ion_scor e,recall _score,f 1_score, roc_auc_ score)X= data[[' 正确选取“是否高峰”字段构造 历史日均 标签 y 用电量', '历史峰 值负荷', '月用电 量','用 户类型', '电压等 级','温 度','湿 度','是 否节假日 ','时刻 ']]y=dat a['是否 高峰 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) model=Ra ndomFore stClassi fier(n_e stimator s=100,ra ndom_sta te=2026) model.fi t(X_trai n,y_trai n)yp=mod el.predi ct(X_tes t)yp_pro ba=model .predict _proba(X _test)[: ,1]acc=a ccuracy_ score(y_ test,yp) pre=prec ision_sc ore(y_te st,yp)re c=recall _score(y _test,yp )f1=f1_s core(y_t est,yp)a uc=roc_a uc_score (y_test, yp_proba )cm=pd.D ataFrame ({'评价 维度': ['Accura cy','Pre cision', 'Recall' ,'F1','A UC'],'指 标值': [acc,pre ,rec,f1, auc]})pr int(cm)# 示例: Acc≈0.7 2,Pre≈0 .62,Rec ≈0.57,F 1≈0.59, AUC≈0.7 5#质量门 禁与迭代 触发判定 threshol d=0.80be low=cm[c m['指标 值'] <thresho ld]iflen (below)= =0:print ('模型通 过质量门 禁，可以 上线 ')else:p rint('模 型未通过 质量门 禁，需进 入下一轮 迭代 ')print( '未达标 指标清 单： ')print( below.to _string( index=Fa lse)) fromskle arn.mode l_select ionimpor ttrain_t 正确从 sklearn.model_selection est_spli 导入 train_test_split tfromskl earn.ens embleimp ortRando mForestC lassifie rfromskl earn.met ricsimpo rt(accur acy_scor e,precis ion_scor e,recall _score,f 1_score, roc_auc_ score)X= data[[' 历史日均 用电量', '历史峰 值负荷', '月用电 量','用 户类型', '电压等 级','温 度','湿 度','是 否节假日 ','时刻 ']]y=dat a['是否 高峰 ']X_trai n,X_test ,y_train ,y_test= train_te st_split (X,y,tes t_size=0 .2,rando m_state= 2026,str atify=y) model=Ra ndomFore stClassi fier(n_e stimator s=100,ra ndom_sta te=2026) model.fi t(X_trai n,y_trai",
+        "standard": "训练和预测代码 X_train, 用 0.80 阈值筛选未达标指标并输 y_train) 出质量门禁结论。 pred=mod el.predi ct(X_tes t)accura cy=accur acy_scor e(y_test ,pred)f1 =f1_scor e(y_test ,pred)ca pability =pd.Data Frame({\" 指标\": [\"Accura cy\",\"F1\" ],\"值\": [accurac y,f1]})p rint(cap ability) below=ca pability [capabil ity[\"值 \"]<0.80] print(\" 模型通过 质量门禁 \"iflen(b elow)==0 else\"模 型需进入 下一轮迭 代\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)mo del=Rand omForest Classifi er(n_est 2.2（35 分）：正确补全 imators= Accuracy、F1 和 DataFrame 能力 100,rand 矩阵代码 om_state =2026)mo del.fit( X_train, y_train) pred=mod el.predi ct(X_tes t)accura cy=accur acy_scor e(y_test ,pred)f1 =f1_scor e(y_test ,pred)ca pability =pd.Data Frame({\" 指标\": [\"Accura cy\",\"F1\" ],\"值\": [accurac y,f1]})p rint(cap ability) below=ca pability [capabil ity[\"值 \"]<0.80] print(\" 模型通过 质量门禁 \"iflen(b elow)==0 else\"模 型需进入 下一轮迭 代\") X_train, X_test,y _train,y _test=tr ain_test _split(X ,y,test_ size=0.2 ,random_ state=20 26,strat ify=y)mo del=Rand 2.3（20 分）：正确补全 0.80 阈 omForest 值、len 判断并输出结论 Classifi er(n_est imators= 100,rand om_state =2026)mo del.fit( X_train, y_train) pred=mod el.predi ct(X_tes t)accura cy=accur acy_scor e(y_test ,pred)f1 =f1_scor e(y_test ,pred)ca pability =pd.Data Frame({\" 指标\": [\"Accura cy\",\"F1\" ],\"值\": [accurac y,f1]})p rint(cap ability) below=ca pability [capabil ity[\"值 \"]<0.80] print(\" 模型通过 质量门禁 \"iflen(b elow)==0 else\"模 型需进入 下一轮迭 代\") 每超 1 分钟扣 1 分，超过 5 分停",
         "remarks": ""
+      },
+      {
+        "id": "SS-5-5-5-04-R03",
+        "order": 3,
+        "item": "超时扣分 按时完成工作",
+        "requirement": "超时扣分 按时完成工作",
+        "points": 0,
+        "standard": "止操作。 考评人： 日期: 地点:",
+        "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-5-5-5-04/SS-5-5-5-04_user_load.csv"
+    ]
   },
   {
     "id": "SS-6-3-3-01",
@@ -2854,15 +3042,15 @@
     "toolsAndEnvironment": "普通办公计算机终端 1 台，流程图管理软件 1 个，可绘制流程图",
     "questionText": "电网设备状态监测数据采集流程设计\n工具、设备、场地 普通办公计算机终端 1 台，流程图管理软件 1 个，可绘制流程图\n作为人工智能训练师，你负责为某电网公司开发一个基于 AI 的设备状态监测与\n故障预测系统，该系统用于分析变压器、断路器等关键电力设备的监测数据，以辅\n助运维人员进行设备健康状态评估和预测性维护。业务场景涉及从各变电站、配电\n网站点获取原始设备监测数据，并经过一系列处理步骤，最终为 AI 模型训练提供高\n质量、可用的数据。该项目特别强调电网数据安全保护（需符合电力行业数据安全\n规范，确保数据加密和最小权限访问）和 AI 技术对高精度时序数据的需求（确保监\n测数据的完整性和准确性，以支持模型预测精度）。\n请设计一个完整的数据采集流程，覆盖从原始设备监测数据获取到最终为 AI 模型提\n供可用数据的全环节。流程需重点整合以下方面：\n1. 全流程覆盖：包含数据来源、采集方式、传输协议、处理步骤、存储方案等环节\n2. 数据安全保障：整合数据加密、访问控制、权限管理等安全措施，确保符合电力\n行业数据安全规范\n3. 数据质量保证：确保高精度时序数据的完整性，避免数据丢失或降质，支持 AI\n模型的训练精度要求\n4. 流程合理性：步骤清晰、衔接合理，符合电网设备监测的实际业务场景\n5. 合规性与创新性：符合电力行业相关法规标准，可包含流程优化创新点",
     "sourcePages": [
-      390
+      226
     ],
     "rubricPages": [
-      391,
-      392
+      227,
+      228
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "业务场景",
+      "流程图"
     ],
     "practiceType": "flow_design",
     "inputFiles": [
@@ -2918,7 +3106,8 @@
         "remarks": ""
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-6-3-3-02",
@@ -2934,15 +3123,15 @@
     "toolsAndEnvironment": "普通办公计算机 1 台，数据处理软件（MicrosoftExcel），流程绘图工具",
     "questionText": "电网设备故障预测数据采集流程设计\n工具、设备、场地 普通办公计算机 1 台，数据处理软件（MicrosoftExcel），流程绘图工具\n作为电网公司的人工智能训练师，你负责为输变电设备故障预测模型设计数据\n采集流程。业务场景涉及从各变电站、配电网站点采集设备运行数据，用于训练能\n够早期预警设备故障的 AI 模型。\n业务特征要求：\n1. 设备监测数据需符合《电力监控系统安全防护规定》和《电网数据安全分级指\n南》\n2. 跨安全分区的数据传输需单独加密存储，满足电力监控系统\"安全分区、网络\n专用、横向隔离、纵向认证\"的要求\nAI 技术要求：\n1. 设备故障事件占比不足 0.1%（极端不平衡数据分布）\n2. 需保留稀有故障样本的完整时序数据序列，包括故障发生前后的完整监测数据\n任务要求：\n请设计完整的数据采集流程，确保在满足电网数据安全要求的前提下，有效采集适\n用于故障预测模型训练的高质量数据，需要满嘴以下要求：\n1、业务流程完整性，包含数据来源、采集、数据传输、处理流程、据存储与管理方\n案；\n\n2、设计数据安全合规性措施，需符合电力监控系统安全防护规定，并提出有效的加\n密、隔离、权限管理、审计机制；\n3、设计数据质量保障，提出数据完整性、准确性、异常数据识别、异常数据处理等\n方案及机制；\n4、设计样本处理策略，提出稀有故障样本识别及保留方案、不平衡数据处理策略；\n5、流程可行性与创新性。",
     "sourcePages": [
-      393,
-      394
+      229,
+      230
     ],
     "rubricPages": [
-      395
+      231
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "业务场景",
+      "流程图"
     ],
     "practiceType": "flow_design",
     "inputFiles": [
@@ -3007,79 +3196,177 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-6-4-4-01",
-    "title": "电网设备智能预警系统数据清洗规范设计",
+    "title": "安全帽检测智能体接口设计",
     "module": "智能系统设计",
     "moduleCode": "SS-6",
     "subModuleCode": "SS-6-4",
     "evaluationContent": "",
     "level": "技师",
     "questionType": "实际操作题",
-    "timeLimitMinutes": 90,
+    "timeLimitMinutes": 60,
     "score": 100,
-    "toolsAndEnvironment": "普通办公计算机 1 台，数据处理软件（如 MicrosoftExcel），流程绘图工具",
-    "questionText": "电网设备智能预警系统数据清洗规范设计\n工具、设备、场地 普通办公计算机 1 台，数据处理软件（如 MicrosoftExcel），流程绘图工具\n你作为某电网公司 AI 训练师，需为设备智能预警系统（采用深度学习算法）制\n定数据清洗规范。系统需处理每日 2TB 设备监测数据（如电流、电压、温度、振动\n等传感器记录），同时满足：\n1. 算法要求：支持设备长短期状态建模、异常模式识别\n2. 业务要求：符合电力行业数据安全规定，禁止直接使用设备编号、地理位\n置等敏感字段\n具体考核要求\n1. 规范完整性\n覆盖数据采集、传输、存储、清洗全流程\no\n包含异常数据处理策略（如传感器故障数据、测试数据）\no\n2. 技术合规性\n设计符合设备状态预警需求的字段清洗规则（如数据对齐、缺失值处\no\n理、异常值修正）\n实现隐私保护技术方案（数据脱敏、加密、访问控制）\no\n3. 可操作性\n明确各环节责任人及验收标准\no\n\n提供关键字段清洗示例（如设备编号模糊化处理）\no\n4. 文档结构化\n采用标准技术文档框架（范围定义、处理流程、质量监控）\no",
+    "toolsAndEnvironment": "普通办公计算机 1 台，编程工具 Python，文本编辑器",
+    "questionText": "安全帽检测智能体接口设计\n工具、设备、场地 普通办公计算机 1 台，编程工具 Python，文本编辑器\n你作为某电网公司 AI 训练师，在省公司人工智能平台查看安全帽检测智能\n体接口参数，并先完善接口文档。\n具体考核要求\n1. 登录人工智能平台\n2. 找到“未戴安全帽检测服务”能力\n3. 查看 AppKey 和 AppSecret\n4. 查看能力编码\n5. 查看 api 服务编码\n6. 按照查询的数据和提供图片的路径，修改 py 文件。",
     "sourcePages": [
-      396,
-      397
+      232
     ],
     "rubricPages": [
-      398
+      233
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "智能体",
+      "流程编排"
     ],
-    "practiceType": "flow_design",
+    "practiceType": "dify_agent",
     "inputFiles": [
-      "流程节点模板.json"
+      "安全帽图片.jpeg",
+      "安全帽检测.py"
     ],
-    "expectedOutputFiles": [
-      "flow_design.json"
-    ],
+    "expectedOutputFiles": [],
     "rubric": [
       {
         "id": "SS-6-4-4-01-R01",
         "order": 1,
-        "item": "范说明，内容具体明确",
-        "requirement": "范说明，内容具体明确",
-        "points": 25,
-        "standard": "常数据处理策略（如 常数据处理策略（如传感器故障 规范包含完善的传感器故障数据 传感器故障数据、测 数据、测试数据） 识别与处理策略，方法明确可行 试数据） 规范方法明确可行 规范包含完善的测试数据识别与 处理策略，方法明确可行 设计合理的数据对齐与缺失值处 技术合规性 o 设计符 理技术方案，符合预警需求 合设备状态预警需求 设计符合预警需求 技术合规性 o 设计符合设备状态 的字段清洗规则（如 设计合理的异常值识别与修正技 预警需求的字段清洗规则（如数 数据对齐、缺失值处 术方案，符合预警需求",
+        "item": "成功进入点击我的工作空间页面 成功进入“我的工作空间”界面",
+        "requirement": "成功进入点击我的工作空间页面 成功进入“我的工作空间”界面",
+        "points": 6,
+        "standard": "块",
         "remarks": ""
       },
       {
         "id": "SS-6-4-4-01-R02",
         "order": 2,
-        "item": "据对齐、缺失值处理、异常值修",
-        "requirement": "据对齐、缺失值处理、异常值修",
-        "points": 25,
-        "standard": "理、异常值修正）o 设计完整的数据脱敏与加密传输 正）o 实现隐私保护技术方案（数 实现隐私保护技术方 方案 据脱敏、加密、访问控制） 案（数据脱敏、加密、 方案技术合理、可实现 访问控制） 设计完整的访问控制方案，权限 划分清晰，安全措施到位 明确各环节责任人 责任人职责划分清晰 明确各环节验收标准，标准具体、 可衡量 可操作性 o 明确各环 提供的清洗示例至少覆盖设备编 节责任人及验收标准 可操作性 o 明确各环节责任人及 号、传感器读数、时间戳三种关",
+        "item": "进入我的能力模块 成功进入点击我的能力管理页面 成功进入“我的能力”界面",
+        "requirement": "进入我的能力模块 成功进入点击我的能力管理页面 成功进入“我的能力”界面",
+        "points": 6,
+        "standard": "成功找到“未戴安全帽检测服",
         "remarks": ""
       },
       {
         "id": "SS-6-4-4-01-R03",
         "order": 3,
-        "item": "o 提供关键字段清洗 验收标准 o 提供关键字段清洗示 键字段",
-        "requirement": "o 提供关键字段清洗 验收标准 o 提供关键字段清洗示 键字段",
-        "points": 25,
-        "standard": "示例（如设备编号模 例（如设备编号模糊化处理） 每个示例均包含原始值、清洗规 糊化处理） 则与处理后结果 示例包含明确的处理指令（如 “使用正则表达式替换”）、具 体参数与输入输出示例，步骤完 整可复现 文档结构化 o 采用标 采用标准技术文档框架，包含范 文档结构化 o 采用标准技术文档 准技术文档框架（范 围定义、处理流程、质量监控等",
+        "item": "找到服务 找到“未戴安全帽检测服务”",
+        "requirement": "找到服务 找到“未戴安全帽检测服务”",
+        "points": 6,
+        "standard": "务”",
         "remarks": ""
       },
       {
         "id": "SS-6-4-4-01-R04",
         "order": 4,
-        "item": "框架（范围定义、处理流程、质",
-        "requirement": "框架（范围定义、处理流程、质",
-        "points": 25,
-        "standard": "围定义、处理流程、 必要章节 量监控） 质量监控） 文档结构清晰、完整 每超 1 分钟扣 1 分，超过 5 分停",
+        "item": "查看 AppKey 查看 AppKey 成果查看 AppKey",
+        "requirement": "查看 AppKey 查看 AppKey 成果查看 AppKey",
+        "points": 6,
+        "standard": "",
         "remarks": ""
       },
       {
         "id": "SS-6-4-4-01-R05",
         "order": 5,
+        "item": "查看 AppSecret 查看 AppSecret 成果查看 AppSecret",
+        "requirement": "查看 AppSecret 查看 AppSecret 成果查看 AppSecret",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R06",
+        "order": 6,
+        "item": "查看能力编码 查看能力编码 成功查看能力编码",
+        "requirement": "查看能力编码 查看能力编码 成功查看能力编码",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R07",
+        "order": 7,
+        "item": "查看 api 服务编码 查看 api 服务编码 成功查看 api 服务编码",
+        "requirement": "查看 api 服务编码 查看 api 服务编码 成功查看 api 服务编码",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R08",
+        "order": 8,
+        "item": "打开 py 文档 打开“安全帽检测”文档 成功打开“安全帽检测”文档",
+        "requirement": "打开 py 文档 打开“安全帽检测”文档 成功打开“安全帽检测”文档",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R09",
+        "order": 9,
+        "item": "修改 appkey 修改 appkey 正确修改 appkey",
+        "requirement": "修改 appkey 修改 appkey 正确修改 appkey",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R10",
+        "order": 10,
+        "item": "修改 AppSecret 修改 AppSecret 正确修改 AppSecret",
+        "requirement": "修改 AppSecret 修改 AppSecret 正确修改 AppSecret",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R11",
+        "order": 11,
+        "item": "修改能力编码 修改能力编码 正确修改能力编码",
+        "requirement": "修改能力编码 修改能力编码 正确修改能力编码",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R12",
+        "order": 12,
+        "item": "修改 api 服务编码 修改 api 服务编码 正确修改 api 服务编码",
+        "requirement": "修改 api 服务编码 修改 api 服务编码 正确修改 api 服务编码",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R13",
+        "order": 13,
+        "item": "修改 api 服务编码 修改 api 服务编码 正确修改 api 服务编码",
+        "requirement": "修改 api 服务编码 修改 api 服务编码 正确修改 api 服务编码",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R14",
+        "order": 14,
+        "item": "修改图片路径 修改安全帽图片路径 成功修改安全帽图片路径",
+        "requirement": "修改图片路径 修改安全帽图片路径 成功修改安全帽图片路径",
+        "points": 6,
+        "standard": "",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R15",
+        "order": 15,
+        "item": "保存 py 文件 保存 py 文件 成功保存 py 文件",
+        "requirement": "保存 py 文件 保存 py 文件 成功保存 py 文件",
+        "points": 6,
+        "standard": "每超 1 分钟扣 1 分，超过 5 分停",
+        "remarks": ""
+      },
+      {
+        "id": "SS-6-4-4-01-R16",
+        "order": 16,
         "item": "超时扣分 按时完成工作",
         "requirement": "超时扣分 按时完成工作",
         "points": 0,
@@ -3087,7 +3374,11 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-6-4-4-01/安全帽图片.jpeg",
+      "data/attachments/SS-6-4-4-01/安全帽检测.py"
+    ]
   },
   {
     "id": "SS-6-4-4-02",
@@ -3103,22 +3394,20 @@
     "toolsAndEnvironment": "普通办公计算机 1 台，编程工具 Python，文本编辑器",
     "questionText": "智能文本生成系统性能测试\n工具、设备、场地 普通办公计算机 1 台，编程工具 Python，文本编辑器\n你作为 AI 训练师，需对某企业提供的智能文本生成系统进行性能测试模拟。该\n系统接收文本输入，返回续写内容。要求通过纯 Python 编写的模拟环境来评估其响\n应效率与可靠性，为后续模型优化提供数据支撑。\n具体考核要求\n1. 测试环境搭建 (Python 模拟)\n编写一个 TextGeneratorSimulator 类，模拟 API 的文本续写行\no\n为。\n该类必须能模拟可配置的响应延迟（如：平均响应时间为 200\no\n毫秒）和随机错误率（如：2%的请求模拟失败）。\n2. 测试脚本设计\n编写测试脚本，实例化上述模拟器。\no\n循环发送 10 个不同文本的请求，并记录每个请求的详细结果。\no\n实现简单的并发请求测试（如：使用 threading 模块模拟 5 个\no\n并发用户）。",
     "sourcePages": [
-      399
+      234
     ],
     "rubricPages": [
-      400,
-      401
+      235,
+      236
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "Python",
+      "性能测试"
     ],
-    "practiceType": "flow_design",
-    "inputFiles": [
-      "流程节点模板.json"
-    ],
+    "practiceType": "python_coding",
+    "inputFiles": [],
     "expectedOutputFiles": [
-      "flow_design.json"
+      "SS-6-4-4-02.py"
     ],
     "rubric": [
       {
@@ -3167,7 +3456,8 @@
         "remarks": ""
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-6-4-4-03",
@@ -3183,22 +3473,20 @@
     "toolsAndEnvironment": "普通办公计算机 1 台，数据处理软件（MicrosoftExcel），流程绘图软件 某智能客服系统需处理全球用户的多语言文本咨询（含中/英/西语及混合语",
     "questionText": "智能客服系统业务数据处理流程设计\n工具、设备、场地 普通办公计算机 1 台，数据处理软件（MicrosoftExcel），流程绘图软件\n某智能客服系统需处理全球用户的多语言文本咨询（含中/英/西语及混合语\n言），原始数据存在符号冗余、大小写混乱、非标准缩写等问题。作为 AI 训练师，\n需设计一套覆盖数据接入→清洗→标准化的全流程方案，确保输出数据满足文本分\n类模型的训练要求。\n具体要求：\n1. 流程完整性：包含数据输入、多语言识别、分语言处理、文本清洗、标准化\n转换、质量校验、输出存储 7 个核心环节\n2. 多语言适配：需针对不同语种设计差异化处理规则（如中文分词/英文词形还\n原/西语重音处理）\n3. 清洗标准化：定义特殊字符过滤规则（保留@#*等业务相关符号）、统一大小\n写策略、制定缩写词标准化对照表\n4. 可扩展性：流程需支持后续新增语种（预留扩展接口）\n5. 输出规范：最终数据需满足：UTF-8 编码、每句单行存储、标注语言类型标\n签",
     "sourcePages": [
-      402
+      237
     ],
     "rubricPages": [
-      403,
-      404
+      238,
+      239
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "业务场景",
+      "流程图"
     ],
     "practiceType": "flow_design",
-    "inputFiles": [
-      "流程节点模板.json"
-    ],
+    "inputFiles": [],
     "expectedOutputFiles": [
-      "flow_design.json"
+      "流程图与处理规则说明（格式以考场要求为准）"
     ],
     "rubric": [
       {
@@ -3256,7 +3544,8 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-6-4-4-04",
@@ -3272,21 +3561,23 @@
     "toolsAndEnvironment": "普通办公计算机 1 台，编程工具 Python，文本编辑器 一、题目说明 线损电量 = 供电量 - 售电量，线损率 = 线损电量 ÷ 供电量 × 100%。 现有多组台区用电数据，使 用 Python 完成线损计算、状态判断并输出结果。",
     "questionText": "电力营销线损计算设计\n工具、设备、场地 普通办公计算机 1 台，编程工具 Python，文本编辑器\n一、题目说明\n线损电量 = 供电量 - 售电量，线损率 = 线损电量 ÷ 供电量 × 100%。 现有多组台区用电数据，使\n用 Python 完成线损计算、状态判断并输出结果。\n规则：电量单位：kWh，线损率保留 2 位小数\n1. 判定标准：\n1. 线损率 ＞ 8%：高线损异常\n2. 线损电量 ＜ 0：负线损异常\n3. 其余：线损正常\n二、答题要求\n1. 遍历数据，逐行计算线损电量、线损率；\n2. 根据规则判断台区运行状态；\n3. 控制台清晰打印每一条台区的完整信息；\n4. 基础版不强制面向对象，普通循环 + 条件判断实现即可。\n3、测试数据\nid：台区编号 name:台区名称 supply:供电量 sell:售电量\n原始台区数据\ndata = [\n{\"id\": \"T001\", \"name\": \"城东 1 区\", \"supply\": 12500, \"sell\": 11800},\n{\"id\": \"T002\", \"name\": \"城东 2 区\", \"supply\": 9800, \"sell\": 9750},\n{\"id\": \"T003\", \"name\": \"城西 1 区\", \"supply\": 15200, \"sell\": 13600},\n{\"id\": \"T004\", \"name\": \"城西 2 区\", \"supply\": 8600, \"sell\": 8900}\n]\n(已提供测试数据表可直接复制)",
     "sourcePages": [
-      405
+      240
     ],
     "rubricPages": [
-      406
+      241
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "Python",
+      "循环",
+      "条件判断",
+      "线损计算"
     ],
-    "practiceType": "flow_design",
+    "practiceType": "python_coding",
     "inputFiles": [
-      "流程节点模板.json"
+      "测试数据表.docx"
     ],
     "expectedOutputFiles": [
-      "flow_design.json"
+      "SS-6-4-4-04.py"
     ],
     "rubric": [
       {
@@ -3371,7 +3662,10 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": [
+      "data/attachments/SS-6-4-4-04/测试数据表.docx"
+    ]
   },
   {
     "id": "SS-6-5-5-01",
@@ -3387,16 +3681,16 @@
     "toolsAndEnvironment": "普通办公计算机 1 台，数据处理软件（如 MicrosoftExcel），开发工具 Python，流程图工具",
     "questionText": "员工绩效与敬业度分析系统优化方案设计\n工具、设备、场地 普通办公计算机 1 台，数据处理软件（如 MicrosoftExcel），开发工具 Python，流程图工具\n你作为某科技公司人力资源部门的数据分析师，获得一批员工工作数据（含工\n作时长、任务完成情况、协作记录）及员工满意度调查结果。数据显示：\n1. 加班时长统计误差率达 15%\n2. 远程工作模式识别准确率仅 62%\n3. 30%员工因缺乏职业发展机会在一年内离职\n需针对数据准确性与员工激励设计优化方案\n具体考核要求\n1. 数据分析\n准确识别异常数据样本\no\n深入分析数据质量问题根源\no\n准确定位数据采集薄弱环节\no\n提出具体的数据采集改进方向\no\n清晰标注工作状态误识别的高发场景\no\n2. 精度优化需求\n提出有效的多源数据融合算法改进思路\no\n明确多源数据融合的具体数据来源\no\n\n设计工作模式识别模型的具体技术方法\no\n规划模型优化的详细实施步骤\no\n开展模型优化方案的可行性分析\no\n制定科学且可落地的动态阈值调整机制\no\n3. 员工激励优化\n构建包含晋升体系的职业发展激励框架\no\n完善框架中的技能认证与薪酬激励要素\no\n基于绩效数据分析设计发展路径推荐逻辑\no\n结合职业倾向分析明确推荐逻辑的核心依据\no\n制定员工倦怠期干预的明确触发条件\no\n提出具体的干预支持措施及完整执行流程\no\n4. 输出方案报告\n以规范的 Markdown 格式提交文档，结构清晰\no\n包含详细的技术实现路径\no\n提供的预期效果指标需涵盖准确率、效率等多维度，明确具体\no\n数值目标及实现周期",
     "sourcePages": [
-      407,
-      408
+      242,
+      243
     ],
     "rubricPages": [
-      409,
-      410
+      244,
+      245
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "业务场景",
+      "流程图"
     ],
     "practiceType": "flow_design",
     "inputFiles": [
@@ -3452,7 +3746,8 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-6-5-5-02",
@@ -3468,16 +3763,16 @@
     "toolsAndEnvironment": "普通办公计算机 1 台，数据处理软件（如 MicrosoftExcel），开发工具 Python，流程图工具 某区域电网在早晚用电高峰期间出现频率波动和局部过载问题，传统固定功率 分配策略导致部分线路负载率超过 85%，供电质量下降。现有设备包含：SCADA 系统、 PMU 同步相量测量装置、智能电表、边缘计算节点及电网调度中心。要求设计智能负",
     "questionText": "电网负载智能调度系统设计\n工具、设备、场地 普通办公计算机 1 台，数据处理软件（如 MicrosoftExcel），开发工具 Python，流程图工具\n某区域电网在早晚用电高峰期间出现频率波动和局部过载问题，传统固定功率\n分配策略导致部分线路负载率超过 85%，供电质量下降。现有设备包含：SCADA 系统、\nPMU 同步相量测量装置、智能电表、边缘计算节点及电网调度中心。要求设计智能负\n载调度系统，通过 AI 技术动态优化发电出力分配和负荷控制。\n具体考核要求\n1. 数据层设计\n完整覆盖发、输、配、用各环节的关键数据类型。\no\n数据采集频率与精度满足电网调度要求。\no\n设计多源数据融合流程，有效解决数据异构问题。\no\n方案包含完整的异常数据识别与处理步骤。\no\n2. 算法层设计\n所选优化算法适合电网调度场景，理由充分。\no\n算法具备在线学习与自适应优化能力。\no\n机制包含识别方法、检测流程与处置逻辑，形成闭环。\no\n机制包含识别方法、检测流程与处置逻辑，形成闭环。\no\n故障下的策略调整方案合理且具备实效性。\no\n\n3. 系统架构\n系统架构层次清晰，功能模块划分明确。\no\n边缘计算与中心调度职责分工明确，协同高效。\no\n控制指令流程设计满足业务实时性要求。\no\n系统设计具备良好的可扩展性与可靠性。\no\n4. 优化指标\n评价指标设定覆盖全面且可量化衡量。\no\n各指标目标值设定科学且有依据。\no\n仿真方案设计完整，场景典型，流程可操作。\no\n验证方法包含对比测试与量化分析，步骤清晰。\no\n5. 安全性\n故障降级预案完善，能有效保障电网安全。\no\n数据安全防护措施健全有效。\no\n系统具备网络安全防护能力。\no",
     "sourcePages": [
-      411,
-      412
+      246,
+      247
     ],
     "rubricPages": [
-      413,
-      414
+      248,
+      249
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "业务场景",
+      "流程图"
     ],
     "practiceType": "flow_design",
     "inputFiles": [
@@ -3542,7 +3837,8 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-6-5-5-03",
@@ -3558,16 +3854,16 @@
     "toolsAndEnvironment": "普通办公计算机 1 台，数据处理软件（MicrosoftExcel），流程绘图工具",
     "questionText": "电网设备监测数据审核流程设计\n工具、设备、场地 普通办公计算机 1 台，数据处理软件（MicrosoftExcel），流程绘图工具\n作为电网公司的人工智能训练师，你需要为设备故障预测模型设计一套完整的\n业务数据审核流程。该流程需要覆盖从数据采集到模型训练数据交付的全过程，紧\n密结合电网业务的安全关键性和 AI 模型对数据质量的要求。\n具体考核要求\n1. 流程结构设计：定义清晰的流程阶段（如数据采集、初步审核、深度\n审核、问题处理、审核通过/拒绝），并说明各阶段的输入、输出和责任人。\n2. 安全关键性融入：在审核步骤中体现电网安全要求，例如设置冗余检\n查、严格阈值（如数据错误率低于 0.1%）、风险评估机制（如对跳闸、过载等\n关键事件数据进行二次验证），确保流程能识别并隔离潜在数据安全风险。\n3. AI 技术要求整合：针对数据质量和一致性，设计具体审核方法，如数\n据清洗（处理缺失值或异常值）、一致性验证（确保跨变电站数据格式统一）、\n质量评估指标（如数据完整性、准确性得分），并说明如何应用自动化工具进\n行审核。\n4. 流程可操作性：流程需实用、可执行，包括审核工具的使用说明、问\n题反馈机制（如审核失败时的数据修正流程），以及文档记录要求（如审核日\n志、问题追踪）。\n\n5. 输出形式：以流程图或文字描述形式呈现设计，要求逻辑清晰、步骤\n完整。",
     "sourcePages": [
-      415,
-      416
+      250,
+      251
     ],
     "rubricPages": [
-      417,
-      418
+      252,
+      253
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "业务场景",
+      "流程图"
     ],
     "practiceType": "flow_design",
     "inputFiles": [
@@ -3592,7 +3888,7 @@
         "item": "0.1%）、风险评估机 率低于 0.1%）、风险评估机制",
         "requirement": "0.1%）、风险评估机 率低于 0.1%）、风险评估机制",
         "points": 33,
-        "standard": "制（如对跳闸、过载 （如对跳闸、过载等关键事件数 建立二次验证机制 等关键事件数据进行 据进行二次验证），确保流程能 二次验证），确保流 识别并隔离潜在数据安全风险。 程能识别并隔离潜在 数据安全风险。 AI 技术要求整合：针 设计完整的数据清洗方案 对数据质量和一致 设计完整的异常值处理方案 性，设计具体审核方 AI 技术要求整合：针对数据质量 制定跨数据源一致性验证方法 法，如数据清洗（处 和一致性，设计具体审核方法， 理缺失值或异常值）、 如数据清洗（处理缺失值或异常 一致性验证（确保跨 值）、一致性验证（确保跨变电 3 变电站数据格式统 站数据格式统一）、质量评估指 一）、质量评估指标 标（如数据完整性、准确性得 建立量化数据质量评估指标体系 （如数据完整性、准 分），并说明如何应用自动化工 确性得分），并说明 具进行审核。 如何应用自动化工具 进行审核。 流程可操作性：流程需实用、可 提供审核工具具体使用方案 流程可操作性：流程 执行，包括审核工具的使用说明、 机制包含明确责任人等的环节 需实用、可执行，包 问题反馈机制（如审核失败时的 机制包含标准处理时限与数据修 括审核工具的使用说 数据修正流程），以及文档记录 版权 4 属题库来源单位、有问限题责反任馈公机司制 （如审核失败时的数 要求（如审核日志、问题追踪）。 正后重新提交审核等环节 据修正流程），以及 文档记录要求（如审 核日志、问题追踪）。 流程图符号标准统一，无逻辑断 输出形式：以流程图 点，且完整覆盖“数据采集”至 输出形式：以流程图或文字描述 或文字描述形式呈现 “审核通过/拒绝”全流程",
+        "standard": "制（如对跳闸、过载 （如对跳闸、过载等关键事件数 建立二次验证机制 等关键事件数据进行 据进行二次验证），确保流程能 二次验证），确保流 识别并隔离潜在数据安全风险。 程能识别并隔离潜在 数据安全风险。 AI 技术要求整合：针 设计完整的数据清洗方案 对数据质量和一致 设计完整的异常值处理方案 性，设计具体审核方 AI 技术要求整合：针对数据质量 制定跨数据源一致性验证方法 法，如数据清洗（处 和一致性，设计具体审核方法， 理缺失值或异常值）、 如数据清洗（处理缺失值或异常 一致性验证（确保跨 值）、一致性验证（确保跨变电 3 变电站数据格式统 站数据格式统一）、质量评估指 一）、质量评估指标 标（如数据完整性、准确性得 建立量化数据质量评估指标体系 （如数据完整性、准 分），并说明如何应用自动化工 确性得分），并说明 具进行审核。 如何应用自动化工具 进行审核。 流程可操作性：流程需实用、可 提供审核工具具体使用方案 流程可操作性：流程 执行，包括审核工具的使用说明、 机制包含明确责任人等的环节 需实用、可执行，包 问题反馈机制（如审核失败时的 机制包含标准处理时限与数据修 括审核工具的使用说 数据修正流程），以及文档记录 版权 4 属广东电明网、有问限题责反任馈公机司制 （如审核失败时的数 要求（如审核日志、问题追踪）。 正后重新提交审核等环节 据修正流程），以及 文档记录要求（如审 核日志、问题追踪）。 流程图符号标准统一，无逻辑断 输出形式：以流程图 点，且完整覆盖“数据采集”至 输出形式：以流程图或文字描述 或文字描述形式呈现 “审核通过/拒绝”全流程",
         "remarks": ""
       },
       {
@@ -3614,7 +3910,8 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   },
   {
     "id": "SS-6-5-5-04",
@@ -3630,16 +3927,16 @@
     "toolsAndEnvironment": "普通办公计算机 1 台，数据处理软件（MicrosoftExcel），流程绘图工具",
     "questionText": "电网设备声纹监测与故障识别流程设计\n工具、设备、场地 普通办公计算机 1 台，数据处理软件（MicrosoftExcel），流程绘图工具\n作为电网公司的人工智能训练师，你负责提升设备声纹监测系统在复杂变电站\n环境（如变压器运行噪声、断路器操作声、环境风雨干扰）下的故障识别准确率。\n需设计一套覆盖数据采集、清洗、标注到模型训练的业务流程，重点解决环境噪声\n干扰问题，并满足特征提取（如 MFCC）和降噪（如谱减法）的技术要求。\n具体考核要求\n1. 流程完整性：设计包含数据采集→预处理→特征工程→模型训练→测\n试优化的端到端流程。\n2. 噪声针对性：\n1）数据采集阶段需明确变电站噪声场景覆盖策略\n2）预处理阶段必须包含针对电力设备声纹的降噪技术模块，需提出\n不少于 2 项降噪方法\n3. 技术合规性：\n1）特征提取环节需制定适用于设备声纹的时序特征处理方法，需\n提出不少于 2 种处理方法\n2）标注规范需包含噪声环境下的声纹事件切割与标注标准\n4. 可操作性：\n\n1）定义各环节输入/输出数据格式（如采样率、音频格式）\n2）建立标注质量保障措施，提出不少于 2 种保障方法\n5. 文档规范：用专业符号绘制流程图并辅以文字说明",
     "sourcePages": [
-      419,
-      420
+      254,
+      255
     ],
     "rubricPages": [
-      421,
-      422
+      256,
+      257
     ],
     "platformTags": [
-      "流程图",
-      "电网业务"
+      "业务场景",
+      "流程图"
     ],
     "practiceType": "flow_design",
     "inputFiles": [
@@ -3695,6 +3992,7 @@
         "remarks": "每超1分钟扣1分，超过5分钟停止操作。"
       }
     ],
-    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作"
+    "timeoutRule": "每超1分钟扣1分，超过5分钟停止操作",
+    "attachments": []
   }
 ]

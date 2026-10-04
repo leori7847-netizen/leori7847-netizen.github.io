@@ -4,8 +4,8 @@
     "name": "数据采集和处理",
     "questionCount": 2,
     "levels": [
-      "中级工",
-      "初级工"
+      "初级工",
+      "中级工"
     ],
     "practiceTypes": [
       "python_coding"
@@ -16,8 +16,8 @@
     "name": "数据标注",
     "questionCount": 2,
     "levels": [
-      "中级工",
-      "初级工"
+      "初级工",
+      "中级工"
     ],
     "practiceTypes": [
       "bbox_labeling",
@@ -29,10 +29,11 @@
     "name": "智能系统运维",
     "questionCount": 2,
     "levels": [
-      "中级工",
-      "初级工"
+      "初级工",
+      "中级工"
     ],
     "practiceTypes": [
+      "image_ai",
       "monitoring_ops"
     ]
   },
@@ -41,16 +42,16 @@
     "name": "业务分析",
     "questionCount": 10,
     "levels": [
-      "技师",
       "高级工",
+      "技师",
       "高级技师"
     ],
     "practiceTypes": [
       "bbox_labeling",
       "dify_agent",
       "document_ocr",
-      "flow_design",
-      "image_ai"
+      "image_ai",
+      "python_coding"
     ]
   },
   {
@@ -58,8 +59,8 @@
     "name": "智能训练",
     "questionCount": 10,
     "levels": [
-      "技师",
       "高级工",
+      "技师",
       "高级技师"
     ],
     "practiceTypes": [
@@ -71,12 +72,14 @@
     "name": "智能系统设计",
     "questionCount": 10,
     "levels": [
-      "技师",
       "高级工",
+      "技师",
       "高级技师"
     ],
     "practiceTypes": [
-      "flow_design"
+      "dify_agent",
+      "flow_design",
+      "python_coding"
     ]
   }
 ]
