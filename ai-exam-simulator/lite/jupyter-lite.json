@@ -406,6 +406,11 @@
         ]
       }
     },
+    "settingsOverrides": {
+      "@jupyterlab/translation-extension:plugin": {
+        "locale": "zh_CN"
+      }
+    },
     "versionInfo": {
       "@jupyter-notebook/application": {
         "label": "Jupyter Notebook",

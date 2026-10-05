@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2026-10-04T17:36:00.727151Z",
+      "created": "2026-10-05T08:56:05.907623Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2026-10-04T17:35:47.826937Z",
+      "last_modified": "2026-10-05T08:55:54.204250Z",
       "mimetype": "text/csv",
       "name": "SS-5-5-5-02_transformer_health.csv",
       "path": "SS-5-5-5-02/04/SS-5-5-5-02_transformer_health.csv",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2026-10-04T17:36:00.727151Z",
+  "created": "2026-10-05T08:56:05.907623Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2026-10-04T17:36:00.727151Z",
+  "last_modified": "2026-10-05T08:56:05.907623Z",
   "mimetype": null,
   "name": "04",
   "path": "SS-5-5-5-02/04",
