@@ -1356,8 +1356,8 @@ function notebookContext() {
 
 function notebookTitle(q) { return q.title.split(/。|\s*装有\s*Python/)[0]; }
 
-function publicLiteNotebookUrl(questionId) {
-  return `./lite/lab/index.html?path=${encodeURIComponent(`${questionId}/answer.ipynb`)}`;
+function publicLiteNotebookUrl(questionId, filename = 'answer.ipynb') {
+  return `./lite/lab/index.html?path=${encodeURIComponent(`${questionId}/${filename}`)}`;
 }
 
 async function prepareNotebook(options = {}) {
@@ -1400,11 +1400,12 @@ function renderPythonSandbox() {
         <p class="muted">这道题可在浏览器 Jupyter 中编写并运行。练习保存在当前浏览器，不会自动同步到其他设备。</p>
         <div class="button-row">
           <a class="btn primary" href="${publicLiteNotebookUrl(q.id)}" target="_blank" rel="noopener">打开浏览器 Jupyter ↗</a>
+          <a class="btn" href="${publicLiteNotebookUrl(q.id, '教学参考.ipynb')}" target="_blank" rel="noopener">教学参考 ↗</a>
           <a class="btn" href="#/learn/${q.id}">老师带练</a>
           <a class="btn" href="#/question/${q.id}">原题与评分标准</a>
           <a class="btn" href="./README.md">本机运行步骤</a>
         </div>
-        <p class="public-lite-note"><strong>首次使用：</strong>打开后等待右上角内核就绪，点击代码单元格，补写代码，再按 Shift + Enter 运行。需要换设备时请先下载笔记本。${q.id === 'SS-6-4-4-02' ? '性能测试题在浏览器内使用 asyncio 模拟并发，线程池写法需用本地 Jupyter 练习。' : ''}</p>
+        <p class="public-lite-note"><strong>首次使用：</strong>打开后等待右上角内核就绪，点击代码单元格，补写代码，再按 Shift + Enter 运行。教学参考是辅助理解的示例实现，不是官方标准答案；需要换设备时请先下载笔记本。${q.id === 'SS-6-4-4-02' ? '性能测试题在浏览器内使用 asyncio 模拟并发，线程池写法需用本地 Jupyter 练习。' : ''}</p>
         <details open><summary>题目与交付要求</summary><div class="question-text">${escapeHTML(q.questionText)}</div></details>
       </section>
     `, 'Python 题目');

@@ -23,18 +23,18 @@ python3 scripts/build_bbox_preview.py
 推荐从实操平台目录启动本地服务，它会同时服务实操平台和上级理论题库。第一次使用真实 Python 运行功能时，先创建独立环境并安装依赖：
 
 ```bash
-cd /Users/kk/Desktop/Codex输出/人工智能训练师考试/question_practice_site/ai-exam-simulator
-/Users/kk/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 -m venv --system-site-packages .venv
+cd ai-exam-simulator
+python3 -m venv .venv
 .venv/bin/python3 -m pip install -r requirements-local.txt
 .venv/bin/python3 -c "import pandas, sklearn, PIL; print('Python 环境可用')"
 ```
 
-上面的 Python 3.12 路径是这台 Mac 当前已验证可用的路径。如果它以后不存在，请改用你安装的 Python 3.11 或更新版本创建 `.venv`；不要直接用本机当前的系统 Python 3.9。
+请使用 Python 3.11 或更新版本创建 `.venv`，不要使用 Python 3.9。
 
 然后启动服务：
 
 ```bash
-cd /Users/kk/Desktop/Codex输出/人工智能训练师考试/question_practice_site/ai-exam-simulator
+cd ai-exam-simulator
 node server/static-dev.mjs
 ```
 
@@ -69,9 +69,11 @@ node --test server/python-runtime.test.mjs
 
 ## 公开发布说明
 
-GitHub Pages 发布版本只包含脱敏后的运行数据和静态页面。以下来源文件不提交到公网仓库：
+GitHub Pages 发布版本只包含脱敏后的运行数据和静态页面。
 
 公开站已为全部 15 道 Python 与模型评估题提供 JupyterLite 练习本。点击“Python编程”，选题后点“打开浏览器 Jupyter”即可在浏览器内运行 Python，无需安装本地环境。各题保留原题的代码空格或从头编写方式；CSV 放在同题号目录，图像增强题使用明确标注的模拟图片。中文分词题会在浏览器中安装 `jieba`，模型题首次导入 `pandas` 与 `scikit-learn` 时需要下载组件。
+
+公开 Jupyter 默认显示简体中文；如浏览器保存过英文偏好，可在“设置 → 语言”选择中文并按提示刷新。每题的“教学参考”按钮会打开独立的 `教学参考.ipynb`，与答题本 `answer.ipynb` 分开；13 空代码题还提供 `逐步解析.md`。教学参考是示例实现，不是官方标准答案，也不会覆盖浏览器中已有的答题草稿。
 
 浏览器内核使用 Pyodide。`SS-6-4-4-02` 性能测试题使用 `asyncio` 模拟 5 人并发；原题线程池写法需在本地 Jupyter 练习。浏览器练习记录保存在当前浏览器；换设备或清除网站数据前，应从 Jupyter 菜单下载 `.ipynb`。公开版不连接本地自动评分接口，也不读取 `.local-jupyter/`。
 
@@ -173,7 +175,7 @@ node server/validate.mjs
 如需从 PDF 重新生成运行数据：
 
 ```bash
-cd /Users/kk/Desktop/Codex输出/人工智能训练师考试/question_practice_site/ai-exam-simulator
+cd ai-exam-simulator
 python3 scripts/extract_pdf.py
 python3 scripts/normalize_questions.py
 node server/validate.mjs
