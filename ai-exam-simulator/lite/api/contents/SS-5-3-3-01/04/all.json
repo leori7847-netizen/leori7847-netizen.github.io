@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2026-10-05T15:40:23.082156Z",
+      "created": "2026-10-07T07:35:19.684145Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2026-10-05T15:40:07.451224Z",
+      "last_modified": "2026-10-07T07:35:07.715615Z",
       "mimetype": "text/csv",
       "name": "SS-5-3-3-01_transformer_dga.csv",
       "path": "SS-5-3-3-01/04/SS-5-3-3-01_transformer_dga.csv",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2026-10-05T15:40:23.081671Z",
+  "created": "2026-10-07T07:35:19.684145Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2026-10-05T15:40:23.081671Z",
+  "last_modified": "2026-10-07T07:35:19.684145Z",
   "mimetype": null,
   "name": "04",
   "path": "SS-5-3-3-01/04",

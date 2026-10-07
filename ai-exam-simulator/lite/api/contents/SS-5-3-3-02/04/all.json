@@ -2,11 +2,11 @@
   "content": [
     {
       "content": null,
-      "created": "2026-10-05T15:40:23.083941Z",
+      "created": "2026-10-07T07:35:19.685199Z",
       "format": null,
       "hash": null,
       "hash_algorithm": null,
-      "last_modified": "2026-10-05T15:40:07.451557Z",
+      "last_modified": "2026-10-07T07:35:07.715889Z",
       "mimetype": "text/csv",
       "name": "SS-5-3-3-02_line_loss.csv",
       "path": "SS-5-3-3-02/04/SS-5-3-3-02_line_loss.csv",
@@ -15,11 +15,11 @@
       "writable": true
     }
   ],
-  "created": "2026-10-05T15:40:23.083941Z",
+  "created": "2026-10-07T07:35:19.685199Z",
   "format": "json",
   "hash": null,
   "hash_algorithm": null,
-  "last_modified": "2026-10-05T15:40:23.083941Z",
+  "last_modified": "2026-10-07T07:35:19.685199Z",
   "mimetype": null,
   "name": "04",
   "path": "SS-5-3-3-02/04",
