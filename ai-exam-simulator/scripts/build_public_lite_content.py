@@ -91,6 +91,19 @@ def reference_notebook(question, exercise):
                 f"{index}. {item}" for index, item in enumerate(exercise["explanations"], 1)
             )
         ))
+    if exercise["id"] == "SS-6-4-4-02":
+        thread_reference = (ROOT / "lite-src" / "performance_reference.py").read_text(encoding="utf-8")
+        cells.append(nbformat.v4.new_markdown_cell(
+            "## 本机 Jupyter 交付版（29 行）\n\n"
+            "这是按题目要求使用 5 个 Python 线程的精简参考实现。"
+            "浏览器内核不能运行 `ThreadPoolExecutor`；请在本机 Jupyter 中运行这一版。\n\n"
+            f"```python\n{thread_reference.rstrip()}\n```"
+        ))
+        cells.append(nbformat.v4.new_markdown_cell(
+            "## 浏览器可运行改写版\n\n"
+            "下方代码改用 `asyncio` 模拟 5 人并发，仅用于公开网页练习；"
+            "正式交付时以题目要求和现场 Python 环境为准。"
+        ))
     cells.append(nbformat.v4.new_code_cell(exercise["reference"]))
     result = nbformat.v4.new_notebook(
         cells=cells,
