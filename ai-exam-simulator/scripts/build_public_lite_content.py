@@ -22,11 +22,15 @@ def question_text_html(text):
     return "<div>" + "<br>\n".join(escape(line) for line in text.splitlines()) + "</div>"
 
 
+def question_title(question):
+    return question["title"].split(" 装有 Python", 1)[0].rstrip("。 ")
+
+
 def notebook(question, exercise):
     question_id = question["id"]
     cells = [
         nbformat.v4.new_markdown_cell(
-            f"# {question['title']}\n\n"
+            f"# {question_title(question)}\n\n"
             f"题号：`{question_id}` · {question['level']} · "
             f"{question['timeLimitMinutes']} 分钟\n\n"
             "这是公开网站的浏览器练习本。按 `Shift + Enter` 运行当前代码单元格。"
@@ -73,7 +77,7 @@ def notebook(question, exercise):
 
 def reference_notebook(question, exercise):
     cells = [nbformat.v4.new_markdown_cell(
-        f"# {question['title']} · 教学参考\n\n"
+        f"# {question_title(question)} · 教学参考\n\n"
         "这是帮助理解写法的参考实现，不是官方标准答案。请在 `answer.ipynb` "
         "独立作答；不要在本文件中覆盖自己的草稿。"
     )]
@@ -121,7 +125,7 @@ def main():
         nbformat.write(answer, directory / ANSWER_FILENAME)
         nbformat.write(reference_notebook(question, exercise), directory / "教学参考.ipynb")
         (directory / "题目.md").write_text(
-            f"# {question['title']}\n\n{question_text_html(question['questionText'])}\n", encoding="utf-8"
+            f"# {question_title(question)}\n\n{question_text_html(question['questionText'])}\n", encoding="utf-8"
         )
         instructions = [
             "# 浏览器实操说明",
