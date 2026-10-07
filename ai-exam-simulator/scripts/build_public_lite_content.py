@@ -2,6 +2,7 @@
 """Build the public JupyterLite notebooks from checked, static exercise sources."""
 
 import json
+from html import escape
 from pathlib import Path
 
 import nbformat
@@ -9,10 +10,16 @@ import nbformat
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "lite-src" / "files"
+ANSWER_FILENAME = "answer-20261007.ipynb"
 
 
 def read_json(path):
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def question_text_html(text):
+    # The PDF contains bare '-' lines that Markdown interprets as heading underlines.
+    return "<div>" + "<br>\n".join(escape(line) for line in text.splitlines()) + "</div>"
 
 
 def notebook(question, exercise):
@@ -24,12 +31,12 @@ def notebook(question, exercise):
             f"{question['timeLimitMinutes']} 分钟\n\n"
             "这是公开网站的浏览器练习本。按 `Shift + Enter` 运行当前代码单元格。"
             "首次启动 Python 内核或加载科学计算库时可能需要等待。\n\n"
-            "**教学参考（非官方答案）：**左侧文件列表中打开 `教学参考.ipynb`；"
+            "<strong>教学参考（非官方答案）：</strong>左侧文件列表中打开 `教学参考.ipynb`；"
             "`逐步解析.md` 说明每一步为什么这样写。请先完成自己的答题本。"
         ),
         nbformat.v4.new_markdown_cell(
             "## 题目与交付要求\n\n"
-            + question["questionText"]
+            + question_text_html(question["questionText"])
             + ("\n\n**浏览器版说明：**" + exercise["note"] if exercise["note"] else "")
         ),
     ]
@@ -109,21 +116,24 @@ def main():
         for relative in exercise["files"]:
             if not (directory / relative).is_file():
                 raise FileNotFoundError(directory / relative)
-        nbformat.write(notebook(question, exercise), directory / "answer.ipynb")
+        answer = notebook(question, exercise)
+        nbformat.write(answer, directory / "answer.ipynb")
+        nbformat.write(answer, directory / ANSWER_FILENAME)
         nbformat.write(reference_notebook(question, exercise), directory / "教学参考.ipynb")
         (directory / "题目.md").write_text(
-            f"# {question['title']}\n\n{question['questionText']}\n", encoding="utf-8"
+            f"# {question['title']}\n\n{question_text_html(question['questionText'])}\n", encoding="utf-8"
         )
         instructions = [
             "# 浏览器实操说明",
             "",
-            "1. 双击 `answer.ipynb`，阅读题目并完成代码。",
+            f"1. 双击 `{ANSWER_FILENAME}`，阅读题目并完成代码。旧版 `answer.ipynb` 保留原草稿，请勿直接删除。",
             "2. 按 `Shift + Enter` 运行当前单元格。",
             "3. 若题目有数据附件，文件已放在本题文件夹中；按题目路径读取。",
             "4. 保存笔记本，并从菜单下载 `.ipynb` 备份。",
             "5. 先自己作答；需要核对时，打开同目录的 `教学参考.ipynb`。它不是官方标准答案。",
             "",
             "本版在当前浏览器内运行，记录不跨设备同步，也不提供本机版的交卷评分。",
+            "若内核选择框只有“无内核”，先下载答题本，再强制刷新页面并重新打开；请勿清空网站数据。",
         ]
         if exercise["note"]:
             instructions.extend(["", exercise["note"]])
